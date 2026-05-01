@@ -10,7 +10,7 @@
 body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f3f3;color:#2a1a1a}
 .hdr{background:#7b1c2e;padding:24px 20px 28px;border-bottom:4px solid #c8922a}
 .hdr-in{max-width:800px;margin:0 auto;display:flex;align-items:center;gap:18px}
-.aphoto{width:80px;height:80px;border-radius:50%;border:3px solid #c8922a;object-fit:cover;flex-shrink:0}
+.aphoto{width:80px;height:80px;border-radius:50%;border:3px solid #c8922a;object-fit:cover;object-position:center top;flex-shrink:0}
 .htxt{flex:1}
 .eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c8922a;margin-bottom:6px}
 .htxt h1{font-size:22px;font-weight:700;color:#fff;margin:0 0 6px;line-height:1.3}
@@ -27,7 +27,7 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 .cintro{background:#7b1c2e;color:#fff;border-radius:10px;padding:14px 16px;margin-bottom:14px;font-size:13px;line-height:1.6}
 .cintro strong{color:#f0c060}
 .cbox{background:#fff;border-radius:10px;box-shadow:0 3px 16px rgba(0,0,0,.08);border:1px solid #ddc8c8;overflow:hidden}
-.cmsgs{height:340px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.cmsgs{height:360px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
 .cmsg{display:flex;gap:8px}
 .cmsg.u{flex-direction:row-reverse}
 .cav{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;margin-top:2px}
@@ -80,7 +80,7 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 .succ h3{margin:0 0 4px;font-size:14px}
 .succ p{margin:0;font-size:12px}
 .ctbar{background:#540f1e;padding:24px 20px;text-align:center;margin-top:24px;border-top:4px solid #c8922a}
-.cphoto{width:58px;height:58px;border-radius:50%;border:3px solid #c8922a;object-fit:cover;margin:0 auto 8px;display:block}
+.cphoto{width:64px;height:64px;border-radius:50%;border:3px solid #c8922a;object-fit:cover;object-position:center top;margin:0 auto 8px;display:block}
 .ctbar h3{color:#fff;font-size:15px;margin:0 0 2px}
 .ctitle{color:#c8922a;font-size:11px;font-weight:600;letter-spacing:.5px;margin-bottom:12px}
 .cline{width:32px;height:3px;background:#c8922a;margin:0 auto 12px;border-radius:2px}
@@ -100,9 +100,9 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
       <p>Get quick answers to your flood insurance questions, request a free quote, or have your current policy reviewed. Local agent, real answers, no pressure.</p>
       <div class="tags">
         <span class="tag">NFIP Specialist</span>
-        <span class="tag">Baton Rouge, LA</span>
+        <span class="tag">Louisiana Licensed</span>
         <span class="tag">24/7 Answers</span>
-        <span class="tag">LA Licensed Agent</span>
+        <span class="tag">Zero Pressure</span>
       </div>
     </div>
   </div>
@@ -117,28 +117,28 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 </div>
 
 <div class="pnl on" id="p-chat">
-  <div class="cintro">Ask any flood insurance question and get a quick answer. <strong>Don't see your answer?</strong> Send Brian a question directly and he will respond personally.</div>
+  <div class="cintro">Ask any flood insurance question and get a straight answer. <strong>Don't see what you need?</strong> Send Brian a question directly and he will get back to you personally.</div>
   <div class="cbox">
     <div class="cmsgs" id="cmsgs">
       <div class="cmsg b">
         <div class="cav b">BH</div>
-        <div class="cbbl">Hi! I am Brian Hall's flood insurance assistant. Ask me anything, or use the tabs above to get a quote or policy review. I am here to help!</div>
+        <div class="cbbl">Hey there! I am Brian Hall's flood insurance assistant. I am here to give you straight answers about flood insurance — no fluff, no pressure. Ask me anything or tap one of the questions below to get started!</div>
       </div>
     </div>
     <div class="qwrap">
       <div class="qlbl">Tap a question to get started</div>
       <div class="qbtns">
+        <button class="qb" data-q="What does flood insurance do?">What does flood insurance do?</button>
         <button class="qb" data-q="Does homeowners insurance cover floods?">Does homeowners cover floods?</button>
         <button class="qb" data-q="How much does flood insurance cost in Louisiana?">How much does it cost?</button>
         <button class="qb" data-q="What does flood insurance cover?">What is covered?</button>
         <button class="qb" data-q="What is NOT covered by flood insurance?">What is NOT covered?</button>
         <button class="qb" data-q="Is there a waiting period for flood insurance?">Waiting period?</button>
         <button class="qb" data-q="What flood zone am I in?">My flood zone?</button>
-        <button class="qb" data-q="Do I need flood insurance if I am not in a high risk zone?">Not in high-risk zone?</button>
+        <button class="qb" data-q="I have never flooded so do I really need flood insurance?">I have never flooded</button>
         <button class="qb" data-q="How do I transfer my flood policy to Brian?">Transfer my policy?</button>
         <button class="qb" data-q="What happened in the 2016 Louisiana floods?">2016 Louisiana floods?</button>
         <button class="qb" data-q="What is a Preferred Risk Policy?">Preferred Risk Policy?</button>
-        <button class="qb" data-q="Does flood insurance cover my basement?">Basement coverage?</button>
         <button class="qb" data-q="What is the difference between NFIP and private flood insurance?">NFIP vs private?</button>
       </div>
     </div>
@@ -149,8 +149,6 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
     <div class="cnote">General information only. Brian Hall | Louisiana Farm Bureau Insurance | (225) 610-3611</div>
   </div>
 </div>
-
-<!-- QUOTE FORM -->
 
 <div class="pnl" id="p-quote">
   <div class="fcard">
@@ -183,8 +181,6 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
     </div>
   </div>
 </div>
-
-<!-- REVIEW FORM -->
 
 <div class="pnl" id="p-review">
   <div class="fcard">
@@ -223,7 +219,7 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 <div class="ctbar">
   <img class="cphoto" src="https://www.sfbcic.com/AgentPhotos/1735204.jpg" alt="Brian Hall" onerror="this.style.display='none'">
   <h3>Brian Hall</h3>
-  <div class="ctitle">Louisiana Farm Bureau Insurance | Baton Rouge, LA</div>
+  <div class="ctitle">Louisiana Farm Bureau Insurance | Serving All of Louisiana</div>
   <div class="cline"></div>
   <div class="clinks">
     <a href="tel:2256103611">Call: (225) 610-3611</a>
@@ -238,27 +234,101 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 var FORMSPREE = 'https://formspree.io/f/meenogzy';
 
 var KB = [
-  {k:['homeowner','home insurance','regular insurance','cover flood','standard policy'],a:'Standard homeowners insurance does NOT cover flood damage - not even one dollar. Flood insurance is a completely separate policy you have to buy on its own. Use the Get a Quote tab above and Brian will get you covered!'},
-  {k:['cost','price','premium','how much','afford','rate','expensive'],a:'In Louisiana, flood insurance averages $1,470 per year statewide. East Baton Rouge Parish averages about $655 per year, one of the more affordable parishes. The price depends on your flood zone, elevation, and coverage amount, so Brian can give you an exact quote for your property.'},
-  {k:['what is covered','what does it cover','building coverage'],a:'Flood insurance covers your home structure up to $250,000 including electrical, plumbing, HVAC, built-in appliances, water heaters, and cabinets. It also covers personal contents up to $100,000 like furniture, electronics, and clothing. Brian can make sure you have the right amounts.'},
-  {k:['not covered','exclusion','excluded','living expenses','temporary housing','car','vehicle','pool','deck','fence'],a:'Flood insurance does NOT cover additional living expenses, temporary housing, cars, pools, decks, fences, landscaping, or most basement contents. Wind damage requires a separate policy. Use the tab above to send Brian a specific question.'},
-  {k:['waiting period','wait','when does it start','effective','take effect','30 day'],a:'There is normally a 30-day waiting period before your NFIP policy kicks in, so do not wait until a storm is coming! The wait is waived if you buy at mortgage closing or after being newly mapped into a flood zone. Brian can walk you through the details.'},
-  {k:['flood zone','zone','sfha','high risk','zone a','zone v','zone x','zone b','zone c','map','firm','what zone'],a:'FEMA designates flood zones on maps. Zone A and V are high-risk where flood insurance is required with a mortgage. Zone X is moderate to low risk where it is not required but strongly recommended. The 2016 floods proved Zone X homes can still flood badly. Brian can look up your zone for free.'},
-  {k:['do i need','need flood','required','mandatory','lender','mortgage','must i have'],a:'It is required if you have a federally-backed mortgage and live in a high-risk flood zone. But even if not required, Louisiana flood history makes it a smart investment since about 25 percent of all flood claims come from outside high-risk zones. Brian can tell you exactly what your situation requires.'},
-  {k:['2016','flood of 2016','august 2016','livingston','denham springs','historic flood'],a:'The 2016 Louisiana floods were devastating with 146,000 homes damaged, $15 billion in losses, and 75 percent of Livingston Parish homes declared total losses. Many of those homes were in Zone X, considered low risk. That event is exactly why flood insurance matters even outside high-risk zones.'},
-  {k:['transfer','switch agent','change agent','move my policy','new agent','switch to'],a:'Transferring your existing flood policy to Brian is completely free, takes just a few minutes, and causes zero lapse in your coverage. Your policy stays exactly the same with the same price, same coverage, and same renewal date. Use the Policy Review tab above to get started!'},
-  {k:['preferred risk','low risk policy','prp','affordable','zone x policy','cheaper'],a:'If you are in a low-to-moderate risk zone, you may qualify for a Preferred Risk Policy with the same NFIP coverage at a much lower cost, around $400 to $600 per year in the Baton Rouge area. Brian can check if you qualify.'},
-  {k:['disaster','fema grant','federal assistance','government help','disaster relief'],a:'Federal disaster assistance is NOT a substitute for flood insurance. It is usually a low-interest loan you have to repay, only available if the President declares a disaster, and averages just $2,704 compared to average NFIP payouts of $63,691. Do not rely on it.'},
-  {k:['private flood','nfip vs private','private insurance','difference between'],a:'NFIP is the federal program with standardized coverage and max limits of $250,000 building and $100,000 contents. Private flood insurance can offer higher limits, shorter waiting periods, and sometimes lower rates. Brian can compare both options for your specific property.'},
-  {k:['basement','below grade','crawl space'],a:'NFIP basement coverage is very limited. Finished walls, carpet, and furniture are generally NOT covered. What is covered includes furnaces, water heaters, electrical panels, and sump pumps. Brian can explain exactly what is protected in your specific situation.'},
-  {k:['renter','tenant','rent','apartment','landlord'],a:'Yes! Renters can get flood insurance for their personal belongings up to $100,000. Your landlord building coverage does not protect your stuff. If you are renting in Louisiana, a renters flood policy is affordable and worth it. Ask Brian for a quote!'},
-  {k:['new construction','new home','newly built','build a home','buying new'],a:'New construction homes built to current Louisiana flood codes often qualify for lower flood insurance rates. If you are buying in Zone X, you may only pay $400 to $600 per year. Always verify the flood zone for any lot before buying. Brian can help you understand what you will pay.'},
-  {k:['claim','file a claim','after flood','damaged','adjuster','settlement'],a:'After a flood, document all damage with photos before cleaning up, then contact your flood insurance company right away. An adjuster will be assigned to your claim. The process typically takes 30 to 90 days. Contact Brian if you need help navigating a claim.'},
-  {k:['elevation','bfe','base flood elevation','elevation certificate'],a:'An elevation certificate documents your home elevation compared to the Base Flood Elevation and can help lower your flood insurance premium. Brian can explain whether you need one and how to get it.'},
-  {k:['limit','maximum','max coverage','enough coverage','excess flood'],a:'NFIP max limits are $250,000 for your home structure and $100,000 for contents. If your home is worth more, private excess flood insurance can pick up where NFIP leaves off. Brian can help you figure out if you need additional coverage.'},
-  {k:['hurricane','wind','storm surge','tropical'],a:'Flood insurance covers water damage from hurricanes and storm surge, but NOT wind damage. You need a separate windstorm policy for that. Louisiana hurricane season runs June through November, so make sure you have both types of coverage.'},
-  {k:['contact','brian','speak','agent','talk','phone','email','office'],a:'You can reach Brian Hall directly at (225) 610-3611 or bhall@sfbcic.com. His office is at 12035 Coursey Blvd, Baton Rouge, LA 70816. Or use the tabs above to request a quote or policy review - Brian responds personally!'},
-  {k:['hello','hi','hey','good morning','good afternoon','howdy'],a:'Hi there! I am Brian Hall flood insurance assistant. I can answer common flood insurance questions, or you can use the tabs above to get a free quote or policy review. What would you like to know?'}
+  // WHAT DOES FLOOD INSURANCE DO
+  {k:['what does flood insurance do','what does it do','what is flood insurance','explain flood insurance','how does flood insurance work','what does flood','flood insurance do'],
+  a:'Think of your standard home insurance like health insurance for your house — it covers unexpected things that happen inside, like a pipe bursting and flooding your kitchen. Flood insurance is different. It is specialized protection for when water comes in from the outside — heavy rain, rising bayous, storm surge. If rising groundwater flows under your front door, standard insurance will not touch it, but flood insurance will. Want me to get Brian to walk you through your specific situation? Just tap the Get a Quote tab above.'},
+
+  // HOMEOWNERS DOESN'T COVER FLOODS
+  {k:['homeowner','home insurance','regular insurance','cover flood','standard policy','does my insurance'],
+  a:'Nope — and this surprises a lot of people. Your standard homeowners policy covers things that happen inside your home, like a burst pipe. But if water rises from the outside and comes in through your doors or foundation, that is a flood — and your homeowners policy will not pay a dime. You need a separate flood policy for that. Want Brian to get you a quick quote?'},
+
+  // COST
+  {k:['cost','price','premium','how much','afford','rate','expensive','what do i pay'],
+  a:'In Louisiana, flood insurance averages around $1,470 per year statewide, but East Baton Rouge Parish averages closer to $655 per year. If you are in a lower-risk zone, a Preferred Risk Policy can run as low as $400 to $600 a year — honestly less than most people expect. The exact number depends on your property, flood zone, and coverage level. Brian can give you a real number for your specific address. Tap Get a Quote above!'},
+
+  // WHAT IS COVERED
+  {k:['what is covered','what does it cover','covered','building coverage','structure','contents','personal property','what will it pay'],
+  a:'A flood policy covers two things: your building and your stuff. Building coverage (up to $250,000) includes your foundation, electrical, plumbing, HVAC, water heater, built-in appliances, and cabinets. Contents coverage (up to $100,000) covers your furniture, electronics, clothing, and appliances like your washer and dryer. Brian can make sure you have the right amounts for your home.'},
+
+  // NOT COVERED
+  {k:['not covered','exclusion','excluded','what won\'t','won\'t cover','doesn\'t cover','living expenses','temporary','car','vehicle','pool','deck','fence','landscaping'],
+  a:'Good question to ask upfront. Flood insurance does NOT cover: your car (that is auto insurance), temporary housing if you have to move out, pools, decks, fences, landscaping, or most finished basement contents. Wind damage is also separate — that is a windstorm policy. The good news is Brian can help you make sure all your bases are covered. Just reach out!'},
+
+  // NEVER FLOODED
+  {k:['never flooded','haven\'t flooded','don\'t need it','waste of money','low risk','not going to flood','probably won\'t','unlikely to flood','i\'m fine'],
+  a:'I hear that a lot — and honestly, most people say the same thing right up until they file a claim. Here is the thing: insurance is not a bet on the past, it is protection against what you hope never happens. In South Louisiana, our maps and weather cannot keep up with each other. The storm that misses you today could shift two inches east tomorrow. Ask anyone in Denham Springs who was in Zone X in 2016 — their lender told them they did not need it. Many of them lost everything. The question is simple: if your home floods tomorrow, do you want 100% of that bill to fall on you? Brian can show you what a policy actually costs for your property — it is probably a lot less than you think.'},
+
+  // 2016 FLOODS
+  {k:['2016','flood of 2016','august 2016','livingston','denham springs','historic','remember the flood','baton rouge flood'],
+  a:'In Baton Rouge, I barely have to finish that sentence. The August 2016 flood damaged 146,000 homes and caused $15 billion in losses. The part that still stings? Most of those homes were in Zone X — the so-called lowest risk zone. Lenders told them they did not need flood insurance. Some agents called it a waste of money. One inch of water causes an estimated $25,000 in damage according to FEMA. Those families had no flood insurance and no real help. That event changed how a lot of Louisiana homeowners think about this — and it should.'},
+
+  // WAITING PERIOD
+  {k:['waiting period','wait','when does it start','effective','take effect','30 day','when will i be covered','how long'],
+  a:'There is normally a 30-day waiting period before your NFIP policy kicks in — so please do not wait until a storm is in the Gulf to call me. The wait is waived if you are buying at mortgage closing or if your property was just remapped into a higher risk zone. Some private flood policies have shorter waiting periods of 10 to 15 days. Either way, the best time to get covered is before you need it.'},
+
+  // FLOOD ZONES
+  {k:['flood zone','zone','sfha','high risk','zone a','zone v','zone x','zone b','zone c','map','firm','what zone','am i in a','which zone'],
+  a:'FEMA maps Louisiana into flood zones. Zone A and V are high-risk — flood insurance is required if you have a federally-backed mortgage. Zone X is moderate to low risk — not required, but 2016 showed us that does not mean safe. About 25 percent of all flood claims come from outside high-risk zones. Brian can look up your exact flood zone for free — just send him your address using the Get a Quote tab.'},
+
+  // DO I NEED IT
+  {k:['do i need','need flood','required','mandatory','lender','mortgage','must i have','is it required','should i get'],
+  a:'It is legally required if you have a federally-backed mortgage and live in a high-risk flood zone. But here is what I tell everyone: the lender requirement and your actual risk are two different things. Just because your lender does not require it does not mean you are safe. In South Louisiana especially, Brian recommends every homeowner at least understand what a policy would cost for their property before deciding. It is usually a lot more affordable than people expect.'},
+
+  // TRANSFER
+  {k:['transfer','switch agent','change agent','move my policy','new agent','switch to brian','transfer to brian','can i switch','change my agent'],
+  a:'Transferring your existing flood policy to Brian is one of the easiest things in insurance. It is completely free, takes just a few minutes of paperwork, and your coverage never lapses — not even for a day. Same policy, same price, same renewal date. You just get Brian as your agent going forward, which means a local person who actually answers the phone. Tap the Policy Review tab above to get started!'},
+
+  // PREFERRED RISK
+  {k:['preferred risk','low risk policy','prp','affordable','zone x policy','cheaper policy','discount','lower cost'],
+  a:'If your property is in a moderate to low risk zone — Zone X, B, or C — you may qualify for a Preferred Risk Policy. It gives you the same solid NFIP coverage at a significantly lower premium, sometimes as low as $400 to $600 a year in the Baton Rouge area. It is honestly one of the best deals in insurance. Brian can check in about two minutes whether your property qualifies.'},
+
+  // FEDERAL DISASTER
+  {k:['disaster','fema grant','federal assistance','government help','disaster relief','fema will help','government will pay','president declare'],
+  a:'This is one of the biggest myths out there. Federal disaster assistance is NOT free money — it is usually a low-interest loan that you have to pay back, and it is only available if the President formally declares a disaster in your area. The average payout is around $2,704. The average NFIP flood claim payout is $63,691. That is a massive difference. Do not gamble your home on a presidential declaration.'},
+
+  // NFIP VS PRIVATE
+  {k:['private flood','nfip vs private','private insurance','difference between','which is better','private vs nfip'],
+  a:'NFIP is the federal program — standardized coverage, rates are the same no matter who sells it, with max limits of $250,000 for your building and $100,000 for contents. Private flood insurance can offer higher limits, shorter waiting periods, and sometimes lower rates, but not every property in Louisiana qualifies. Brian can compare both options for your specific address and tell you which makes more sense.'},
+
+  // BASEMENT
+  {k:['basement','below grade','crawl space'],
+  a:'NFIP basement coverage is very limited. Finished walls, flooring, carpet, and furniture in a basement are generally not covered. What is covered down there: your furnace, water heater, electrical panel, and sump pump. Most Louisiana homes do not have basements, but if yours does Brian can walk you through exactly what is and is not protected.'},
+
+  // RENTERS
+  {k:['renter','tenant','rent','apartment','landlord','i rent','do renters'],
+  a:'Absolutely — renters can and should get flood insurance. Your landlord\'s building policy covers the structure, but it does not cover a single thing you own. NFIP offers contents-only policies for renters up to $100,000. In Louisiana, it is one of the most affordable and overlooked policies out there. Ask Brian for a quote!'},
+
+  // NEW CONSTRUCTION
+  {k:['new construction','new home','newly built','building a home','buying new','new build','just built'],
+  a:'Great timing to ask this. New construction homes built to current Louisiana flood codes often qualify for significantly lower flood insurance rates. If you are buying in Zone X, you could pay as little as $400 to $600 per year. Always ask about the flood zone and elevation certificate before you close on any lot — it can affect your insurance costs for as long as you own the home. Brian is happy to walk you through it before you sign anything.'},
+
+  // CLAIMS
+  {k:['claim','file a claim','after flood','flood damage','adjuster','settlement','what do i do if','if i flood'],
+  a:'First thing: document everything with photos and video before you touch anything or start cleaning up. Then contact your flood insurance company immediately to start the claim. An adjuster will be assigned to your case. The process typically takes 30 to 90 days. Brian can help you understand what to expect and make sure you get everything you are entitled to under your policy.'},
+
+  // ELEVATION CERTIFICATE
+  {k:['elevation','bfe','base flood elevation','elevation certificate','certificate'],
+  a:'An elevation certificate is a document that shows how high your home sits compared to the Base Flood Elevation in your area. It can make a significant difference in your flood insurance premium — sometimes saving hundreds of dollars a year. Brian can explain whether you need one for your property and how to get one.'},
+
+  // COVERAGE LIMITS
+  {k:['limit','maximum','max coverage','enough coverage','excess flood','more than 250','high value home'],
+  a:'NFIP caps out at $250,000 for your building and $100,000 for contents. If your home is worth more than that, private excess flood insurance can pick up where NFIP leaves off and provide much higher limits. Brian can assess your property and make sure you are not underinsured — because finding out your coverage was not enough after a flood is the worst possible time to find out.'},
+
+  // HURRICANE
+  {k:['hurricane','wind','storm surge','tropical','named storm','category'],
+  a:'Flood insurance covers water damage from hurricanes and storm surge — but NOT wind damage. Wind is a separate windstorm or homeowners policy. Louisiana hurricane season runs June through November, so the time to make sure you have both coverages in place is right now, not when a storm is forming in the Gulf. Brian can make sure you have no gaps.'},
+
+  // WHAT IS NFIP
+  {k:['what is nfip','national flood insurance','nfip','federal flood','who is nfip'],
+  a:'NFIP stands for National Flood Insurance Program. It is a federal program run through FEMA that provides standardized flood insurance policies to homeowners, renters, and businesses across the country. Because it is federal, the rates and coverage are the same no matter which agent sells it to you — the difference is the agent you work with. Brian is a licensed NFIP agent serving all of Louisiana.'},
+
+  // CONTACT / BRIAN
+  {k:['contact','brian','speak to someone','talk to a person','human','phone','email','office','reach brian','call brian'],
+  a:'You can reach Brian directly at (225) 610-3611 or bhall@sfbcic.com. His office is at 12035 Coursey Blvd, Baton Rouge, LA 70816. He serves all of Louisiana and is one of those agents who actually answers the phone. Or just use the tabs above to request a quote or policy review and he will reach out to you!'},
+
+  // GREETINGS
+  {k:['hello','hi','hey','good morning','good afternoon','howdy','what can you do','help me','get started'],
+  a:'Hey! Glad you stopped by. I am Brian Hall\'s flood insurance assistant — here to give you straight, honest answers about flood coverage in Louisiana. No pressure, no sales pitch. Ask me anything or tap one of the questions below!'}
 ];
 
 function findAns(txt) {
@@ -315,7 +385,7 @@ function showSendForm(prefill) {
   var wrap = document.createElement('div');
   wrap.className = 'sfwrap';
   var p = document.createElement('p');
-  p.textContent = 'Send Brian your question - he will reply personally:';
+  p.textContent = 'Send Brian your question directly and he will get back to you personally:';
   var ta = document.createElement('textarea');
   ta.id = 'sf-q'; ta.placeholder = 'Your question...'; ta.textContent = prefill || '';
   var row = document.createElement('div');
@@ -332,16 +402,15 @@ function showSendForm(prefill) {
     var nm = document.getElementById('sf-n').value.trim();
     var pv = document.getElementById('sf-p').value.trim();
     if (!q || !nm || !pv) { alert('Please fill in all three fields.'); return; }
-    // Send to Formspree
     var data = new FormData();
-    data.append('Type', 'Direct Question');
+    data.append('Type', 'Direct Question from Chatbot');
     data.append('Name', nm);
     data.append('Contact', pv);
     data.append('Question', q);
     fetch(FORMSPREE, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
     var f = document.getElementById('sfmsg');
     if (f) f.parentNode.removeChild(f);
-    addMsg('Got it ' + nm + '! Brian received your question and will get back to you at ' + pv + ' soon. Thanks for reaching out!', 'b');
+    addMsg('Got it ' + nm + '! Brian received your question and will get back to you at ' + pv + ' soon. He appreciates you reaching out!', 'b');
   });
   wrap.appendChild(p); wrap.appendChild(ta); wrap.appendChild(row); wrap.appendChild(btn);
   d.appendChild(av); d.appendChild(wrap);
@@ -364,7 +433,7 @@ function doSend() {
     if (ans) {
       addMsg(ans, 'b');
     } else {
-      addMsg('I do not have a specific answer for that one, but Brian will! Send him your question below and he will get back to you personally.', 'b');
+      addMsg('That is a great question and Brian will have the answer for you. Send it to him directly below and he will get back to you personally — usually the same day.', 'b');
       showSendForm(txt);
     }
     document.getElementById('csnd').disabled = false;
@@ -400,7 +469,6 @@ function submitForm(type) {
   var btn = document.getElementById(p+'-sbmt');
   btn.disabled = true;
   btn.textContent = 'Sending...';
-
   var data = new FormData();
   if (type === 'quote') {
     data.append('Type', 'Quote Request');
@@ -425,12 +493,11 @@ function submitForm(type) {
     data.append('Annual Premium', document.getElementById('r-pr').value);
     data.append('Concerns', document.getElementById('r-nt').value);
   }
-
   fetch(FORMSPREE, {
     method: 'POST',
     body: data,
     headers: { 'Accept': 'application/json' }
-  }).then(function(res) {
+  }).then(function() {
     var succId = type === 'quote' ? 'q-succ' : 'r-succ';
     var s = document.getElementById(succId);
     s.style.display = 'block';
@@ -443,7 +510,6 @@ function submitForm(type) {
   });
 }
 
-// ATTACH ALL EVENTS
 document.getElementById('t-chat').addEventListener('click', function() { showTab('chat'); });
 document.getElementById('t-quote').addEventListener('click', function() { showTab('quote'); });
 document.getElementById('t-review').addEventListener('click', function() { showTab('review'); });
