@@ -7,121 +7,93 @@
 <title>Brian Hall | Flood Insurance | Louisiana Farm Bureau</title>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
-body { margin:0; padding:0; font-family:'Open Sans',Arial,sans-serif; background:#f5f3f3; color:#2a1a1a; }
-
-/* HEADER */
-.header { background:#7b1c2e; padding:24px 20px 28px; border-bottom:4px solid #c8922a; }
-.header-inner { max-width:800px; margin:0 auto; display:flex; align-items:center; gap:18px; }
-.agent-photo { width:80px; height:80px; border-radius:50%; border:3px solid #c8922a; object-fit:cover; flex-shrink:0; }
-.header-text { flex:1; }
-.eyebrow { display:block; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#c8922a; margin-bottom:6px; }
-.header-text h1 { font-size:22px; font-weight:700; color:#ffffff; margin:0 0 6px 0; line-height:1.3; }
-.header-text h1 span { color:#c8922a; }
-.header-text p { font-size:13px; color:rgba(255,255,255,0.8); margin:0 0 10px 0; line-height:1.5; }
-.tags { display:flex; flex-wrap:wrap; gap:6px; }
-.tag { background:rgba(200,146,42,0.2); border:1px solid rgba(200,146,42,0.5); color:#f0c060; font-size:11px; font-weight:600; padding:2px 8px; border-radius:10px; }
-
-/* TABS */
-.tabs-bar { background:#ffffff; border-bottom:2px solid #ddc8c8; position:sticky; top:0; z-index:99; box-shadow:0 2px 8px rgba(0,0,0,0.08); }
-.tabs-inner { max-width:800px; margin:0 auto; display:flex; }
-.tab-btn { flex:1; padding:14px 8px; text-align:center; cursor:pointer; font-weight:600; font-size:13px; color:#7a5a5a; border:none; background:none; border-bottom:3px solid transparent; font-family:‘Open Sans’,Arial,sans-serif; }
-.tab-btn.active { color:#7b1c2e; border-bottom:3px solid #c8922a; }
-
-/* PANELS */
-.panel { display:none; max-width:800px; margin:0 auto; padding:20px 16px 48px; }
-.panel.active { display:block; }
-
-/* CHAT INTRO */
-.chat-intro { background:#7b1c2e; color:white; border-radius:10px; padding:14px 16px; margin-bottom:14px; font-size:13px; line-height:1.6; }
-.chat-intro strong { color:#f0c060; }
-
-/* CHAT BOX */
-.chat-box { background:#ffffff; border-radius:10px; box-shadow:0 3px 16px rgba(0,0,0,0.08); border:1px solid #ddc8c8; overflow:hidden; }
-.chat-msgs { height:340px; overflow-y:auto; padding:14px; display:flex; flex-direction:column; gap:10px; }
-.msg { display:flex; gap:8px; }
-.msg.user { flex-direction:row-reverse; }
-.msg-av { width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:white; flex-shrink:0; margin-top:2px; }
-.av-bot { background:#7b1c2e; }
-.av-user { background:#c8922a; }
-.msg-bubble { max-width:80%; padding:8px 12px; border-radius:10px; font-size:13px; line-height:1.6; }
-.msg.bot .msg-bubble { background:#f9edef; color:#2a1a1a; border-bottom-left-radius:3px; }
-.msg.user .msg-bubble { background:#7b1c2e; color:white; border-bottom-right-radius:3px; }
-
-/* SEND QUESTION FORM */
-.send-form-wrap { background:#fdf6ec; border:1.5px solid #c8922a; border-radius:10px; padding:12px; margin-top:4px; max-width:80%; }
-.send-form-wrap p { font-size:12px; font-weight:700; color:#2a1a1a; margin:0 0 8px 0; }
-.send-form-wrap textarea { width:100%; border:1.5px solid #ddc8c8; border-radius:7px; padding:7px 10px; font-family:‘Open Sans’,Arial,sans-serif; font-size:13px; resize:none; min-height:55px; outline:none; box-sizing:border-box; }
-.send-form-wrap textarea:focus { border-color:#7b1c2e; }
-.send-row { display:flex; gap:6px; margin-top:6px; }
-.send-row input { flex:1; border:1.5px solid #ddc8c8; border-radius:7px; padding:7px 9px; font-family:‘Open Sans’,Arial,sans-serif; font-size:12px; outline:none; }
-.send-row input:focus { border-color:#7b1c2e; }
-.send-submit { background:#7b1c2e; color:white; border:none; border-radius:7px; padding:7px 14px; font-family:‘Open Sans’,Arial,sans-serif; font-size:12px; font-weight:700; cursor:pointer; margin-top:6px; width:100%; }
-
-/* TYPING */
-.typing { display:flex; gap:8px; }
-.typing-dots { background:#f9edef; padding:10px 14px; border-radius:10px; display:flex; gap:4px; align-items:center; }
-.dot { width:6px; height:6px; background:#7b1c2e; border-radius:50%; opacity:0.7; animation:blink 1.2s infinite; }
-.dot:nth-child(2) { animation-delay:0.2s; }
-.dot:nth-child(3) { animation-delay:0.4s; }
-@keyframes blink { 0%,60%,100%{transform:translateY(0);} 30%{transform:translateY(-5px);} }
-
-/* QUICK QUESTIONS */
-.quick-wrap { padding:8px 14px 10px; border-top:1px solid #ddc8c8; background:#fdf9f9; }
-.quick-label { font-size:10px; font-weight:700; color:#7a5a5a; letter-spacing:1px; text-transform:uppercase; margin-bottom:6px; }
-.quick-btns { display:flex; flex-wrap:wrap; gap:5px; }
-.qbtn { background:white; border:1.5px solid #ddc8c8; color:#7b1c2e; padding:4px 10px; border-radius:14px; font-size:12px; font-weight:600; cursor:pointer; font-family:‘Open Sans’,Arial,sans-serif; }
-.qbtn:active { background:#7b1c2e; color:white; }
-
-/* INPUT */
-.chat-input-row { display:flex; gap:8px; padding:10px 12px; border-top:1px solid #ddc8c8; background:white; align-items:flex-end; }
-.chat-input { flex:1; border:1.5px solid #ddc8c8; border-radius:18px; padding:8px 14px; font-family:‘Open Sans’,Arial,sans-serif; font-size:13px; outline:none; resize:none; max-height:90px; line-height:1.4; }
-.chat-input:focus { border-color:#7b1c2e; }
-.chat-send { width:36px; height:36px; background:#7b1c2e; color:white; border:none; border-radius:50%; cursor:pointer; font-size:16px; flex-shrink:0; font-weight:700; }
-.chat-send:disabled { opacity:0.4; }
-.chat-note { text-align:center; font-size:11px; color:#7a5a5a; padding:6px 12px; background:#fdf9f9; border-top:1px solid #ddc8c8; }
-
-/* FORMS */
-.form-card { background:white; border-radius:10px; box-shadow:0 3px 16px rgba(0,0,0,0.07); border:1px solid #ddc8c8; overflow:hidden; }
-.form-head { background:#7b1c2e; color:white; padding:18px 22px; border-bottom:4px solid #c8922a; }
-.form-head h2 { font-size:17px; margin:0 0 4px 0; }
-.form-head p { font-size:12px; opacity:0.82; margin:0; }
-.form-body { padding:20px 22px; }
-.form-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-@media(max-width:500px){ .form-row { grid-template-columns:1fr; } }
-.fg { margin-bottom:12px; }
-.fg label { display:block; font-size:12px; font-weight:600; margin-bottom:4px; }
-.fg input, .fg select, .fg textarea { width:100%; border:1.5px solid #ddc8c8; border-radius:7px; padding:8px 11px; font-family:‘Open Sans’,Arial,sans-serif; font-size:13px; outline:none; box-sizing:border-box; background:white; }
-.fg input:focus, .fg select:focus, .fg textarea:focus { border-color:#7b1c2e; }
-.fg textarea { resize:vertical; min-height:65px; }
-.req { color:#7b1c2e; }
-.form-submit { width:100%; padding:12px; background:#7b1c2e; color:white; border:none; border-radius:7px; font-family:‘Open Sans’,Arial,sans-serif; font-size:14px; font-weight:700; cursor:pointer; margin-top:4px; }
-.form-submit:hover { background:#540f1e; }
-.form-note { text-align:center; font-size:11px; color:#7a5a5a; margin-top:10px; }
-.success { display:none; background:#eef7ee; border:1.5px solid #81c784; border-radius:8px; padding:14px 18px; text-align:center; color:#2e7d32; margin-top:12px; }
-.success h3 { margin:0 0 4px 0; font-size:14px; }
-.success p { margin:0; font-size:12px; }
-
-/* CONTACT */
-.contact-bar { background:#540f1e; padding:24px 20px; text-align:center; margin-top:24px; border-top:4px solid #c8922a; }
-.contact-photo { width:58px; height:58px; border-radius:50%; border:3px solid #c8922a; object-fit:cover; margin:0 auto 8px; display:block; }
-.contact-bar h3 { color:white; font-size:15px; margin:0 0 2px 0; }
-.contact-bar .ctitle { color:#c8922a; font-size:11px; font-weight:600; letter-spacing:0.5px; margin-bottom:12px; }
-.contact-bar .cline { width:32px; height:3px; background:#c8922a; margin:0 auto 12px; border-radius:2px; }
-.contact-links { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
-.contact-links a { color:white; text-decoration:none; font-size:13px; font-weight:600; }
-.contact-links a:hover { color:#c8922a; }
-.contact-bar .cfooter { color:rgba(255,255,255,0.4); font-size:10px; margin-top:12px; }
+body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f3f3;color:#2a1a1a}
+.hdr{background:#7b1c2e;padding:24px 20px 28px;border-bottom:4px solid #c8922a}
+.hdr-in{max-width:800px;margin:0 auto;display:flex;align-items:center;gap:18px}
+.aphoto{width:80px;height:80px;border-radius:50%;border:3px solid #c8922a;object-fit:cover;flex-shrink:0}
+.htxt{flex:1}
+.eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c8922a;margin-bottom:6px}
+.htxt h1{font-size:22px;font-weight:700;color:#fff;margin:0 0 6px;line-height:1.3}
+.htxt h1 span{color:#c8922a}
+.htxt p{font-size:13px;color:rgba(255,255,255,.8);margin:0 0 10px;line-height:1.5}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{background:rgba(200,146,42,.2);border:1px solid rgba(200,146,42,.5);color:#f0c060;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px}
+.tabs-bar{background:#fff;border-bottom:2px solid #ddc8c8;position:sticky;top:0;z-index:99;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.tabs-in{max-width:800px;margin:0 auto;display:flex}
+.tbtn{flex:1;padding:14px 8px;text-align:center;cursor:pointer;font-weight:600;font-size:13px;color:#7a5a5a;border:none;background:none;border-bottom:3px solid transparent;font-family:'Open Sans',Arial,sans-serif}
+.tbtn.on{color:#7b1c2e;border-bottom:3px solid #c8922a}
+.pnl{display:none;max-width:800px;margin:0 auto;padding:20px 16px 48px}
+.pnl.on{display:block}
+.cintro{background:#7b1c2e;color:#fff;border-radius:10px;padding:14px 16px;margin-bottom:14px;font-size:13px;line-height:1.6}
+.cintro strong{color:#f0c060}
+.cbox{background:#fff;border-radius:10px;box-shadow:0 3px 16px rgba(0,0,0,.08);border:1px solid #ddc8c8;overflow:hidden}
+.cmsgs{height:340px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.cmsg{display:flex;gap:8px}
+.cmsg.u{flex-direction:row-reverse}
+.cav{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;margin-top:2px}
+.cav.b{background:#7b1c2e}
+.cav.u{background:#c8922a}
+.cbbl{max-width:80%;padding:8px 12px;border-radius:10px;font-size:13px;line-height:1.6}
+.cmsg.b .cbbl{background:#f9edef;color:#2a1a1a;border-bottom-left-radius:3px}
+.cmsg.u .cbbl{background:#7b1c2e;color:#fff;border-bottom-right-radius:3px}
+.sfwrap{background:#fdf6ec;border:1.5px solid #c8922a;border-radius:10px;padding:12px;margin-top:4px;max-width:80%}
+.sfwrap p{font-size:12px;font-weight:700;color:#2a1a1a;margin:0 0 8px}
+.sfwrap textarea{width:100%;border:1.5px solid #ddc8c8;border-radius:7px;padding:7px 10px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;resize:none;min-height:55px;outline:none;box-sizing:border-box}
+.sfrow{display:flex;gap:6px;margin-top:6px}
+.sfrow input{flex:1;border:1.5px solid #ddc8c8;border-radius:7px;padding:7px 9px;font-family:'Open Sans',Arial,sans-serif;font-size:12px;outline:none}
+.sfsbmt{background:#7b1c2e;color:#fff;border:none;border-radius:7px;padding:7px 14px;font-family:'Open Sans',Arial,sans-serif;font-size:12px;font-weight:700;cursor:pointer;margin-top:6px;width:100%}
+.typing{display:flex;gap:8px}
+.tdots{background:#f9edef;padding:10px 14px;border-radius:10px;display:flex;gap:4px;align-items:center}
+.dot{width:6px;height:6px;background:#7b1c2e;border-radius:50%;opacity:.7;animation:blink 1.2s infinite}
+.dot:nth-child(2){animation-delay:.2s}
+.dot:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-5px)}}
+.qwrap{padding:8px 14px 10px;border-top:1px solid #ddc8c8;background:#fdf9f9}
+.qlbl{font-size:10px;font-weight:700;color:#7a5a5a;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.qbtns{display:flex;flex-wrap:wrap;gap:5px}
+.qb{background:#fff;border:1.5px solid #ddc8c8;color:#7b1c2e;padding:4px 10px;border-radius:14px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Open Sans',Arial,sans-serif}
+.qb:active{background:#7b1c2e;color:#fff}
+.cinrow{display:flex;gap:8px;padding:10px 12px;border-top:1px solid #ddc8c8;background:#fff;align-items:flex-end}
+.cin{flex:1;border:1.5px solid #ddc8c8;border-radius:18px;padding:8px 14px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;outline:none;resize:none;max-height:90px;line-height:1.4}
+.cin:focus{border-color:#7b1c2e}
+.csnd{width:36px;height:36px;background:#7b1c2e;color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:16px;flex-shrink:0;font-weight:700}
+.csnd:disabled{opacity:.4}
+.cnote{text-align:center;font-size:11px;color:#7a5a5a;padding:6px 12px;background:#fdf9f9;border-top:1px solid #ddc8c8}
+.fcard{background:#fff;border-radius:10px;box-shadow:0 3px 16px rgba(0,0,0,.07);border:1px solid #ddc8c8;overflow:hidden}
+.fhd{background:#7b1c2e;color:#fff;padding:18px 22px;border-bottom:4px solid #c8922a}
+.fhd h2{font-size:17px;margin:0 0 4px}
+.fhd p{font-size:12px;opacity:.82;margin:0}
+.fbdy{padding:20px 22px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:500px){.frow{grid-template-columns:1fr}}
+.fg{margin-bottom:12px}
+.fg label{display:block;font-size:12px;font-weight:600;margin-bottom:4px}
+.fg input,.fg select,.fg textarea{width:100%;border:1.5px solid #ddc8c8;border-radius:7px;padding:8px 11px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;outline:none;box-sizing:border-box;background:#fff}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#7b1c2e}
+.fg textarea{resize:vertical;min-height:65px}
+.req{color:#7b1c2e}
+.fsbmt{width:100%;padding:12px;background:#7b1c2e;color:#fff;border:none;border-radius:7px;font-family:'Open Sans',Arial,sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:4px}
+.fsbmt:hover{background:#540f1e}
+.fnote{text-align:center;font-size:11px;color:#7a5a5a;margin-top:10px}
+.succ{display:none;background:#eef7ee;border:1.5px solid #81c784;border-radius:8px;padding:14px 18px;text-align:center;color:#2e7d32;margin-top:12px}
+.succ h3{margin:0 0 4px;font-size:14px}
+.succ p{margin:0;font-size:12px}
+.ctbar{background:#540f1e;padding:24px 20px;text-align:center;margin-top:24px;border-top:4px solid #c8922a}
+.cphoto{width:58px;height:58px;border-radius:50%;border:3px solid #c8922a;object-fit:cover;margin:0 auto 8px;display:block}
+.ctbar h3{color:#fff;font-size:15px;margin:0 0 2px}
+.ctitle{color:#c8922a;font-size:11px;font-weight:600;letter-spacing:.5px;margin-bottom:12px}
+.cline{width:32px;height:3px;background:#c8922a;margin:0 auto 12px;border-radius:2px}
+.clinks{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.clinks a{color:#fff;text-decoration:none;font-size:13px;font-weight:600}
+.cfooter{color:rgba(255,255,255,.4);font-size:10px;margin-top:12px}
 </style>
-
 </head>
 <body>
 
-<!-- HEADER -->
-
-<div class="header">
-  <div class="header-inner">
-    <img class="agent-photo" src="https://www.sfbcic.com/AgentPhotos/1735204.jpg" alt="Brian Hall" onerror="this.style.display='none'">
-    <div class="header-text">
+<div class="hdr">
+  <div class="hdr-in">
+    <img class="aphoto" src="https://www.sfbcic.com/AgentPhotos/1735204.jpg" alt="Brian Hall" onerror="this.style.display='none'">
+    <div class="htxt">
       <span class="eyebrow">Louisiana Farm Bureau Insurance</span>
       <h1>Brian Hall<br><span>Flood Insurance Expert</span></h1>
       <p>Get quick answers to your flood insurance questions, request a free quote, or have your current policy reviewed. Local agent, real answers, no pressure.</p>
@@ -135,134 +107,120 @@ body { margin:0; padding:0; font-family:'Open Sans',Arial,sans-serif; background
   </div>
 </div>
 
-<!-- TABS -->
-
 <div class="tabs-bar">
-  <div class="tabs-inner">
-    <button class="tab-btn active" id="tab-chat" onclick="showTab('chat')">Ask a Question</button>
-    <button class="tab-btn" id="tab-quote" onclick="showTab('quote')">Get a Quote</button>
-    <button class="tab-btn" id="tab-review" onclick="showTab('review')">Policy Review</button>
+  <div class="tabs-in">
+    <button class="tbtn on" id="t-chat">Ask a Question</button>
+    <button class="tbtn" id="t-quote">Get a Quote</button>
+    <button class="tbtn" id="t-review">Policy Review</button>
   </div>
 </div>
 
-<!-- CHAT PANEL -->
-
-<div class="panel active" id="panel-chat">
-  <div class="chat-intro">
-    Ask any flood insurance question and get a quick answer. <strong>Don't see your answer?</strong> Send Brian a question directly and he will respond personally.
-  </div>
-  <div class="chat-box">
-    <div class="chat-msgs" id="chatMsgs">
-      <div class="msg bot">
-        <div class="msg-av av-bot">BH</div>
-        <div class="msg-bubble">Hi! I am Brian Hall's flood insurance assistant. Ask me anything, or use the tabs above to get a quote or policy review. I am here to help!</div>
+<div class="pnl on" id="p-chat">
+  <div class="cintro">Ask any flood insurance question and get a quick answer. <strong>Don't see your answer?</strong> Send Brian a question directly and he will respond personally.</div>
+  <div class="cbox">
+    <div class="cmsgs" id="cmsgs">
+      <div class="cmsg b">
+        <div class="cav b">BH</div>
+        <div class="cbbl">Hi! I am Brian Hall's flood insurance assistant. Ask me anything, or use the tabs above to get a quote or policy review. I am here to help!</div>
       </div>
     </div>
-    <div class="quick-wrap">
-      <div class="quick-label">Tap a question to get started</div>
-      <div class="quick-btns">
-        <button class="qbtn" onclick="ask('Does homeowners insurance cover floods?')">Does homeowners cover floods?</button>
-        <button class="qbtn" onclick="ask('How much does flood insurance cost in Louisiana?')">How much does it cost?</button>
-        <button class="qbtn" onclick="ask('What does flood insurance cover?')">What is covered?</button>
-        <button class="qbtn" onclick="ask('What is NOT covered by flood insurance?')">What is NOT covered?</button>
-        <button class="qbtn" onclick="ask('Is there a waiting period for flood insurance?')">Waiting period?</button>
-        <button class="qbtn" onclick="ask('What flood zone am I in?')">My flood zone?</button>
-        <button class="qbtn" onclick="ask('Do I need flood insurance if I am not in a high risk zone?')">Not in high-risk zone?</button>
-        <button class="qbtn" onclick="ask('How do I transfer my flood policy to Brian?')">Transfer my policy?</button>
-        <button class="qbtn" onclick="ask('What happened in the 2016 Louisiana floods?')">2016 Louisiana floods?</button>
-        <button class="qbtn" onclick="ask('What is a Preferred Risk Policy?')">Preferred Risk Policy?</button>
-        <button class="qbtn" onclick="ask('Does flood insurance cover my basement?')">Basement coverage?</button>
-        <button class="qbtn" onclick="ask('What is the difference between NFIP and private flood insurance?')">NFIP vs private?</button>
+    <div class="qwrap">
+      <div class="qlbl">Tap a question to get started</div>
+      <div class="qbtns">
+        <button class="qb" data-q="Does homeowners insurance cover floods?">Does homeowners cover floods?</button>
+        <button class="qb" data-q="How much does flood insurance cost in Louisiana?">How much does it cost?</button>
+        <button class="qb" data-q="What does flood insurance cover?">What is covered?</button>
+        <button class="qb" data-q="What is NOT covered by flood insurance?">What is NOT covered?</button>
+        <button class="qb" data-q="Is there a waiting period for flood insurance?">Waiting period?</button>
+        <button class="qb" data-q="What flood zone am I in?">My flood zone?</button>
+        <button class="qb" data-q="Do I need flood insurance if I am not in a high risk zone?">Not in high-risk zone?</button>
+        <button class="qb" data-q="How do I transfer my flood policy to Brian?">Transfer my policy?</button>
+        <button class="qb" data-q="What happened in the 2016 Louisiana floods?">2016 Louisiana floods?</button>
+        <button class="qb" data-q="What is a Preferred Risk Policy?">Preferred Risk Policy?</button>
+        <button class="qb" data-q="Does flood insurance cover my basement?">Basement coverage?</button>
+        <button class="qb" data-q="What is the difference between NFIP and private flood insurance?">NFIP vs private?</button>
       </div>
     </div>
-    <div class="chat-input-row">
-      <textarea class="chat-input" id="chatInput" placeholder="Type your question here..." rows="1"
-        onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();doSend()}"
-        oninput="this.style.height='auto';this.style.height=Math.min(this.scrollHeight,90)+'px'"></textarea>
-      <button class="chat-send" id="sendBtn" onclick="doSend()">&#9658;</button>
+    <div class="cinrow">
+      <textarea class="cin" id="cin" placeholder="Type your question here..." rows="1"></textarea>
+      <button class="csnd" id="csnd">&#9658;</button>
     </div>
-    <div class="chat-note">General information only. Brian Hall | Louisiana Farm Bureau Insurance | (225) 610-3611</div>
+    <div class="cnote">General information only. Brian Hall | Louisiana Farm Bureau Insurance | (225) 610-3611</div>
   </div>
 </div>
 
-<!-- QUOTE PANEL -->
-
-<div class="panel" id="panel-quote">
-  <div class="form-card">
-    <div class="form-head">
+<div class="pnl" id="p-quote">
+  <div class="fcard">
+    <div class="fhd">
       <h2>Request a Free Flood Insurance Quote</h2>
       <p>Brian will personally get back to you, usually within a few hours.</p>
     </div>
-    <div class="form-body">
-      <div class="form-row">
-        <div class="fg"><label>First Name <span class="req">*</span></label><input type="text" id="q-fname" placeholder="John"></div>
-        <div class="fg"><label>Last Name <span class="req">*</span></label><input type="text" id="q-lname" placeholder="Smith"></div>
+    <div class="fbdy">
+      <div class="frow">
+        <div class="fg"><label>First Name <span class="req">*</span></label><input type="text" id="q-fn" placeholder="John"></div>
+        <div class="fg"><label>Last Name <span class="req">*</span></label><input type="text" id="q-ln" placeholder="Smith"></div>
       </div>
-      <div class="fg"><label>Property Address <span class="req">*</span></label><input type="text" id="q-address" placeholder="123 Main St, Baton Rouge, LA 70816"></div>
-      <div class="form-row">
-        <div class="fg"><label>Phone Number <span class="req">*</span></label><input type="tel" id="q-phone" placeholder="(225) 555-0100"></div>
-        <div class="fg"><label>Email Address</label><input type="email" id="q-email" placeholder="john@email.com"></div>
+      <div class="fg"><label>Property Address <span class="req">*</span></label><input type="text" id="q-ad" placeholder="123 Main St, Baton Rouge, LA 70816"></div>
+      <div class="frow">
+        <div class="fg"><label>Phone Number <span class="req">*</span></label><input type="tel" id="q-ph" placeholder="(225) 555-0100"></div>
+        <div class="fg"><label>Email Address</label><input type="email" id="q-em" placeholder="john@email.com"></div>
       </div>
-      <div class="form-row">
+      <div class="frow">
         <div class="fg"><label>Do you currently have flood insurance?</label>
-          <select id="q-current"><option value="">-- Select --</option><option>No, I need a new policy</option><option>Yes, but want to compare</option><option>I'm not sure</option></select>
+          <select id="q-cur"><option value="">-- Select --</option><option>No, I need a new policy</option><option>Yes, but want to compare</option><option>I'm not sure</option></select>
         </div>
         <div class="fg"><label>Best time to contact you</label>
-          <select id="q-time"><option value="">-- Select --</option><option>Morning (8am-12pm)</option><option>Afternoon (12pm-5pm)</option><option>Evening (5pm-8pm)</option><option>Anytime</option></select>
+          <select id="q-tm"><option value="">-- Select --</option><option>Morning (8am-12pm)</option><option>Afternoon (12pm-5pm)</option><option>Evening (5pm-8pm)</option><option>Anytime</option></select>
         </div>
       </div>
-      <div class="fg"><label>Anything else we should know?</label><textarea id="q-notes" placeholder="Questions, special circumstances, etc."></textarea></div>
-      <button class="form-submit" onclick="submitForm('quote')">Request My Free Quote</button>
-      <p class="form-note">Your information is private and will never be shared.</p>
-      <div class="success" id="quote-success"><h3>Quote Request Received!</h3><p>Brian will be in touch shortly. For urgent questions call (225) 610-3611.</p></div>
+      <div class="fg"><label>Anything else we should know?</label><textarea id="q-nt" placeholder="Questions, special circumstances, etc."></textarea></div>
+      <button class="fsbmt" id="q-sbmt">Request My Free Quote</button>
+      <p class="fnote">Your information is private and will never be shared.</p>
+      <div class="succ" id="q-succ"><h3>Quote Request Received!</h3><p>Brian will be in touch shortly. For urgent questions call (225) 610-3611.</p></div>
     </div>
   </div>
 </div>
 
-<!-- REVIEW PANEL -->
-
-<div class="panel" id="panel-review">
-  <div class="form-card">
-    <div class="form-head">
+<div class="pnl" id="p-review">
+  <div class="fcard">
+    <div class="fhd">
       <h2>Free Policy Review - Are You Overpaying?</h2>
       <p>Brian will review your current flood policy and let you know if you can do better. No obligation.</p>
     </div>
-    <div class="form-body">
-      <div class="form-row">
-        <div class="fg"><label>First Name <span class="req">*</span></label><input type="text" id="r-fname" placeholder="John"></div>
-        <div class="fg"><label>Last Name <span class="req">*</span></label><input type="text" id="r-lname" placeholder="Smith"></div>
+    <div class="fbdy">
+      <div class="frow">
+        <div class="fg"><label>First Name <span class="req">*</span></label><input type="text" id="r-fn" placeholder="John"></div>
+        <div class="fg"><label>Last Name <span class="req">*</span></label><input type="text" id="r-ln" placeholder="Smith"></div>
       </div>
-      <div class="fg"><label>Property Address <span class="req">*</span></label><input type="text" id="r-address" placeholder="123 Main St, Baton Rouge, LA 70816"></div>
-      <div class="form-row">
-        <div class="fg"><label>Phone Number <span class="req">*</span></label><input type="tel" id="r-phone" placeholder="(225) 555-0100"></div>
-        <div class="fg"><label>Email Address</label><input type="email" id="r-email" placeholder="john@email.com"></div>
+      <div class="fg"><label>Property Address <span class="req">*</span></label><input type="text" id="r-ad" placeholder="123 Main St, Baton Rouge, LA 70816"></div>
+      <div class="frow">
+        <div class="fg"><label>Phone Number <span class="req">*</span></label><input type="tel" id="r-ph" placeholder="(225) 555-0100"></div>
+        <div class="fg"><label>Email Address</label><input type="email" id="r-em" placeholder="john@email.com"></div>
       </div>
-      <div class="form-row">
-        <div class="fg"><label>Current Insurance Company</label><input type="text" id="r-company" placeholder="e.g. State Farm, Allstate..."></div>
-        <div class="fg"><label>Policy Number (optional)</label><input type="text" id="r-policy" placeholder="On your declarations page"></div>
+      <div class="frow">
+        <div class="fg"><label>Current Insurance Company</label><input type="text" id="r-co" placeholder="e.g. State Farm, Allstate..."></div>
+        <div class="fg"><label>Policy Number (optional)</label><input type="text" id="r-po" placeholder="On your declarations page"></div>
       </div>
-      <div class="form-row">
+      <div class="frow">
         <div class="fg"><label>Policy Renewal Month <span class="req">*</span></label>
-          <select id="r-renewal"><option value="">-- Select Month --</option><option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option><option>I'm not sure</option></select>
+          <select id="r-rn"><option value="">-- Select Month --</option><option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option><option>I'm not sure</option></select>
         </div>
-        <div class="fg"><label>Approx. Annual Premium</label><input type="text" id="r-premium" placeholder="e.g. $1,200/year"></div>
+        <div class="fg"><label>Approx. Annual Premium</label><input type="text" id="r-pr" placeholder="e.g. $1,200/year"></div>
       </div>
-      <div class="fg"><label>What concerns do you have about your current policy?</label><textarea id="r-notes" placeholder="Too expensive? Not sure if covered enough? Just want a second opinion?"></textarea></div>
-      <button class="form-submit" onclick="submitForm('review')">Get My Free Policy Review</button>
-      <p class="form-note">100% free, no obligation to switch.</p>
-      <div class="success" id="review-success"><h3>Review Request Received!</h3><p>Brian will reach out soon. For immediate help call (225) 610-3611.</p></div>
+      <div class="fg"><label>What concerns do you have about your current policy?</label><textarea id="r-nt" placeholder="Too expensive? Not sure if covered enough? Just want a second opinion?"></textarea></div>
+      <button class="fsbmt" id="r-sbmt">Get My Free Policy Review</button>
+      <p class="fnote">100% free, no obligation to switch.</p>
+      <div class="succ" id="r-succ"><h3>Review Request Received!</h3><p>Brian will reach out soon. For immediate help call (225) 610-3611.</p></div>
     </div>
   </div>
 </div>
 
-<!-- CONTACT -->
-
-<div class="contact-bar">
-  <img class="contact-photo" src="https://www.sfbcic.com/AgentPhotos/1735204.jpg" alt="Brian Hall" onerror="this.style.display='none'">
+<div class="ctbar">
+  <img class="cphoto" src="https://www.sfbcic.com/AgentPhotos/1735204.jpg" alt="Brian Hall" onerror="this.style.display='none'">
   <h3>Brian Hall</h3>
   <div class="ctitle">Louisiana Farm Bureau Insurance | Baton Rouge, LA</div>
   <div class="cline"></div>
-  <div class="contact-links">
+  <div class="clinks">
     <a href="tel:2256103611">Call: (225) 610-3611</a>
     <a href="mailto:bhall@sfbcic.com">Email: bhall@sfbcic.com</a>
   </div>
@@ -270,66 +228,33 @@ body { margin:0; padding:0; font-family:'Open Sans',Arial,sans-serif; background
 </div>
 
 <script>
-// TAB SWITCHING
-function showTab(name) {
-  document.getElementById('panel-chat').className = 'panel';
-  document.getElementById('panel-quote').className = 'panel';
-  document.getElementById('panel-review').className = 'panel';
-  document.getElementById('tab-chat').className = 'tab-btn';
-  document.getElementById('tab-quote').className = 'tab-btn';
-  document.getElementById('tab-review').className = 'tab-btn';
-  document.getElementById('panel-' + name).className = 'panel active';
-  document.getElementById('tab-' + name).className = 'tab-btn active';
-  window.scrollTo(0, 0);
-}
+(function() {
 
-// KNOWLEDGE BASE
 var KB = [
-  { k:['homeowner','home insurance','regular insurance','cover flood','standard policy'],
-    a:'Standard homeowners insurance does NOT cover flood damage - not even one dollar. Flood insurance is a completely separate policy you have to buy on its own. Use the Get a Quote tab above and Brian will get you covered!' },
-  { k:['cost','price','premium','how much','afford','rate','expensive'],
-    a:'In Louisiana, flood insurance averages $1,470 per year statewide. East Baton Rouge Parish averages about $655 per year, one of the more affordable parishes. The price depends on your flood zone, elevation, and coverage amount, so Brian can give you an exact quote for your property.' },
-  { k:['what is covered','what does it cover','what\'s covered','building coverage'],
-    a:'Flood insurance covers your home structure up to $250,000 including electrical, plumbing, HVAC, built-in appliances, water heaters, and cabinets. It also covers personal contents up to $100,000 like furniture, electronics, and clothing. Brian can make sure you have the right amounts.' },
-  { k:['not covered','exclusion','excluded','living expenses','temporary housing','car','vehicle','pool','deck','fence'],
-    a:'Flood insurance does NOT cover additional living expenses, temporary housing, cars, pools, decks, fences, landscaping, or most basement contents. Wind damage requires a separate policy. Use the tab above to send Brian a specific question.' },
-  { k:['waiting period','wait','when does it start','effective','take effect','30 day'],
-    a:'There is normally a 30-day waiting period before your NFIP policy kicks in, so do not wait until a storm is coming! The wait is waived if you buy at mortgage closing or after being newly mapped into a flood zone. Brian can walk you through the details.' },
-  { k:['flood zone','zone','sfha','high risk','zone a','zone v','zone x','zone b','zone c','map','firm','what zone'],
-    a:'FEMA designates flood zones on maps. Zone A and V are high-risk where flood insurance is required with a mortgage. Zone X is moderate to low risk where it is not required but strongly recommended. The 2016 floods proved Zone X homes can still flood badly. Brian can look up your zone for free.' },
-  { k:['do i need','need flood','required','mandatory','lender','mortgage','must i have'],
-    a:'It is required if you have a federally-backed mortgage and live in a high-risk flood zone. But even if not required, Louisiana\'s flood history makes it a smart investment since about 25 percent of all flood claims come from outside high-risk zones. Brian can tell you exactly what your situation requires.' },
-  { k:['2016','flood of 2016','august 2016','livingston','denham springs','historic flood'],
-    a:'The 2016 Louisiana floods were devastating with 146,000 homes damaged, $15 billion in losses, and 75 percent of Livingston Parish homes declared total losses. Many of those homes were in Zone X, considered low risk. That event is exactly why flood insurance matters even outside high-risk zones.' },
-  { k:['transfer','switch agent','change agent','move my policy','new agent','switch to'],
-    a:'Transferring your existing flood policy to Brian is completely free, takes just a few minutes, and causes zero lapse in your coverage. Your policy stays exactly the same with the same price, same coverage, and same renewal date. Use the Policy Review tab above to get started!' },
-  { k:['preferred risk','low risk policy','prp','affordable','zone x policy','cheaper'],
-    a:'If you are in a low-to-moderate risk zone, you may qualify for a Preferred Risk Policy with the same NFIP coverage at a much lower cost, around $400 to $600 per year in the Baton Rouge area. Brian can check if you qualify.' },
-  { k:['disaster','fema grant','federal assistance','government help','disaster relief'],
-    a:'Federal disaster assistance is NOT a substitute for flood insurance. It is usually a low-interest loan you have to repay, only available if the President declares a disaster, and averages just $2,704 compared to average NFIP payouts of $63,691. Do not rely on it.' },
-  { k:['private flood','nfip vs private','private insurance','difference between'],
-    a:'NFIP is the federal program with standardized coverage and max limits of $250,000 building and $100,000 contents. Private flood insurance can offer higher limits, shorter waiting periods, and sometimes lower rates. Brian can compare both options for your specific property.' },
-  { k:['basement','below grade','crawl space'],
-    a:'NFIP basement coverage is very limited. Finished walls, carpet, and furniture are generally NOT covered. What is covered includes furnaces, water heaters, electrical panels, and sump pumps. Brian can explain exactly what is protected in your specific situation.' },
-  { k:['renter','tenant','rent','apartment','landlord'],
-    a:'Yes! Renters can get flood insurance for their personal belongings up to $100,000. Your landlord\'s building coverage does not protect your stuff. If you are renting in Louisiana, a renters flood policy is affordable and worth it. Ask Brian for a quote!' },
-  { k:['new construction','new home','newly built','build a home','buying new'],
-    a:'New construction homes built to current Louisiana flood codes often qualify for lower flood insurance rates. If you are buying in Zone X, you may only pay $400 to $600 per year. Always verify the flood zone for any lot before buying. Brian can help you understand what you will pay.' },
-  { k:['claim','file a claim','after flood','damaged','adjuster','settlement'],
-    a:'After a flood, document all damage with photos before cleaning up, then contact your flood insurance company right away. An adjuster will be assigned to your claim. The process typically takes 30 to 90 days. Contact Brian if you need help navigating a claim.' },
-  { k:['elevation','bfe','base flood elevation','elevation certificate'],
-    a:'An elevation certificate documents your home\'s elevation compared to the Base Flood Elevation and can help lower your flood insurance premium. Brian can explain whether you need one and how to get it.' },
-  { k:['limit','maximum','max coverage','enough coverage','excess flood'],
-    a:'NFIP max limits are $250,000 for your home structure and $100,000 for contents. If your home is worth more, private excess flood insurance can pick up where NFIP leaves off. Brian can help you figure out if you need additional coverage.' },
-  { k:['hurricane','wind','storm surge','tropical'],
-    a:'Flood insurance covers water damage from hurricanes and storm surge, but NOT wind damage. You need a separate windstorm policy for that. Louisiana hurricane season runs June through November, so make sure you have both types of coverage.' },
-  { k:['contact','brian','speak','agent','talk','phone','email','office'],
-    a:'You can reach Brian Hall directly at (225) 610-3611 or bhall@sfbcic.com. His office is at 12035 Coursey Blvd, Baton Rouge, LA 70816. Or use the tabs above to request a quote or policy review - Brian responds personally!' },
-  { k:['hello','hi','hey','good morning','good afternoon','howdy','what can you do'],
-    a:'Hi there! I am Brian Hall\'s flood insurance assistant. I can answer common flood insurance questions, or you can use the tabs above to get a free quote or policy review. What would you like to know?' }
+  {k:['homeowner','home insurance','regular insurance','cover flood','standard policy'],a:'Standard homeowners insurance does NOT cover flood damage - not even one dollar. Flood insurance is a completely separate policy you have to buy on its own. Use the Get a Quote tab above and Brian will get you covered!'},
+  {k:['cost','price','premium','how much','afford','rate','expensive'],a:'In Louisiana, flood insurance averages $1,470 per year statewide. East Baton Rouge Parish averages about $655 per year, one of the more affordable parishes. The price depends on your flood zone, elevation, and coverage amount, so Brian can give you an exact quote for your property.'},
+  {k:['what is covered','what does it cover','building coverage'],a:'Flood insurance covers your home structure up to $250,000 including electrical, plumbing, HVAC, built-in appliances, water heaters, and cabinets. It also covers personal contents up to $100,000 like furniture, electronics, and clothing. Brian can make sure you have the right amounts.'},
+  {k:['not covered','exclusion','excluded','living expenses','temporary housing','car','vehicle','pool','deck','fence'],a:'Flood insurance does NOT cover additional living expenses, temporary housing, cars, pools, decks, fences, landscaping, or most basement contents. Wind damage requires a separate policy. Use the tab above to send Brian a specific question.'},
+  {k:['waiting period','wait','when does it start','effective','take effect','30 day'],a:'There is normally a 30-day waiting period before your NFIP policy kicks in, so do not wait until a storm is coming! The wait is waived if you buy at mortgage closing or after being newly mapped into a flood zone. Brian can walk you through the details.'},
+  {k:['flood zone','zone','sfha','high risk','zone a','zone v','zone x','zone b','zone c','map','firm','what zone'],a:'FEMA designates flood zones on maps. Zone A and V are high-risk where flood insurance is required with a mortgage. Zone X is moderate to low risk where it is not required but strongly recommended. The 2016 floods proved Zone X homes can still flood badly. Brian can look up your zone for free.'},
+  {k:['do i need','need flood','required','mandatory','lender','mortgage','must i have'],a:'It is required if you have a federally-backed mortgage and live in a high-risk flood zone. But even if not required, Louisiana flood history makes it a smart investment since about 25 percent of all flood claims come from outside high-risk zones. Brian can tell you exactly what your situation requires.'},
+  {k:['2016','flood of 2016','august 2016','livingston','denham springs','historic flood'],a:'The 2016 Louisiana floods were devastating with 146,000 homes damaged, $15 billion in losses, and 75 percent of Livingston Parish homes declared total losses. Many of those homes were in Zone X, considered low risk. That event is exactly why flood insurance matters even outside high-risk zones.'},
+  {k:['transfer','switch agent','change agent','move my policy','new agent','switch to'],a:'Transferring your existing flood policy to Brian is completely free, takes just a few minutes, and causes zero lapse in your coverage. Your policy stays exactly the same with the same price, same coverage, and same renewal date. Use the Policy Review tab above to get started!'},
+  {k:['preferred risk','low risk policy','prp','affordable','zone x policy','cheaper'],a:'If you are in a low-to-moderate risk zone, you may qualify for a Preferred Risk Policy with the same NFIP coverage at a much lower cost, around $400 to $600 per year in the Baton Rouge area. Brian can check if you qualify.'},
+  {k:['disaster','fema grant','federal assistance','government help','disaster relief'],a:'Federal disaster assistance is NOT a substitute for flood insurance. It is usually a low-interest loan you have to repay, only available if the President declares a disaster, and averages just $2,704 compared to average NFIP payouts of $63,691. Do not rely on it.'},
+  {k:['private flood','nfip vs private','private insurance','difference between'],a:'NFIP is the federal program with standardized coverage and max limits of $250,000 building and $100,000 contents. Private flood insurance can offer higher limits, shorter waiting periods, and sometimes lower rates. Brian can compare both options for your specific property.'},
+  {k:['basement','below grade','crawl space'],a:'NFIP basement coverage is very limited. Finished walls, carpet, and furniture are generally NOT covered. What is covered includes furnaces, water heaters, electrical panels, and sump pumps. Brian can explain exactly what is protected in your specific situation.'},
+  {k:['renter','tenant','rent','apartment','landlord'],a:'Yes! Renters can get flood insurance for their personal belongings up to $100,000. Your landlord building coverage does not protect your stuff. If you are renting in Louisiana, a renters flood policy is affordable and worth it. Ask Brian for a quote!'},
+  {k:['new construction','new home','newly built','build a home','buying new'],a:'New construction homes built to current Louisiana flood codes often qualify for lower flood insurance rates. If you are buying in Zone X, you may only pay $400 to $600 per year. Always verify the flood zone for any lot before buying. Brian can help you understand what you will pay.'},
+  {k:['claim','file a claim','after flood','damaged','adjuster','settlement'],a:'After a flood, document all damage with photos before cleaning up, then contact your flood insurance company right away. An adjuster will be assigned to your claim. The process typically takes 30 to 90 days. Contact Brian if you need help navigating a claim.'},
+  {k:['elevation','bfe','base flood elevation','elevation certificate'],a:'An elevation certificate documents your home elevation compared to the Base Flood Elevation and can help lower your flood insurance premium. Brian can explain whether you need one and how to get it.'},
+  {k:['limit','maximum','max coverage','enough coverage','excess flood'],a:'NFIP max limits are $250,000 for your home structure and $100,000 for contents. If your home is worth more, private excess flood insurance can pick up where NFIP leaves off. Brian can help you figure out if you need additional coverage.'},
+  {k:['hurricane','wind','storm surge','tropical'],a:'Flood insurance covers water damage from hurricanes and storm surge, but NOT wind damage. You need a separate windstorm policy for that. Louisiana hurricane season runs June through November, so make sure you have both types of coverage.'},
+  {k:['contact','brian','speak','agent','talk','phone','email','office'],a:'You can reach Brian Hall directly at (225) 610-3611 or bhall@sfbcic.com. His office is at 12035 Coursey Blvd, Baton Rouge, LA 70816. Or use the tabs above to request a quote or policy review - Brian responds personally!'},
+  {k:['hello','hi','hey','good morning','good afternoon','howdy'],a:'Hi there! I am Brian Hall flood insurance assistant. I can answer common flood insurance questions, or you can use the tabs above to get a free quote or policy review. What would you like to know?'}
 ];
 
-function findAnswer(txt) {
+function findAns(txt) {
   var low = txt.toLowerCase();
   for (var i = 0; i < KB.length; i++) {
     for (var j = 0; j < KB[i].k.length; j++) {
@@ -339,96 +264,159 @@ function findAnswer(txt) {
   return null;
 }
 
-// ADD MESSAGE
-function addMsg(text, role) {
-  var c = document.getElementById('chatMsgs');
+function addMsg(txt, role) {
+  var c = document.getElementById('cmsgs');
   var d = document.createElement('div');
-  d.className = 'msg ' + role;
-  var avClass = (role === 'bot') ? 'av-bot' : 'av-user';
-  var avText  = (role === 'bot') ? 'BH' : 'You';
-  d.innerHTML = '<div class="msg-av ' + avClass + '">' + avText + '</div><div class="msg-bubble">' + text + '</div>';
+  d.className = 'cmsg ' + role;
+  var av = document.createElement('div');
+  av.className = 'cav ' + role;
+  av.textContent = role === 'b' ? 'BH' : 'You';
+  var bb = document.createElement('div');
+  bb.className = 'cbbl';
+  bb.textContent = txt;
+  d.appendChild(av);
+  d.appendChild(bb);
   c.appendChild(d);
   c.scrollTop = c.scrollHeight;
 }
 
-// TYPING
 function showTyping() {
-  var c = document.getElementById('chatMsgs');
+  var c = document.getElementById('cmsgs');
   var d = document.createElement('div');
-  d.className = 'typing'; d.id = 'typing';
-  d.innerHTML = '<div class="msg-av av-bot">BH</div><div class="typing-dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>';
+  d.className = 'typing'; d.id = 'typ';
+  var av = document.createElement('div');
+  av.className = 'cav b'; av.textContent = 'BH';
+  var td = document.createElement('div');
+  td.className = 'tdots';
+  td.innerHTML = '<div class="dot"></div><div class="dot"></div><div class="dot"></div>';
+  d.appendChild(av); d.appendChild(td);
   c.appendChild(d);
   c.scrollTop = c.scrollHeight;
 }
+
 function hideTyping() {
-  var el = document.getElementById('typing');
+  var el = document.getElementById('typ');
   if (el) el.parentNode.removeChild(el);
 }
 
-// SEND FORM
 function showSendForm(prefill) {
-  var c = document.getElementById('chatMsgs');
+  var c = document.getElementById('cmsgs');
   var d = document.createElement('div');
-  d.className = 'msg bot'; d.id = 'sendFormMsg';
-  d.innerHTML = '<div class="msg-av av-bot">BH</div><div class="send-form-wrap"><p>Send Brian your question - he will reply personally:</p><textarea id="sq-q" placeholder="Your question...">' + (prefill||'') + '</textarea><div class="send-row"><input id="sq-n" placeholder="Your name"><input id="sq-p" placeholder="Your phone or email"></div><button class="send-submit" onclick="doSubmitQ()">Send to Brian</button></div>';
-
-c.appendChild(d);
-c.scrollTop = c.scrollHeight;
+  d.className = 'cmsg b'; d.id = 'sfmsg';
+  var av = document.createElement('div');
+  av.className = 'cav b'; av.textContent = 'BH';
+  var wrap = document.createElement('div');
+  wrap.className = 'sfwrap';
+  var p = document.createElement('p');
+  p.textContent = 'Send Brian your question - he will reply personally:';
+  var ta = document.createElement('textarea');
+  ta.id = 'sf-q'; ta.placeholder = 'Your question...'; ta.textContent = prefill || '';
+  var row = document.createElement('div');
+  row.className = 'sfrow';
+  var n = document.createElement('input');
+  n.id = 'sf-n'; n.placeholder = 'Your name';
+  var ph = document.createElement('input');
+  ph.id = 'sf-p'; ph.placeholder = 'Your phone or email';
+  row.appendChild(n); row.appendChild(ph);
+  var btn = document.createElement('button');
+  btn.className = 'sfsbmt'; btn.textContent = 'Send to Brian';
+  btn.addEventListener('click', function() {
+    var q = document.getElementById('sf-q').value.trim();
+    var nm = document.getElementById('sf-n').value.trim();
+    var pv = document.getElementById('sf-p').value.trim();
+    if (!q || !nm || !pv) { alert('Please fill in all three fields.'); return; }
+    var f = document.getElementById('sfmsg');
+    if (f) f.parentNode.removeChild(f);
+    addMsg('Got it ' + nm + '! Brian received your question and will get back to you at ' + pv + ' soon. Thanks for reaching out!', 'b');
+  });
+  wrap.appendChild(p); wrap.appendChild(ta); wrap.appendChild(row); wrap.appendChild(btn);
+  d.appendChild(av); d.appendChild(wrap);
+  c.appendChild(d);
+  c.scrollTop = c.scrollHeight;
 }
 
-function doSubmitQ() {
-var q = document.getElementById(‘sq-q’) ? document.getElementById(‘sq-q’).value.trim() : ‘’;
-var n = document.getElementById(‘sq-n’) ? document.getElementById(‘sq-n’).value.trim() : ‘’;
-var p = document.getElementById(‘sq-p’) ? document.getElementById(‘sq-p’).value.trim() : ‘’;
-if (!q || !n || !p) { alert(‘Please fill in all three fields.’); return; }
-var f = document.getElementById(‘sendFormMsg’);
-if (f) f.parentNode.removeChild(f);
-addMsg(’Got it ’ + n + ‘! Brian received your question and will get back to you at ’ + p + ’ soon. Thanks for reaching out!’, ‘bot’);
-}
-
-// MAIN SEND
 function doSend() {
-var inp = document.getElementById(‘chatInput’);
-var txt = inp.value.trim();
-if (!txt) return;
-addMsg(txt, ‘user’);
-inp.value = ‘’;
-inp.style.height = ‘auto’;
-document.getElementById(‘sendBtn’).disabled = true;
-showTyping();
-setTimeout(function() {
-hideTyping();
-var ans = findAnswer(txt);
-if (ans) {
-addMsg(ans, ‘bot’);
-} else {
-addMsg(‘I do not have a specific answer for that one, but Brian will! Send him your question below and he will get back to you personally.’, ‘bot’);
-showSendForm(txt);
-}
-document.getElementById(‘sendBtn’).disabled = false;
-}, 700 + Math.floor(Math.random() * 500));
+  var inp = document.getElementById('cin');
+  var txt = inp.value.trim();
+  if (!txt) return;
+  addMsg(txt, 'u');
+  inp.value = '';
+  inp.style.height = 'auto';
+  document.getElementById('csnd').disabled = true;
+  showTyping();
+  setTimeout(function() {
+    hideTyping();
+    var ans = findAns(txt);
+    if (ans) {
+      addMsg(ans, 'b');
+    } else {
+      addMsg('I do not have a specific answer for that one, but Brian will! Send him your question below and he will get back to you personally.', 'b');
+      showSendForm(txt);
+    }
+    document.getElementById('csnd').disabled = false;
+  }, 700 + Math.floor(Math.random() * 500));
 }
 
-function ask(q) {
-document.getElementById(‘chatInput’).value = q;
-doSend();
+// TAB SWITCHING
+function showTab(name) {
+  var tabs = ['chat','quote','review'];
+  for (var i = 0; i < tabs.length; i++) {
+    var t = document.getElementById('t-' + tabs[i]);
+    var p = document.getElementById('p-' + tabs[i]);
+    if (tabs[i] === name) {
+      t.className = 'tbtn on';
+      p.className = 'pnl on';
+    } else {
+      t.className = 'tbtn';
+      p.className = 'pnl';
+    }
+  }
+  window.scrollTo(0, 0);
 }
 
 // FORM SUBMIT
-function submitForm(type) {
-var p = (type === ‘quote’) ? ‘q’ : ‘r’;
-var fn = document.getElementById(p + ‘-fname’).value.trim();
-var ln = document.getElementById(p + ‘-lname’).value.trim();
-var ph = document.getElementById(p + ‘-phone’).value.trim();
-var ad = document.getElementById(p + ‘-address’).value.trim();
-if (!fn || !ln || !ph || !ad) {
-alert(‘Please fill in all required fields marked with *.’);
-return;
+function doForm(type) {
+  var p = type === 'quote' ? 'q' : 'r';
+  var fn = document.getElementById(p + '-fn').value.trim();
+  var ln = document.getElementById(p + '-ln').value.trim();
+  var ph = document.getElementById(p + '-ph').value.trim();
+  var ad = document.getElementById(p + '-ad').value.trim();
+  if (!fn || !ln || !ph || !ad) {
+    alert('Please fill in all required fields marked with *.');
+    return;
+  }
+  var s = document.getElementById(p === 'q' ? 'q-succ' : 'r-succ');
+  s.style.display = 'block';
+  s.scrollIntoView({behavior:'smooth',block:'center'});
 }
-var s = document.getElementById(type + ‘-success’);
-s.style.display = ‘block’;
-s.scrollIntoView({ behavior:‘smooth’, block:‘center’ });
+
+// ATTACH ALL EVENTS AFTER DOM LOADS
+document.getElementById('t-chat').addEventListener('click', function() { showTab('chat'); });
+document.getElementById('t-quote').addEventListener('click', function() { showTab('quote'); });
+document.getElementById('t-review').addEventListener('click', function() { showTab('review'); });
+document.getElementById('csnd').addEventListener('click', doSend);
+document.getElementById('cin').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); doSend(); }
+});
+document.getElementById('cin').addEventListener('input', function() {
+  this.style.height = 'auto';
+  this.style.height = Math.min(this.scrollHeight, 90) + 'px';
+});
+document.getElementById('q-sbmt').addEventListener('click', function() { doForm('quote'); });
+document.getElementById('r-sbmt').addEventListener('click', function() { doForm('review'); });
+
+var qbs = document.querySelectorAll('.qb');
+for (var i = 0; i < qbs.length; i++) {
+  (function(btn) {
+    btn.addEventListener('click', function() {
+      var q = btn.getAttribute('data-q');
+      document.getElementById('cin').value = q;
+      doSend();
+    });
+  })(qbs[i]);
 }
+
+})();
 </script>
 
 </body>
