@@ -18,6 +18,8 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 .htxt p{font-size:13px;color:rgba(255,255,255,.8);margin:0 0 10px;line-height:1.5}
 .tags{display:flex;flex-wrap:wrap;gap:6px}
 .tag{background:rgba(200,146,42,.2);border:1px solid rgba(200,146,42,.5);color:#f0c060;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px}
+.proof{background:#fdf6ec;border-bottom:2px solid #c8922a;padding:8px 16px;text-align:center;font-size:12px;color:#7b1c2e;font-weight:600}
+.proof span{color:#c8922a}
 .tabs-bar{background:#fff;border-bottom:2px solid #ddc8c8;position:sticky;top:0;z-index:99;box-shadow:0 2px 8px rgba(0,0,0,.08)}
 .tabs-in{max-width:800px;margin:0 auto;display:flex}
 .tbtn{flex:1;padding:14px 8px;text-align:center;cursor:pointer;font-weight:600;font-size:13px;color:#7a5a5a;border:none;background:none;border-bottom:3px solid transparent;font-family:'Open Sans',Arial,sans-serif}
@@ -27,7 +29,7 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 .cintro{background:#7b1c2e;color:#fff;border-radius:10px;padding:14px 16px;margin-bottom:14px;font-size:13px;line-height:1.6}
 .cintro strong{color:#f0c060}
 .cbox{background:#fff;border-radius:10px;box-shadow:0 3px 16px rgba(0,0,0,.08);border:1px solid #ddc8c8;overflow:hidden}
-.cmsgs{height:360px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.cmsgs{height:380px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
 .cmsg{display:flex;gap:8px}
 .cmsg.u{flex-direction:row-reverse}
 .cav{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#fff;flex-shrink:0;margin-top:2px}
@@ -36,12 +38,14 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 .cbbl{max-width:80%;padding:8px 12px;border-radius:10px;font-size:13px;line-height:1.6}
 .cmsg.b .cbbl{background:#f9edef;color:#2a1a1a;border-bottom-left-radius:3px}
 .cmsg.u .cbbl{background:#7b1c2e;color:#fff;border-bottom-right-radius:3px}
-.sfwrap{background:#fdf6ec;border:1.5px solid #c8922a;border-radius:10px;padding:12px;margin-top:4px;max-width:80%}
-.sfwrap p{font-size:12px;font-weight:700;color:#2a1a1a;margin:0 0 8px}
-.sfwrap textarea{width:100%;border:1.5px solid #ddc8c8;border-radius:7px;padding:7px 10px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;resize:none;min-height:55px;outline:none;box-sizing:border-box}
-.sfrow{display:flex;gap:6px;margin-top:6px}
-.sfrow input{flex:1;border:1.5px solid #ddc8c8;border-radius:7px;padding:7px 9px;font-family:'Open Sans',Arial,sans-serif;font-size:12px;outline:none}
-.sfsbmt{background:#7b1c2e;color:#fff;border:none;border-radius:7px;padding:7px 14px;font-family:'Open Sans',Arial,sans-serif;font-size:12px;font-weight:700;cursor:pointer;margin-top:6px;width:100%}
+.qrep{background:#fdf6ec;border:1.5px solid #c8922a;border-radius:10px;padding:10px;margin-top:6px;max-width:80%}
+.qrep p{font-size:12px;font-weight:700;color:#7b1c2e;margin:0 0 8px}
+.qrep .qbtns-inline{display:flex;flex-direction:column;gap:5px}
+.qrep button{background:#fff;border:1.5px solid #c8922a;color:#7b1c2e;padding:7px 10px;border-radius:7px;font-family:'Open Sans',Arial,sans-serif;font-size:12px;font-weight:600;cursor:pointer;text-align:left}
+.qrep button:active{background:#7b1c2e;color:#fff}
+.qrep input{width:100%;border:1.5px solid #ddc8c8;border-radius:7px;padding:8px 10px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;outline:none;box-sizing:border-box;margin-bottom:6px}
+.qrep input:focus{border-color:#7b1c2e}
+.qrep .submit{background:#7b1c2e;color:#fff;border:none;width:100%;padding:8px;border-radius:7px;font-weight:700;font-size:13px}
 .typing{display:flex;gap:8px}
 .tdots{background:#f9edef;padding:10px 14px;border-radius:10px;display:flex;gap:4px;align-items:center}
 .dot{width:6px;height:6px;background:#7b1c2e;border-radius:50%;opacity:.7;animation:blink 1.2s infinite}
@@ -97,7 +101,7 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
     <div class="htxt">
       <span class="eyebrow">Louisiana Farm Bureau Insurance</span>
       <h1>Brian Hall<br><span>Flood Insurance Expert</span></h1>
-      <p>Get quick answers to your flood insurance questions, request a free quote, or have your current policy reviewed. Local agent, real answers, no pressure.</p>
+      <p>Get quick answers, request a free quote, or have your current policy reviewed. Local agent, real answers, zero pressure.</p>
       <div class="tags">
         <span class="tag">NFIP Specialist</span>
         <span class="tag">Louisiana Licensed</span>
@@ -106,6 +110,10 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
       </div>
     </div>
   </div>
+</div>
+
+<div class="proof">
+  <span>★★★★★</span> Helping Louisiana families protect their homes since the 2016 floods
 </div>
 
 <div class="tabs-bar">
@@ -117,13 +125,10 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 </div>
 
 <div class="pnl on" id="p-chat">
-  <div class="cintro">Ask any flood insurance question and get a straight answer. <strong>Don't see what you need?</strong> Send Brian a question directly and he will get back to you personally.</div>
+  <div class="cintro">Ask any flood insurance question and get a straight answer. <strong>Don't see what you need?</strong> Send Brian a question directly and he'll respond personally.</div>
   <div class="cbox">
     <div class="cmsgs" id="cmsgs">
-      <div class="cmsg b">
-        <div class="cav b">BH</div>
-        <div class="cbbl">Hey there! I am Brian Hall's flood insurance assistant. I am here to give you straight answers about flood insurance — no fluff, no pressure. Ask me anything or tap one of the questions below to get started!</div>
-      </div>
+      <!-- messages added dynamically -->
     </div>
     <div class="qwrap">
       <div class="qlbl">Tap a question to get started</div>
@@ -233,109 +238,141 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 
 var FORMSPREE = 'https://formspree.io/f/meenogzy';
 
+// USER STATE - tracks the conversation context
+var user = {
+  name: '',
+  hasName: false,
+  questionsAsked: 0,
+  leadCaptured: false
+};
+
 var KB = [
-  // WHAT DOES FLOOD INSURANCE DO
-  {k:['what does flood insurance do','what does it do','what is flood insurance','explain flood insurance','how does flood insurance work','what does flood','flood insurance do'],
-  a:'Think of your standard home insurance like health insurance for your house — it covers unexpected things that happen inside, like a pipe bursting and flooding your kitchen. Flood insurance is different. It is specialized protection for when water comes in from the outside — heavy rain, rising bayous, storm surge. If rising groundwater flows under your front door, standard insurance will not touch it, but flood insurance will. Want me to get Brian to walk you through your specific situation? Just tap the Get a Quote tab above.'},
+  {k:['what does flood insurance do','what does it do','what is flood insurance','explain flood insurance','how does flood insurance work','flood insurance do'],
+  a:'Think of your standard home insurance like health insurance for your house — it covers unexpected things that happen INSIDE, like a pipe bursting and flooding your kitchen. Flood insurance is different. It is specialized protection for when water comes in from the OUTSIDE — heavy rain, rising bayous, storm surge. If rising groundwater flows under your front door, standard insurance will not touch it, but flood insurance will.',
+  followup:'Want me to find out what flood insurance would actually cost for your specific property? It is usually less than people expect.',
+  fuType:'quote'},
 
-  // HOMEOWNERS DOESN'T COVER FLOODS
   {k:['homeowner','home insurance','regular insurance','cover flood','standard policy','does my insurance'],
-  a:'Nope — and this surprises a lot of people. Your standard homeowners policy covers things that happen inside your home, like a burst pipe. But if water rises from the outside and comes in through your doors or foundation, that is a flood — and your homeowners policy will not pay a dime. You need a separate flood policy for that. Want Brian to get you a quick quote?'},
+  a:'Nope — and this surprises a lot of people. Your standard homeowners policy covers things that happen inside your home, like a burst pipe. But if water rises from the outside and comes in through your doors or foundation, that is a flood — and your homeowners policy will not pay a dime. You need a separate flood policy for that.',
+  followup:'Want Brian to send you a quick flood quote for your address? Most properties run between $400 and $700 a year.',
+  fuType:'quote'},
 
-  // COST
   {k:['cost','price','premium','how much','afford','rate','expensive','what do i pay'],
-  a:'In Louisiana, flood insurance averages around $1,470 per year statewide, but East Baton Rouge Parish averages closer to $655 per year. If you are in a lower-risk zone, a Preferred Risk Policy can run as low as $400 to $600 a year — honestly less than most people expect. The exact number depends on your property, flood zone, and coverage level. Brian can give you a real number for your specific address. Tap Get a Quote above!'},
+  a:'In Louisiana, flood insurance averages around $1,470 per year statewide, but East Baton Rouge Parish averages closer to $655 per year. If you are in a lower-risk zone, a Preferred Risk Policy can run as low as $400 to $600 a year — honestly less than most people expect.',
+  followup:'Want an exact quote for your specific address? Just share where you are and Brian will run the real numbers.',
+  fuType:'quote'},
 
-  // WHAT IS COVERED
   {k:['what is covered','what does it cover','covered','building coverage','structure','contents','personal property','what will it pay'],
-  a:'A flood policy covers two things: your building and your stuff. Building coverage (up to $250,000) includes your foundation, electrical, plumbing, HVAC, water heater, built-in appliances, and cabinets. Contents coverage (up to $100,000) covers your furniture, electronics, clothing, and appliances like your washer and dryer. Brian can make sure you have the right amounts for your home.'},
+  a:'A flood policy covers two things: your building and your stuff. Building coverage (up to $250,000) includes your foundation, electrical, plumbing, HVAC, water heater, built-in appliances, and cabinets. Contents coverage (up to $100,000) covers your furniture, electronics, clothing, and appliances like your washer and dryer.',
+  followup:'Want Brian to make sure you have the right coverage amounts for your home? He can review what you have or set you up if you do not have a policy yet.',
+  fuType:'review'},
 
-  // NOT COVERED
   {k:['not covered','exclusion','excluded','what won\'t','won\'t cover','doesn\'t cover','living expenses','temporary','car','vehicle','pool','deck','fence','landscaping'],
-  a:'Good question to ask upfront. Flood insurance does NOT cover: your car (that is auto insurance), temporary housing if you have to move out, pools, decks, fences, landscaping, or most finished basement contents. Wind damage is also separate — that is a windstorm policy. The good news is Brian can help you make sure all your bases are covered. Just reach out!'},
+  a:'Good question to ask upfront. Flood insurance does NOT cover: your car (that is auto insurance), temporary housing if you have to move out, pools, decks, fences, landscaping, or most finished basement contents. Wind damage is also separate — that is a windstorm policy.',
+  followup:'Want Brian to make sure ALL your coverage gaps are sealed up? He can do a free policy review and tell you exactly where you are exposed.',
+  fuType:'review'},
 
-  // NEVER FLOODED
-  {k:['never flooded','haven\'t flooded','don\'t need it','waste of money','low risk','not going to flood','probably won\'t','unlikely to flood','i\'m fine'],
-  a:'I hear that a lot — and honestly, most people say the same thing right up until they file a claim. Here is the thing: insurance is not a bet on the past, it is protection against what you hope never happens. In South Louisiana, our maps and weather cannot keep up with each other. The storm that misses you today could shift two inches east tomorrow. Ask anyone in Denham Springs who was in Zone X in 2016 — their lender told them they did not need it. Many of them lost everything. The question is simple: if your home floods tomorrow, do you want 100% of that bill to fall on you? Brian can show you what a policy actually costs for your property — it is probably a lot less than you think.'},
+  {k:['never flooded','haven\'t flooded','don\'t need it','waste of money','low risk','not going to flood','probably won\'t','unlikely to flood'],
+  a:'I hear that a lot — and honestly, most people say the same thing right up until they file a claim. Insurance is not a bet on the past, it is protection against what you hope never happens. Ask anyone in Denham Springs who was in Zone X in 2016 — their lender told them they did not need it. Many of them lost everything. The question is simple: if your home floods tomorrow, do you want 100% of that bill to fall on you?',
+  followup:'Brian can show you what a policy actually costs for your property. It is usually a lot less than people expect — under $50/month for many homes.',
+  fuType:'quote'},
 
-  // 2016 FLOODS
   {k:['2016','flood of 2016','august 2016','livingston','denham springs','historic','remember the flood','baton rouge flood'],
-  a:'In Baton Rouge, I barely have to finish that sentence. The August 2016 flood damaged 146,000 homes and caused $15 billion in losses. The part that still stings? Most of those homes were in Zone X — the so-called lowest risk zone. Lenders told them they did not need flood insurance. Some agents called it a waste of money. One inch of water causes an estimated $25,000 in damage according to FEMA. Those families had no flood insurance and no real help. That event changed how a lot of Louisiana homeowners think about this — and it should.'},
+  a:'In Baton Rouge, I barely have to finish that sentence. The August 2016 flood damaged 146,000 homes and caused $15 billion in losses. The part that still stings? Most of those homes were in Zone X — the so-called lowest risk zone. One inch of water causes $25,000 in damage. Those families had no flood insurance and no real help.',
+  followup:'Are you in a Zone X area? If so, Brian can probably get you covered for less than $50/month — it is some of the cheapest peace of mind in Louisiana.',
+  fuType:'quote'},
 
-  // WAITING PERIOD
   {k:['waiting period','wait','when does it start','effective','take effect','30 day','when will i be covered','how long'],
-  a:'There is normally a 30-day waiting period before your NFIP policy kicks in — so please do not wait until a storm is in the Gulf to call me. The wait is waived if you are buying at mortgage closing or if your property was just remapped into a higher risk zone. Some private flood policies have shorter waiting periods of 10 to 15 days. Either way, the best time to get covered is before you need it.'},
+  a:'There is normally a 30-day waiting period before your NFIP policy kicks in — so please do not wait until a storm is in the Gulf to call. The wait is waived if you are buying at mortgage closing or if your property was just remapped into a higher risk zone. Some private flood policies have shorter waiting periods of 10 to 15 days.',
+  followup:'With hurricane season approaching, this is the right time to get something in place. Want Brian to start your policy now so you are covered before the next storm?',
+  fuType:'quote'},
 
-  // FLOOD ZONES
   {k:['flood zone','zone','sfha','high risk','zone a','zone v','zone x','zone b','zone c','map','firm','what zone','am i in a','which zone'],
-  a:'FEMA maps Louisiana into flood zones. Zone A and V are high-risk — flood insurance is required if you have a federally-backed mortgage. Zone X is moderate to low risk — not required, but 2016 showed us that does not mean safe. About 25 percent of all flood claims come from outside high-risk zones. Brian can look up your exact flood zone for free — just send him your address using the Get a Quote tab.'},
+  a:'FEMA maps Louisiana into flood zones. Zone A and V are high-risk — flood insurance is required if you have a federally-backed mortgage. Zone X is moderate to low risk — not required, but 2016 showed us that does not mean safe. About 25 percent of all flood claims come from outside high-risk zones.',
+  followup:'Want Brian to look up your exact flood zone? Free service. Just share your address and he will tell you what zone you are in and what coverage makes sense.',
+  fuType:'quote'},
 
-  // DO I NEED IT
   {k:['do i need','need flood','required','mandatory','lender','mortgage','must i have','is it required','should i get'],
-  a:'It is legally required if you have a federally-backed mortgage and live in a high-risk flood zone. But here is what I tell everyone: the lender requirement and your actual risk are two different things. Just because your lender does not require it does not mean you are safe. In South Louisiana especially, Brian recommends every homeowner at least understand what a policy would cost for their property before deciding. It is usually a lot more affordable than people expect.'},
+  a:'It is legally required if you have a federally-backed mortgage and live in a high-risk flood zone. But here is what I tell everyone: the lender requirement and your actual risk are two different things. Just because your lender does not require it does not mean you are safe.',
+  followup:'Want Brian to tell you exactly what your situation requires? He will check your zone and give you a straight answer.',
+  fuType:'quote'},
 
-  // TRANSFER
   {k:['transfer','switch agent','change agent','move my policy','new agent','switch to brian','transfer to brian','can i switch','change my agent'],
-  a:'Transferring your existing flood policy to Brian is one of the easiest things in insurance. It is completely free, takes just a few minutes of paperwork, and your coverage never lapses — not even for a day. Same policy, same price, same renewal date. You just get Brian as your agent going forward, which means a local person who actually answers the phone. Tap the Policy Review tab above to get started!'},
+  a:'Transferring your existing flood policy to Brian is one of the easiest things in insurance. It is completely free, takes just a few minutes of paperwork, and your coverage never lapses — not even for a day. Same policy, same price, same renewal date. You just get Brian as your agent going forward.',
+  followup:'Want to start the transfer? It takes about 5 minutes and Brian handles all the paperwork.',
+  fuType:'review'},
 
-  // PREFERRED RISK
   {k:['preferred risk','low risk policy','prp','affordable','zone x policy','cheaper policy','discount','lower cost'],
-  a:'If your property is in a moderate to low risk zone — Zone X, B, or C — you may qualify for a Preferred Risk Policy. It gives you the same solid NFIP coverage at a significantly lower premium, sometimes as low as $400 to $600 a year in the Baton Rouge area. It is honestly one of the best deals in insurance. Brian can check in about two minutes whether your property qualifies.'},
+  a:'If your property is in a moderate to low risk zone — Zone X, B, or C — you may qualify for a Preferred Risk Policy. It gives you the same solid NFIP coverage at a significantly lower premium, sometimes as low as $400 to $600 a year in the Baton Rouge area. It is honestly one of the best deals in insurance.',
+  followup:'Want Brian to check if your property qualifies? Takes about 2 minutes.',
+  fuType:'quote'},
 
-  // FEDERAL DISASTER
-  {k:['disaster','fema grant','federal assistance','government help','disaster relief','fema will help','government will pay','president declare'],
-  a:'This is one of the biggest myths out there. Federal disaster assistance is NOT free money — it is usually a low-interest loan that you have to pay back, and it is only available if the President formally declares a disaster in your area. The average payout is around $2,704. The average NFIP flood claim payout is $63,691. That is a massive difference. Do not gamble your home on a presidential declaration.'},
+  {k:['disaster','fema grant','federal assistance','government help','disaster relief','fema will help'],
+  a:'This is one of the biggest myths out there. Federal disaster assistance is NOT free money — it is usually a low-interest loan that you have to pay back, and it is only available if the President formally declares a disaster in your area. The average payout is around $2,704. The average NFIP flood claim payout is $63,691.',
+  followup:'Do not gamble your home on a presidential declaration. Want Brian to set you up with real coverage for less than $50/month?',
+  fuType:'quote'},
 
-  // NFIP VS PRIVATE
   {k:['private flood','nfip vs private','private insurance','difference between','which is better','private vs nfip'],
-  a:'NFIP is the federal program — standardized coverage, rates are the same no matter who sells it, with max limits of $250,000 for your building and $100,000 for contents. Private flood insurance can offer higher limits, shorter waiting periods, and sometimes lower rates, but not every property in Louisiana qualifies. Brian can compare both options for your specific address and tell you which makes more sense.'},
+  a:'NFIP is the federal program — standardized coverage, rates are the same no matter who sells it, with max limits of $250,000 for your building and $100,000 for contents. Private flood insurance can offer higher limits, shorter waiting periods, and sometimes lower rates, but not every property in Louisiana qualifies.',
+  followup:'Want Brian to compare both options for your specific address and tell you which makes more sense?',
+  fuType:'quote'},
 
-  // BASEMENT
   {k:['basement','below grade','crawl space'],
-  a:'NFIP basement coverage is very limited. Finished walls, flooring, carpet, and furniture in a basement are generally not covered. What is covered down there: your furnace, water heater, electrical panel, and sump pump. Most Louisiana homes do not have basements, but if yours does Brian can walk you through exactly what is and is not protected.'},
+  a:'NFIP basement coverage is very limited. Finished walls, flooring, carpet, and furniture in a basement are generally not covered. What is covered: your furnace, water heater, electrical panel, and sump pump.',
+  followup:'Want Brian to walk through exactly what is and is not protected at your specific property?',
+  fuType:'review'},
 
-  // RENTERS
   {k:['renter','tenant','rent','apartment','landlord','i rent','do renters'],
-  a:'Absolutely — renters can and should get flood insurance. Your landlord\'s building policy covers the structure, but it does not cover a single thing you own. NFIP offers contents-only policies for renters up to $100,000. In Louisiana, it is one of the most affordable and overlooked policies out there. Ask Brian for a quote!'},
+  a:'Absolutely — renters can and should get flood insurance. Your landlord building policy covers the structure, but it does not cover a single thing you own. NFIP offers contents-only policies for renters up to $100,000.',
+  followup:'In Louisiana, renters flood policies are usually under $200/year. Want Brian to send you a quote?',
+  fuType:'quote'},
 
-  // NEW CONSTRUCTION
   {k:['new construction','new home','newly built','building a home','buying new','new build','just built'],
-  a:'Great timing to ask this. New construction homes built to current Louisiana flood codes often qualify for significantly lower flood insurance rates. If you are buying in Zone X, you could pay as little as $400 to $600 per year. Always ask about the flood zone and elevation certificate before you close on any lot — it can affect your insurance costs for as long as you own the home. Brian is happy to walk you through it before you sign anything.'},
+  a:'New construction homes built to current Louisiana flood codes often qualify for significantly lower flood insurance rates. If you are buying in Zone X, you could pay as little as $400 to $600 per year. Always ask about the flood zone and elevation certificate before you close on any lot.',
+  followup:'Want Brian to walk you through the flood insurance side of your purchase before you sign anything?',
+  fuType:'quote'},
 
-  // CLAIMS
   {k:['claim','file a claim','after flood','flood damage','adjuster','settlement','what do i do if','if i flood'],
-  a:'First thing: document everything with photos and video before you touch anything or start cleaning up. Then contact your flood insurance company immediately to start the claim. An adjuster will be assigned to your case. The process typically takes 30 to 90 days. Brian can help you understand what to expect and make sure you get everything you are entitled to under your policy.'},
+  a:'First thing: document everything with photos and video before you touch anything or start cleaning up. Then contact your flood insurance company immediately. An adjuster will be assigned. The process typically takes 30 to 90 days.',
+  followup:'Are you dealing with a claim right now? Brian can help you navigate it. Or if you do not have a policy yet and want to make sure you are covered, he can set that up.',
+  fuType:'quote'},
 
-  // ELEVATION CERTIFICATE
-  {k:['elevation','bfe','base flood elevation','elevation certificate','certificate'],
-  a:'An elevation certificate is a document that shows how high your home sits compared to the Base Flood Elevation in your area. It can make a significant difference in your flood insurance premium — sometimes saving hundreds of dollars a year. Brian can explain whether you need one for your property and how to get one.'},
+  {k:['elevation','bfe','base flood elevation','elevation certificate'],
+  a:'An elevation certificate documents how high your home sits compared to the Base Flood Elevation. It can make a significant difference in your premium — sometimes saving hundreds of dollars a year.',
+  followup:'Want Brian to check if getting one would lower your premium? It is a free assessment.',
+  fuType:'review'},
 
-  // COVERAGE LIMITS
   {k:['limit','maximum','max coverage','enough coverage','excess flood','more than 250','high value home'],
-  a:'NFIP caps out at $250,000 for your building and $100,000 for contents. If your home is worth more than that, private excess flood insurance can pick up where NFIP leaves off and provide much higher limits. Brian can assess your property and make sure you are not underinsured — because finding out your coverage was not enough after a flood is the worst possible time to find out.'},
+  a:'NFIP caps out at $250,000 for your building and $100,000 for contents. If your home is worth more than that, private excess flood insurance can pick up where NFIP leaves off and provide much higher limits.',
+  followup:'Want Brian to assess your property and make sure you are not underinsured? Finding out after a flood is the worst possible time.',
+  fuType:'review'},
 
-  // HURRICANE
   {k:['hurricane','wind','storm surge','tropical','named storm','category'],
-  a:'Flood insurance covers water damage from hurricanes and storm surge — but NOT wind damage. Wind is a separate windstorm or homeowners policy. Louisiana hurricane season runs June through November, so the time to make sure you have both coverages in place is right now, not when a storm is forming in the Gulf. Brian can make sure you have no gaps.'},
+  a:'Flood insurance covers water damage from hurricanes and storm surge — but NOT wind damage. Wind is a separate windstorm or homeowners policy. Louisiana hurricane season runs June through November.',
+  followup:'Want Brian to make sure you have no gaps before the next hurricane season? He can review everything in one quick call.',
+  fuType:'review'},
 
-  // WHAT IS NFIP
   {k:['what is nfip','national flood insurance','nfip','federal flood','who is nfip'],
-  a:'NFIP stands for National Flood Insurance Program. It is a federal program run through FEMA that provides standardized flood insurance policies to homeowners, renters, and businesses across the country. Because it is federal, the rates and coverage are the same no matter which agent sells it to you — the difference is the agent you work with. Brian is a licensed NFIP agent serving all of Louisiana.'},
+  a:'NFIP stands for National Flood Insurance Program. It is a federal program run through FEMA that provides standardized flood insurance policies. Because it is federal, the rates and coverage are the same no matter which agent sells it — the difference is the agent you work with.',
+  followup:'Want Brian as your agent? He responds personally and actually answers the phone — unlike most call centers.',
+  fuType:'quote'},
 
-  // CONTACT / BRIAN
   {k:['contact','brian','speak to someone','talk to a person','human','phone','email','office','reach brian','call brian'],
-  a:'You can reach Brian directly at (225) 610-3611 or bhall@sfbcic.com. His office is at 12035 Coursey Blvd, Baton Rouge, LA 70816. He serves all of Louisiana and is one of those agents who actually answers the phone. Or just use the tabs above to request a quote or policy review and he will reach out to you!'},
+  a:'You can reach Brian directly at (225) 610-3611 or bhall@sfbcic.com. His office is at 12035 Coursey Blvd, Baton Rouge, LA 70816. He serves all of Louisiana and is one of those agents who actually answers the phone.',
+  followup:'Want Brian to reach out to you instead? Just leave your name and number below.',
+  fuType:'callback'},
 
-  // GREETINGS
   {k:['hello','hi','hey','good morning','good afternoon','howdy','what can you do','help me','get started'],
-  a:'Hey! Glad you stopped by. I am Brian Hall\'s flood insurance assistant — here to give you straight, honest answers about flood coverage in Louisiana. No pressure, no sales pitch. Ask me anything or tap one of the questions below!'}
+  a:'Glad you stopped by! I am here to give you straight, honest answers about flood insurance in Louisiana. No pressure, no sales pitch.',
+  followup:'What would you like to know about? You can tap any question below or just type yours in.',
+  fuType:'none'}
 ];
 
-function findAns(txt) {
+function findEntry(txt) {
   var low = txt.toLowerCase();
   for (var i = 0; i < KB.length; i++) {
     for (var j = 0; j < KB[i].k.length; j++) {
-      if (low.indexOf(KB[i].k[j]) !== -1) return KB[i].a;
+      if (low.indexOf(KB[i].k[j]) !== -1) return KB[i];
     }
   }
   return null;
@@ -347,7 +384,7 @@ function addMsg(txt, role) {
   d.className = 'cmsg ' + role;
   var av = document.createElement('div');
   av.className = 'cav ' + role;
-  av.textContent = role === 'b' ? 'BH' : 'You';
+  av.textContent = role === 'b' ? 'BH' : (user.hasName ? user.name.charAt(0).toUpperCase() : 'You');
   var bb = document.createElement('div');
   bb.className = 'cbbl';
   bb.textContent = txt;
@@ -376,6 +413,184 @@ function hideTyping() {
   if (el) el.parentNode.removeChild(el);
 }
 
+// FOLLOW-UP QUESTION FLOW (the key conversion driver)
+function showFollowup(text, type) {
+  var c = document.getElementById('cmsgs');
+  var d = document.createElement('div');
+  d.className = 'cmsg b';
+  var av = document.createElement('div');
+  av.className = 'cav b'; av.textContent = 'BH';
+  var wrap = document.createElement('div');
+  wrap.className = 'qrep';
+  var p = document.createElement('p');
+  p.textContent = text;
+  wrap.appendChild(p);
+
+  var btnsDiv = document.createElement('div');
+  btnsDiv.className = 'qbtns-inline';
+
+  if (type === 'quote') {
+    var yesBtn = document.createElement('button');
+    yesBtn.textContent = 'Yes, send me a quote';
+    yesBtn.addEventListener('click', function() { startLeadCapture('quote'); });
+    btnsDiv.appendChild(yesBtn);
+
+    var noBtn = document.createElement('button');
+    noBtn.textContent = 'Just looking for now';
+    noBtn.addEventListener('click', function() {
+      addMsg('Just looking for now', 'u');
+      setTimeout(function() {
+        addMsg('No problem' + (user.hasName ? ', ' + user.name : '') + '! Take your time. Any other questions?', 'b');
+      }, 600);
+    });
+    btnsDiv.appendChild(noBtn);
+  } else if (type === 'review') {
+    var yesBtn = document.createElement('button');
+    yesBtn.textContent = 'Yes, free policy review';
+    yesBtn.addEventListener('click', function() { startLeadCapture('review'); });
+    btnsDiv.appendChild(yesBtn);
+
+    var noBtn = document.createElement('button');
+    noBtn.textContent = 'Maybe later';
+    noBtn.addEventListener('click', function() {
+      addMsg('Maybe later', 'u');
+      setTimeout(function() {
+        addMsg('Sounds good' + (user.hasName ? ', ' + user.name : '') + '. Anything else I can help with?', 'b');
+      }, 600);
+    });
+    btnsDiv.appendChild(noBtn);
+  } else if (type === 'callback') {
+    var yesBtn = document.createElement('button');
+    yesBtn.textContent = 'Yes, have Brian call me';
+    yesBtn.addEventListener('click', function() { startLeadCapture('callback'); });
+    btnsDiv.appendChild(yesBtn);
+
+    var noBtn = document.createElement('button');
+    noBtn.textContent = 'I will call him';
+    noBtn.addEventListener('click', function() {
+      addMsg('I will call him', 'u');
+      setTimeout(function() {
+        addMsg('Sounds good! (225) 610-3611 — Brian answers personally.', 'b');
+      }, 600);
+    });
+    btnsDiv.appendChild(noBtn);
+  }
+
+  wrap.appendChild(btnsDiv);
+  d.appendChild(av); d.appendChild(wrap);
+  c.appendChild(d);
+  c.scrollTop = c.scrollHeight;
+}
+
+// CONVERSATIONAL LEAD CAPTURE - one question at a time
+var leadFlow = { type:'', step:0, data:{} };
+
+function startLeadCapture(type) {
+  leadFlow = { type: type, step: 0, data: {} };
+  if (user.hasName) {
+    leadFlow.data.firstName = user.name;
+    addMsg('Yes, send me a quote', 'u');
+    leadFlow.step = 1;
+    setTimeout(function() { askLeadQuestion(); }, 600);
+  } else {
+    addMsg(type === 'quote' ? 'Yes, send me a quote' : (type === 'review' ? 'Yes, free policy review' : 'Yes, have Brian call me'), 'u');
+    setTimeout(function() { askLeadQuestion(); }, 600);
+  }
+}
+
+function askLeadQuestion() {
+  var prompts = [
+    'Awesome! What is your first name?',
+    user.hasName ? 'Thanks ' + user.name + '! What is the property address?' : 'Thanks {name}! What is the property address?',
+    'Perfect. What is the best phone number to reach you?',
+    'Last question — what time of day works best to call? (morning, afternoon, or evening)'
+  ];
+
+  showTyping();
+  setTimeout(function() {
+    hideTyping();
+    if (leadFlow.step === 0) {
+      addMsg(prompts[0], 'b');
+      showLeadInput('first name', 'firstName');
+    } else if (leadFlow.step === 1) {
+      var msg = prompts[1].replace('{name}', leadFlow.data.firstName || 'so much');
+      addMsg(msg, 'b');
+      showLeadInput('property address', 'address');
+    } else if (leadFlow.step === 2) {
+      addMsg(prompts[2], 'b');
+      showLeadInput('phone number', 'phone');
+    } else if (leadFlow.step === 3) {
+      addMsg(prompts[3], 'b');
+      showLeadInput('best time', 'time');
+    } else {
+      submitLead();
+    }
+  }, 600);
+}
+
+function showLeadInput(placeholder, field) {
+  var c = document.getElementById('cmsgs');
+  var d = document.createElement('div');
+  d.className = 'cmsg b'; d.id = 'leadInputMsg';
+  var av = document.createElement('div');
+  av.className = 'cav b'; av.textContent = 'BH';
+  var wrap = document.createElement('div');
+  wrap.className = 'qrep';
+  var inp = document.createElement('input');
+  inp.id = 'leadInp'; inp.placeholder = 'Your ' + placeholder + '...';
+  if (field === 'phone') inp.type = 'tel';
+  inp.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') { e.preventDefault(); submitLeadField(field); }
+  });
+  var btn = document.createElement('button');
+  btn.className = 'submit'; btn.textContent = 'Continue';
+  btn.addEventListener('click', function() { submitLeadField(field); });
+  wrap.appendChild(inp); wrap.appendChild(btn);
+  d.appendChild(av); d.appendChild(wrap);
+  c.appendChild(d);
+  c.scrollTop = c.scrollHeight;
+  setTimeout(function(){ inp.focus(); }, 200);
+}
+
+function submitLeadField(field) {
+  var inp = document.getElementById('leadInp');
+  var val = inp ? inp.value.trim() : '';
+  if (!val) return;
+  leadFlow.data[field] = val;
+  if (field === 'firstName' && !user.hasName) {
+    user.name = val;
+    user.hasName = true;
+  }
+  var f = document.getElementById('leadInputMsg');
+  if (f) f.parentNode.removeChild(f);
+  addMsg(val, 'u');
+  leadFlow.step++;
+  setTimeout(function() { askLeadQuestion(); }, 400);
+}
+
+function submitLead() {
+  var data = new FormData();
+  data.append('Type', 'CHATBOT LEAD - ' + leadFlow.type.toUpperCase());
+  data.append('Name', leadFlow.data.firstName || 'Not provided');
+  data.append('Address', leadFlow.data.address || 'Not provided');
+  data.append('Phone', leadFlow.data.phone || 'Not provided');
+  data.append('Best Time', leadFlow.data.time || 'Not provided');
+  data.append('Source', 'In-chat lead capture');
+
+  fetch(FORMSPREE, { method:'POST', body:data, headers:{ 'Accept':'application/json' } });
+
+  showTyping();
+  setTimeout(function() {
+    hideTyping();
+    var name = leadFlow.data.firstName || 'there';
+    addMsg('You are all set, ' + name + '! Brian got your info and will reach out soon. He responds personally and usually within a few hours.', 'b');
+    user.leadCaptured = true;
+    setTimeout(function() {
+      addMsg('In the meantime — anything else you want to know?', 'b');
+    }, 1500);
+  }, 800);
+}
+
 function showSendForm(prefill) {
   var c = document.getElementById('cmsgs');
   var d = document.createElement('div');
@@ -383,36 +598,36 @@ function showSendForm(prefill) {
   var av = document.createElement('div');
   av.className = 'cav b'; av.textContent = 'BH';
   var wrap = document.createElement('div');
-  wrap.className = 'sfwrap';
+  wrap.className = 'qrep';
   var p = document.createElement('p');
-  p.textContent = 'Send Brian your question directly and he will get back to you personally:';
-  var ta = document.createElement('textarea');
-  ta.id = 'sf-q'; ta.placeholder = 'Your question...'; ta.textContent = prefill || '';
-  var row = document.createElement('div');
-  row.className = 'sfrow';
+  p.textContent = 'Send Brian your question — he will reply personally:';
+  var ta = document.createElement('input');
+  ta.type = 'text'; ta.id = 'sf-q'; ta.placeholder = 'Your question';
+  if (prefill) ta.value = prefill;
   var n = document.createElement('input');
-  n.id = 'sf-n'; n.placeholder = 'Your name';
+  n.id = 'sf-n'; n.placeholder = 'Your first name';
+  if (user.hasName) n.value = user.name;
   var ph = document.createElement('input');
-  ph.id = 'sf-p'; ph.placeholder = 'Your phone or email';
-  row.appendChild(n); row.appendChild(ph);
+  ph.id = 'sf-p'; ph.placeholder = 'Phone or email';
   var btn = document.createElement('button');
-  btn.className = 'sfsbmt'; btn.textContent = 'Send to Brian';
+  btn.className = 'submit'; btn.textContent = 'Send to Brian';
   btn.addEventListener('click', function() {
     var q = document.getElementById('sf-q').value.trim();
     var nm = document.getElementById('sf-n').value.trim();
     var pv = document.getElementById('sf-p').value.trim();
     if (!q || !nm || !pv) { alert('Please fill in all three fields.'); return; }
     var data = new FormData();
-    data.append('Type', 'Direct Question from Chatbot');
+    data.append('Type', 'CHATBOT - Direct Question');
     data.append('Name', nm);
     data.append('Contact', pv);
     data.append('Question', q);
-    fetch(FORMSPREE, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+    fetch(FORMSPREE, { method:'POST', body:data, headers:{ 'Accept':'application/json' } });
+    if (!user.hasName) { user.name = nm; user.hasName = true; }
     var f = document.getElementById('sfmsg');
     if (f) f.parentNode.removeChild(f);
-    addMsg('Got it ' + nm + '! Brian received your question and will get back to you at ' + pv + ' soon. He appreciates you reaching out!', 'b');
+    addMsg('Got it ' + nm + '! Brian got your question and will get back to you at ' + pv + ' soon.', 'b');
   });
-  wrap.appendChild(p); wrap.appendChild(ta); wrap.appendChild(row); wrap.appendChild(btn);
+  wrap.appendChild(p); wrap.appendChild(ta); wrap.appendChild(n); wrap.appendChild(ph); wrap.appendChild(btn);
   d.appendChild(av); d.appendChild(wrap);
   c.appendChild(d);
   c.scrollTop = c.scrollHeight;
@@ -426,12 +641,24 @@ function doSend() {
   inp.value = '';
   inp.style.height = 'auto';
   document.getElementById('csnd').disabled = true;
+  user.questionsAsked++;
   showTyping();
   setTimeout(function() {
     hideTyping();
-    var ans = findAns(txt);
-    if (ans) {
-      addMsg(ans, 'b');
+    var entry = findEntry(txt);
+    if (entry) {
+      // Personalize with name if we have it
+      var answer = entry.a;
+      if (user.hasName && user.questionsAsked > 1) {
+        answer = 'Good question, ' + user.name + '. ' + answer;
+      }
+      addMsg(answer, 'b');
+      // Show follow-up question if it has one and no lead captured yet
+      if (entry.followup && entry.fuType !== 'none' && !user.leadCaptured) {
+        setTimeout(function() {
+          showFollowup(entry.followup, entry.fuType);
+        }, 1200);
+      }
     } else {
       addMsg('That is a great question and Brian will have the answer for you. Send it to him directly below and he will get back to you personally — usually the same day.', 'b');
       showSendForm(txt);
@@ -510,6 +737,62 @@ function submitForm(type) {
   });
 }
 
+// INITIAL GREETING WITH NAME CAPTURE
+function initGreeting() {
+  setTimeout(function() {
+    addMsg('Hey there! I am Brian Hall flood insurance assistant. I am here to give you straight answers — no pressure.', 'b');
+    setTimeout(function() {
+      addMsg('Quick question first — what is your first name? I want to make this personal.', 'b');
+      // Show name input
+      var c = document.getElementById('cmsgs');
+      var d = document.createElement('div');
+      d.className = 'cmsg b'; d.id = 'nameMsg';
+      var av = document.createElement('div');
+      av.className = 'cav b'; av.textContent = 'BH';
+      var wrap = document.createElement('div');
+      wrap.className = 'qrep';
+      var inp = document.createElement('input');
+      inp.id = 'nameInp'; inp.placeholder = 'Your first name';
+      inp.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') { e.preventDefault(); captureName(); }
+      });
+      var btn = document.createElement('button');
+      btn.className = 'submit'; btn.textContent = 'Let\'s go';
+      btn.addEventListener('click', captureName);
+      var skip = document.createElement('button');
+      skip.style.background = '#fff';
+      skip.style.color = '#7b1c2e';
+      skip.style.border = '1.5px solid #ddc8c8';
+      skip.style.marginTop = '4px';
+      skip.textContent = 'Skip — just answer my question';
+      skip.addEventListener('click', function() {
+        var f = document.getElementById('nameMsg');
+        if (f) f.parentNode.removeChild(f);
+        addMsg('No problem! What can I help you with?', 'b');
+      });
+      wrap.appendChild(inp); wrap.appendChild(btn); wrap.appendChild(skip);
+      d.appendChild(av); d.appendChild(wrap);
+      c.appendChild(d);
+      setTimeout(function() { inp.focus(); }, 200);
+    }, 800);
+  }, 400);
+}
+
+function captureName() {
+  var inp = document.getElementById('nameInp');
+  var val = inp ? inp.value.trim() : '';
+  if (!val) return;
+  user.name = val;
+  user.hasName = true;
+  var f = document.getElementById('nameMsg');
+  if (f) f.parentNode.removeChild(f);
+  addMsg(val, 'u');
+  setTimeout(function() {
+    addMsg('Great to meet you, ' + val + '! What can I help you with? You can tap any question below or type yours in.', 'b');
+  }, 600);
+}
+
+// EVENT LISTENERS
 document.getElementById('t-chat').addEventListener('click', function() { showTab('chat'); });
 document.getElementById('t-quote').addEventListener('click', function() { showTab('quote'); });
 document.getElementById('t-review').addEventListener('click', function() { showTab('review'); });
@@ -533,6 +816,9 @@ for (var i = 0; i < qbs.length; i++) {
     });
   })(qbs[i]);
 }
+
+// Start the greeting
+initGreeting();
 
 })();
 </script>
