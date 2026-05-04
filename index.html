@@ -4,31 +4,87 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Brian Hall | Flood Insurance | Louisiana Farm Bureau</title>
+<title>Brian Hall | Louisiana Flood Insurance | Free Tools & Guide</title>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f3f3;color:#2a1a1a}
-.hdr{position:relative;background:radial-gradient(ellipse 80% 50% at 20% 0%, rgba(255,215,0,.12) 0%, transparent 50%),radial-gradient(ellipse 80% 50% at 80% 0%, rgba(255,215,0,.12) 0%, transparent 50%),radial-gradient(ellipse 60% 40% at 50% 100%, rgba(200,146,42,.18) 0%, transparent 60%),linear-gradient(180deg,#2a0810 0%,#540f1e 30%,#7b1c2e 70%,#7b1c2e 100%);padding:36px 20px;border-bottom:4px solid #c8922a;overflow:hidden}
+.urg{background:#7b1c2e;color:#fff;padding:8px 12px;text-align:center;font-size:12px;font-weight:700;letter-spacing:.3px}
+.urg span{color:#f0c060}
+.hdr{position:relative;background:radial-gradient(ellipse 80% 50% at 20% 0%, rgba(255,215,0,.12) 0%, transparent 50%),radial-gradient(ellipse 80% 50% at 80% 0%, rgba(255,215,0,.12) 0%, transparent 50%),radial-gradient(ellipse 60% 40% at 50% 100%, rgba(200,146,42,.18) 0%, transparent 60%),linear-gradient(180deg,#2a0810 0%,#540f1e 30%,#7b1c2e 70%,#7b1c2e 100%);padding:30px 20px;border-bottom:4px solid #c8922a;overflow:hidden}
 .lights{position:absolute;top:10px;left:0;right:0;display:flex;justify-content:space-around;pointer-events:none;z-index:1}
 .lights span{width:6px;height:6px;background:#ffd700;border-radius:50%;box-shadow:0 0 10px #ffd700, 0 0 18px rgba(255,215,0,.6);opacity:.85}
 .stadium-bg{position:absolute;bottom:0;left:0;right:0;height:50px;opacity:.22;pointer-events:none;z-index:1}
 .hdr-in{position:relative;max-width:800px;margin:0 auto;text-align:center;z-index:3}
-.eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#c8922a;margin-bottom:8px}
-.hdr h1{font-size:28px;font-weight:800;color:#fff;margin:0 0 8px;line-height:1.2;letter-spacing:.5px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
-.hdr h1 span{color:#c8922a;display:block;font-size:18px;font-weight:700;margin-top:4px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
-.hdr p{font-size:13px;color:rgba(255,255,255,.92);margin:0 auto 14px;line-height:1.5;max-width:480px}
-.tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
-.tag{background:rgba(200,146,42,.25);border:1px solid rgba(200,146,42,.6);color:#f0c060;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px}
-.proof{background:#fdf6ec;border-bottom:2px solid #c8922a;padding:10px 16px;text-align:center;font-size:12px;color:#7b1c2e;font-weight:600}
+.eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#c8922a;margin-bottom:6px}
+.hdr h1{font-size:26px;font-weight:800;color:#fff;margin:0 0 6px;line-height:1.2;letter-spacing:.5px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.hdr h1 span{color:#c8922a;display:block;font-size:16px;font-weight:700;margin-top:4px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.hdr p{font-size:13px;color:rgba(255,255,255,.92);margin:0 auto 10px;line-height:1.5;max-width:480px}
+.tools-grid{max-width:800px;margin:18px auto 0;padding:0 16px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+@media(max-width:640px){.tools-grid{grid-template-columns:1fr;gap:8px}}
+.tool-card{background:#fff;border:2px solid #ddc8c8;border-radius:10px;padding:12px;text-align:center;cursor:pointer;transition:all .15s}
+.tool-card:active{background:#fdf6ec;border-color:#c8922a}
+.tool-card .ico{font-size:24px;margin-bottom:4px}
+.tool-card h4{margin:0 0 2px;color:#7b1c2e;font-size:13px;font-weight:800}
+.tool-card p{margin:0;font-size:11px;color:#7a5a5a;line-height:1.3}
+.tool-card .badge{display:inline-block;background:#c8922a;color:#fff;font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;margin-top:5px;letter-spacing:.5px}
+.proof{background:#fdf6ec;padding:8px 16px;text-align:center;font-size:12px;color:#7b1c2e;font-weight:600;border-bottom:1px solid #ddc8c8;margin-top:18px}
 .proof span{color:#c8922a}
 .tabs-bar{background:#fff;border-bottom:2px solid #ddc8c8;position:sticky;top:0;z-index:99;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-.tabs-in{max-width:800px;margin:0 auto;display:flex}
-.tbtn{flex:1;padding:14px 8px;text-align:center;cursor:pointer;font-weight:600;font-size:13px;color:#7a5a5a;border:none;background:none;border-bottom:3px solid transparent;font-family:'Open Sans',Arial,sans-serif}
+.tabs-in{max-width:800px;margin:0 auto;display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tbtn{flex:1;min-width:80px;padding:14px 6px;text-align:center;cursor:pointer;font-weight:600;font-size:12px;color:#7a5a5a;border:none;background:none;border-bottom:3px solid transparent;font-family:'Open Sans',Arial,sans-serif;white-space:nowrap}
 .tbtn.on{color:#7b1c2e;border-bottom:3px solid #c8922a}
-.pnl{display:none;max-width:800px;margin:0 auto;padding:20px 16px 48px}
+.pnl{display:none;max-width:800px;margin:0 auto;padding:18px 16px 48px}
 .pnl.on{display:block}
 .cintro{background:#7b1c2e;color:#fff;border-radius:10px;padding:14px 16px;margin-bottom:14px;font-size:13px;line-height:1.6}
 .cintro strong{color:#f0c060}
+/* COST CALCULATOR */
+.calc-card{background:#fff;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.08);border:2px solid #c8922a;overflow:hidden}
+.calc-hd{background:linear-gradient(135deg,#c8922a 0%,#a87520 100%);color:#fff;padding:16px 18px;text-align:center}
+.calc-hd h2{margin:0 0 2px;font-size:18px;font-weight:800}
+.calc-hd p{margin:0;font-size:12px;opacity:.95}
+.calc-body{padding:16px 18px}
+.calc-row{margin-bottom:12px}
+.calc-row label{display:block;font-size:12px;font-weight:700;margin-bottom:5px;color:#7b1c2e}
+.calc-row select,.calc-row input{width:100%;border:1.5px solid #ddc8c8;border-radius:7px;padding:10px 12px;font-family:'Open Sans',Arial,sans-serif;font-size:14px;outline:none;background:#fff;box-sizing:border-box}
+.calc-row select:focus,.calc-row input:focus{border-color:#7b1c2e}
+.calc-go{width:100%;background:#7b1c2e;color:#fff;border:none;padding:13px;border-radius:8px;font-family:'Open Sans',Arial,sans-serif;font-size:15px;font-weight:800;cursor:pointer;letter-spacing:.3px}
+.calc-go:active{background:#540f1e}
+.calc-result{display:none;margin-top:16px;padding:18px;background:#fdf6ec;border-radius:10px;border:2px solid #c8922a}
+.calc-result.on{display:block}
+.calc-result .est{font-size:13px;color:#7b1c2e;font-weight:700;margin-bottom:4px}
+.calc-result .price{font-size:32px;color:#7b1c2e;font-weight:800;margin-bottom:6px;line-height:1.1}
+.calc-result .range{font-size:12px;color:#7a5a5a;margin-bottom:10px}
+.calc-result .why{font-size:13px;line-height:1.6;color:#2a1a1a;margin-bottom:12px}
+.calc-result .why strong{color:#7b1c2e}
+.calc-cta{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.calc-cta button{padding:11px;border-radius:7px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;font-weight:700;cursor:pointer;border:none}
+.calc-cta .primary{background:#7b1c2e;color:#fff}
+.calc-cta .primary:active{background:#540f1e}
+.calc-cta .secondary{background:#fff;color:#7b1c2e;border:1.5px solid #7b1c2e}
+.calc-disclaim{font-size:11px;color:#7a5a5a;margin-top:10px;font-style:italic;line-height:1.4}
+/* PDF DOWNLOAD CARD */
+.pdf-card{background:linear-gradient(135deg,#7b1c2e 0%,#540f1e 100%);color:#fff;border-radius:12px;padding:22px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.15);border:3px solid #c8922a}
+.pdf-card h2{margin:0 0 4px;font-size:20px;color:#f0c060}
+.pdf-card .pages{font-size:11px;color:rgba(255,255,255,.85);font-weight:600;letter-spacing:1px;margin-bottom:10px}
+.pdf-card p{font-size:13px;line-height:1.5;margin:0 0 14px;opacity:.95}
+.pdf-card a.dlbtn{display:inline-block;background:#c8922a;color:#fff;text-decoration:none;padding:13px 30px;border-radius:8px;font-weight:800;font-size:14px;letter-spacing:.3px}
+.pdf-card a.dlbtn:active{background:#a87520}
+.pdf-card .nogate{font-size:11px;color:rgba(255,255,255,.7);margin-top:8px;font-style:italic}
+/* HURRICANE CHECKLIST */
+.check-card{background:#fff;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.08);border:2px solid #ddc8c8;overflow:hidden}
+.check-hd{background:#7b1c2e;color:#fff;padding:16px 18px;text-align:center;border-bottom:3px solid #c8922a}
+.check-hd h2{margin:0 0 2px;font-size:18px;font-weight:800}
+.check-hd p{margin:0;font-size:12px;opacity:.92}
+.check-body{padding:16px}
+.check-section{margin-bottom:18px}
+.check-section h3{color:#7b1c2e;font-size:14px;margin:0 0 8px;padding-bottom:5px;border-bottom:2px solid #c8922a;display:flex;align-items:center;gap:6px}
+.check-item{display:flex;gap:10px;padding:8px 4px;border-bottom:1px solid #f0e6e6;font-size:13px;line-height:1.4;cursor:pointer;align-items:flex-start}
+.check-item:last-child{border-bottom:none}
+.check-item input{margin-top:2px;flex-shrink:0;cursor:pointer;width:18px;height:18px;accent-color:#7b1c2e}
+.check-item.done{color:#999;text-decoration:line-through}
+.print-btn{display:block;width:100%;background:#7b1c2e;color:#fff;border:none;padding:11px;border-radius:7px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;font-weight:700;cursor:pointer;margin-top:14px}
+@media print{.urg,.hdr,.tools-grid,.proof,.tabs-bar,.cintro,.print-btn,.ctbar{display:none !important}.pnl{display:block !important}}
+/* CHATBOT */
 .cbox{background:#fff;border-radius:10px;box-shadow:0 3px 16px rgba(0,0,0,.08);border:1px solid #ddc8c8;overflow:hidden}
 .cmsgs{height:380px;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
 .cmsg{display:flex;gap:8px}
@@ -43,9 +99,7 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 .qrep p{font-size:12px;font-weight:700;color:#7b1c2e;margin:0 0 8px}
 .qrep .qbtns-inline{display:flex;flex-direction:column;gap:5px}
 .qrep button{background:#fff;border:1.5px solid #c8922a;color:#7b1c2e;padding:7px 10px;border-radius:7px;font-family:'Open Sans',Arial,sans-serif;font-size:12px;font-weight:600;cursor:pointer;text-align:left}
-.qrep button:active{background:#7b1c2e;color:#fff}
 .qrep input{width:100%;border:1.5px solid #ddc8c8;border-radius:7px;padding:8px 10px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;outline:none;box-sizing:border-box;margin-bottom:6px}
-.qrep input:focus{border-color:#7b1c2e}
 .qrep .submit{background:#7b1c2e;color:#fff;border:none;width:100%;padding:8px;border-radius:7px;font-weight:700;font-size:13px}
 .typing{display:flex;gap:8px}
 .tdots{background:#f9edef;padding:10px 14px;border-radius:10px;display:flex;gap:4px;align-items:center}
@@ -57,13 +111,11 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 .qlbl{font-size:10px;font-weight:700;color:#7a5a5a;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
 .qbtns{display:flex;flex-wrap:wrap;gap:5px}
 .qb{background:#fff;border:1.5px solid #ddc8c8;color:#7b1c2e;padding:4px 10px;border-radius:14px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Open Sans',Arial,sans-serif}
-.qb:active{background:#7b1c2e;color:#fff}
 .cinrow{display:flex;gap:8px;padding:10px 12px;border-top:1px solid #ddc8c8;background:#fff;align-items:flex-end}
 .cin{flex:1;border:1.5px solid #ddc8c8;border-radius:18px;padding:8px 14px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;outline:none;resize:none;max-height:90px;line-height:1.4}
-.cin:focus{border-color:#7b1c2e}
 .csnd{width:36px;height:36px;background:#7b1c2e;color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:16px;flex-shrink:0;font-weight:700}
-.csnd:disabled{opacity:.4}
 .cnote{text-align:center;font-size:11px;color:#7a5a5a;padding:6px 12px;background:#fdf9f9;border-top:1px solid #ddc8c8}
+/* FORMS */
 .fcard{background:#fff;border-radius:10px;box-shadow:0 3px 16px rgba(0,0,0,.07);border:1px solid #ddc8c8;overflow:hidden}
 .fhd{background:#7b1c2e;color:#fff;padding:18px 22px;border-bottom:4px solid #c8922a}
 .fhd h2{font-size:17px;margin:0 0 4px}
@@ -74,12 +126,9 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 .fg{margin-bottom:12px}
 .fg label{display:block;font-size:12px;font-weight:600;margin-bottom:4px}
 .fg input,.fg select,.fg textarea{width:100%;border:1.5px solid #ddc8c8;border-radius:7px;padding:8px 11px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;outline:none;box-sizing:border-box;background:#fff}
-.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#7b1c2e}
 .fg textarea{resize:vertical;min-height:65px}
 .req{color:#7b1c2e}
 .fsbmt{width:100%;padding:12px;background:#7b1c2e;color:#fff;border:none;border-radius:7px;font-family:'Open Sans',Arial,sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:4px}
-.fsbmt:hover{background:#540f1e}
-.fsbmt:disabled{opacity:.6;cursor:default}
 .fnote{text-align:center;font-size:11px;color:#7a5a5a;margin-top:10px}
 .succ{display:none;background:#eef7ee;border:1.5px solid #81c784;border-radius:8px;padding:14px 18px;text-align:center;color:#2e7d32;margin-top:12px}
 .succ h3{margin:0 0 4px;font-size:14px}
@@ -95,6 +144,8 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 </head>
 <body>
 
+<div class="urg" id="urgBanner">⚠️ Hurricane season is approaching — there's a <span>30-day waiting period</span> before flood insurance kicks in</div>
+
 <div class="hdr">
   <div class="lights">
     <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
@@ -105,13 +156,28 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
   <div class="hdr-in">
     <span class="eyebrow">Louisiana Farm Bureau Insurance</span>
     <h1>BRIAN HALL<span>Louisiana Flood Insurance Expert</span></h1>
-    <p>Local agent. Real answers. Zero pressure. Get a quick answer below or request a free quote — Brian responds personally.</p>
-    <div class="tags">
-      <span class="tag">NFIP Specialist</span>
-      <span class="tag">Statewide Louisiana</span>
-      <span class="tag">24/7 Answers</span>
-      <span class="tag">Zero Pressure</span>
-    </div>
+    <p>Free tools. Real answers. Zero pressure.</p>
+  </div>
+</div>
+
+<div class="tools-grid">
+  <div class="tool-card" onclick="document.getElementById('t-calc').click();window.scrollTo({top:document.querySelector('.tabs-bar').offsetTop,behavior:'smooth'})">
+    <div class="ico">💰</div>
+    <h4>Cost Calculator</h4>
+    <p>See your estimated annual premium</p>
+    <span class="badge">FREE</span>
+  </div>
+  <div class="tool-card" onclick="document.getElementById('t-guide').click();window.scrollTo({top:document.querySelector('.tabs-bar').offsetTop,behavior:'smooth'})">
+    <div class="ico">📘</div>
+    <h4>The Full Guide</h4>
+    <p>Download Brian's 20-page PDF</p>
+    <span class="badge">FREE</span>
+  </div>
+  <div class="tool-card" onclick="document.getElementById('t-check').click();window.scrollTo({top:document.querySelector('.tabs-bar').offsetTop,behavior:'smooth'})">
+    <div class="ico">🌀</div>
+    <h4>Hurricane Checklist</h4>
+    <p>Be ready for the next storm</p>
+    <span class="badge">FREE</span>
   </div>
 </div>
 
@@ -121,103 +187,218 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 
 <div class="tabs-bar">
   <div class="tabs-in">
-    <button class="tbtn on" id="t-chat">Ask a Question</button>
-    <button class="tbtn" id="t-quote">Get a Quote</button>
-    <button class="tbtn" id="t-review">Policy Review</button>
+    <button class="tbtn on" id="t-calc">💰 Calculator</button>
+    <button class="tbtn" id="t-guide">📘 Guide</button>
+    <button class="tbtn" id="t-check">🌀 Checklist</button>
+    <button class="tbtn" id="t-chat">💬 Ask</button>
+    <button class="tbtn" id="t-quote">Quote</button>
   </div>
 </div>
 
-<div class="pnl on" id="p-chat">
-  <div class="cintro">Ask any flood insurance question and get a straight answer. <strong>Don't see what you need?</strong> Send Brian a question directly and he'll respond personally.</div>
+<!-- COST CALCULATOR PANEL -->
+
+<div class="pnl on" id="p-calc">
+  <div class="calc-card">
+    <div class="calc-hd">
+      <h2>💰 Flood Insurance Cost Calculator</h2>
+      <p>Get an instant estimate based on real Louisiana data</p>
+    </div>
+    <div class="calc-body">
+      <div class="calc-row">
+        <label>Your Parish</label>
+        <select id="cp"><option value="">-- Select your parish --</option></select>
+      </div>
+      <div class="calc-row">
+        <label>Estimated Home Value</label>
+        <select id="ch">
+          <option value="">-- Select range --</option>
+          <option value="100000">Under $150,000</option>
+          <option value="200000">$150,000 - $250,000</option>
+          <option value="300000">$250,000 - $350,000</option>
+          <option value="425000">$350,000 - $500,000</option>
+          <option value="600000">$500,000 - $750,000</option>
+          <option value="900000">$750,000 - $1M</option>
+          <option value="1500000">Over $1M</option>
+        </select>
+      </div>
+      <div class="calc-row">
+        <label>Flood Zone (if you know it)</label>
+        <select id="cz">
+          <option value="unknown">I'm not sure</option>
+          <option value="x">Zone X (low risk)</option>
+          <option value="b">Zone B or C (moderate)</option>
+          <option value="ae">Zone AE (high risk)</option>
+          <option value="a">Zone A (high risk)</option>
+          <option value="v">Zone V (coastal high risk)</option>
+        </select>
+      </div>
+      <div class="calc-row">
+        <label>Foundation Type</label>
+        <select id="cf">
+          <option value="slab">Slab on grade</option>
+          <option value="raised">Raised / Pier & beam</option>
+          <option value="elevated">Elevated (above BFE)</option>
+          <option value="basement">Has basement</option>
+        </select>
+      </div>
+      <button class="calc-go" id="cgo">Calculate My Estimate →</button>
+      <div class="calc-result" id="cresult">
+        <div class="est">YOUR ESTIMATED ANNUAL PREMIUM</div>
+        <div class="price" id="cprice">—</div>
+        <div class="range" id="crange">Estimated range</div>
+        <div class="why" id="cwhy"></div>
+        <div class="calc-cta">
+          <button class="primary" onclick="document.getElementById('t-quote').click();window.scrollTo({top:document.querySelector('.tabs-bar').offsetTop,behavior:'smooth'})">Get My Exact Quote →</button>
+          <button class="secondary" onclick="document.getElementById('t-chat').click();window.scrollTo({top:document.querySelector('.tabs-bar').offsetTop,behavior:'smooth'})">Ask Brian a Question</button>
+        </div>
+        <div class="calc-disclaim">This estimate is based on Louisiana NFIP averages and is not a binding quote. Actual premiums depend on FEMA Flood Map review, elevation certificate, replacement cost, and other factors. For an exact rate, request a free quote from Brian.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PDF GUIDE PANEL -->
+
+<div class="pnl" id="p-guide">
+  <div class="pdf-card">
+    <h2>📘 The Louisiana Flood Insurance Guide</h2>
+    <div class="pages">20 PAGES • FREE PDF • NO EMAIL REQUIRED</div>
+    <p>Everything you need to know about flood insurance in Louisiana, written by Brian Hall. The 2016 lessons, NFIP vs private insurance, the 5 mistakes that cost homeowners thousands, how to read your declarations page, what to do in the first 48 hours after a flood, and a parish-by-parish risk overview for all 64 Louisiana parishes.</p>
+    <a href="Louisiana-Flood-Insurance-Guide.pdf" download class="dlbtn">Download Free PDF →</a>
+    <div class="nogate">Just download — no email, no signup, no tricks.</div>
+  </div>
+  <div style="margin-top:16px;background:#fff;border-radius:10px;padding:16px;border:1px solid #ddc8c8">
+    <h3 style="color:#7b1c2e;margin:0 0 10px;font-size:15px">📑 What's Inside</h3>
+    <ul style="margin:0;padding-left:20px;font-size:13px;line-height:1.7;color:#2a1a1a">
+      <li>The hard truth about homeowners insurance and floods</li>
+      <li>What 2016 taught Louisiana (and why most people forgot)</li>
+      <li>The 30-day waiting period — and why it matters right now</li>
+      <li>What flood insurance actually covers (and doesn't)</li>
+      <li>NFIP vs private flood insurance — full comparison</li>
+      <li>The 5 mistakes that cost Louisiana homeowners thousands</li>
+      <li>How to read your declarations page</li>
+      <li>After a flood: the first 48 hours</li>
+      <li>Quick reference — all 64 parishes at a glance</li>
+      <li>Frequently asked questions</li>
+    </ul>
+  </div>
+</div>
+
+<!-- HURRICANE CHECKLIST PANEL -->
+
+<div class="pnl" id="p-check">
+  <div class="check-card">
+    <div class="check-hd">
+      <h2>🌀 Hurricane Preparedness Checklist</h2>
+      <p>Tap to check items off — your progress saves automatically</p>
+    </div>
+    <div class="check-body">
+      <div class="check-section">
+        <h3>📅 30 DAYS BEFORE HURRICANE SEASON</h3>
+        <label class="check-item"><input type="checkbox" data-key="ck30-1"><span>Confirm flood insurance is active and not expired</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck30-2"><span>Take video walkthrough of every room (open closets, drawers)</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck30-3"><span>Photograph valuables, electronics, jewelry, art</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck30-4"><span>Save digital copies of insurance docs to cloud (Google Drive, iCloud)</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck30-5"><span>Trim trees and remove dead branches near house</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck30-6"><span>Clean gutters and check downspouts</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck30-7"><span>Check generator (if you have one) and stock fuel safely</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck30-8"><span>Stock 14-day supply of non-perishable food and water</span></label>
+      </div>
+      <div class="check-section">
+        <h3>📋 7 DAYS BEFORE A NAMED STORM</h3>
+        <label class="check-item"><input type="checkbox" data-key="ck7-1"><span>Fill all vehicles with gas (do not wait for evacuation)</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck7-2"><span>Get cash from ATM (cards may not work after storm)</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck7-3"><span>Refill prescriptions for 30+ days</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck7-4"><span>Charge all devices, power banks, flashlights</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck7-5"><span>Pack go-bag: meds, docs, clothes, water, snacks</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck7-6"><span>Confirm evacuation route and destination</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck7-7"><span>Stock plywood, screws, tarps, sandbags if available</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck7-8"><span>Notify out-of-state family of your plan</span></label>
+      </div>
+      <div class="check-section">
+        <h3>⏰ 24 HOURS BEFORE LANDFALL</h3>
+        <label class="check-item"><input type="checkbox" data-key="ck24-1"><span>Move valuables to upper floors or above flood level</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck24-2"><span>Secure outdoor furniture, grills, planters indoors</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck24-3"><span>Board windows or close hurricane shutters</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck24-4"><span>Fill bathtubs and clean containers with water</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck24-5"><span>Set freezer/fridge to coldest setting</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck24-6"><span>Turn off propane tanks at the source</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck24-7"><span>Charge all phones to 100%</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck24-8"><span>Decide: shelter in place or evacuate (do not wait too long)</span></label>
+      </div>
+      <div class="check-section">
+        <h3>🚨 AFTER THE STORM</h3>
+        <label class="check-item"><input type="checkbox" data-key="ckafter-1"><span>Document EVERYTHING with photos/video before cleaning</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ckafter-2"><span>Call insurance company immediately, get claim number</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ckafter-3"><span>Make reasonable temporary repairs (tarp, board) — save receipts</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ckafter-4"><span>Do NOT throw anything away until adjuster sees it</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ckafter-5"><span>Watch for downed power lines — assume all are live</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ckafter-6"><span>Boil water until told it is safe</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ckafter-7"><span>Beware contractor scams — get 3 quotes, check licenses</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ckafter-8"><span>Do NOT sign assignment of benefits without legal review</span></label>
+      </div>
+      <button class="print-btn" onclick="window.print()">🖨️ Print This Checklist</button>
+    </div>
+  </div>
+</div>
+
+<!-- CHATBOT PANEL -->
+
+<div class="pnl" id="p-chat">
+  <div class="cintro">Ask any flood insurance question. <strong>Don't see what you need?</strong> Send Brian a question directly.</div>
   <div class="cbox">
     <div class="cmsgs" id="cmsgs"></div>
     <div class="qwrap">
-      <div class="qlbl">Tap a question to get started</div>
+      <div class="qlbl">Tap a question</div>
       <div class="qbtns">
-        <button class="qb" data-q="What does flood insurance do?">What does flood insurance do?</button>
-        <button class="qb" data-q="Does homeowners insurance cover floods?">Does homeowners cover floods?</button>
         <button class="qb" data-q="How much does flood insurance cost in Louisiana?">How much does it cost?</button>
+        <button class="qb" data-q="Does homeowners insurance cover floods?">Does homeowners cover floods?</button>
         <button class="qb" data-q="What does flood insurance cover?">What is covered?</button>
-        <button class="qb" data-q="What is NOT covered by flood insurance?">What is NOT covered?</button>
         <button class="qb" data-q="Is there a waiting period for flood insurance?">Waiting period?</button>
+        <button class="qb" data-q="I have never flooded so do I really need flood insurance?">I never flooded</button>
         <button class="qb" data-q="What flood zone am I in?">My flood zone?</button>
-        <button class="qb" data-q="I have never flooded so do I really need flood insurance?">I have never flooded</button>
-        <button class="qb" data-q="How do I transfer my flood policy to Brian?">Transfer my policy?</button>
-        <button class="qb" data-q="What happened in the 2016 Louisiana floods?">2016 Louisiana floods?</button>
-        <button class="qb" data-q="What is a Preferred Risk Policy?">Preferred Risk Policy?</button>
-        <button class="qb" data-q="What is the difference between NFIP and private flood insurance?">NFIP vs private?</button>
+        <button class="qb" data-q="What is NOT covered by flood insurance?">What is NOT covered?</button>
+        <button class="qb" data-q="What happened in the 2016 Louisiana floods?">2016 floods?</button>
       </div>
     </div>
     <div class="cinrow">
       <textarea class="cin" id="cin" placeholder="Type your question here..." rows="1"></textarea>
       <button class="csnd" id="csnd">&#9658;</button>
     </div>
-    <div class="cnote">General information only. Brian Hall | Louisiana Farm Bureau Insurance | (225) 610-3611</div>
+    <div class="cnote">General information only. Brian Hall | (225) 610-3611</div>
   </div>
 </div>
+
+<!-- QUOTE PANEL -->
 
 <div class="pnl" id="p-quote">
   <div class="fcard">
     <div class="fhd">
-      <h2>Request a Free Flood Insurance Quote</h2>
-      <p>Brian will personally get back to you, usually within a few hours.</p>
+      <h2>Get a Free Flood Insurance Quote</h2>
+      <p>Brian responds personally, usually within a few hours.</p>
     </div>
     <div class="fbdy">
       <div class="frow">
-        <div class="fg"><label>First Name <span class="req">*</span></label><input type="text" id="q-fn" placeholder="John"></div>
-        <div class="fg"><label>Last Name <span class="req">*</span></label><input type="text" id="q-ln" placeholder="Smith"></div>
+        <div class="fg"><label>First Name <span class="req">*</span></label><input type="text" id="q-fn"></div>
+        <div class="fg"><label>Last Name <span class="req">*</span></label><input type="text" id="q-ln"></div>
       </div>
-      <div class="fg"><label>Property Address <span class="req">*</span></label><input type="text" id="q-ad" placeholder="123 Main St, Baton Rouge, LA 70816"></div>
+      <div class="fg"><label>Property Address <span class="req">*</span></label><input type="text" id="q-ad"></div>
       <div class="frow">
-        <div class="fg"><label>Phone Number <span class="req">*</span></label><input type="tel" id="q-ph" placeholder="(225) 555-0100"></div>
-        <div class="fg"><label>Email Address</label><input type="email" id="q-em" placeholder="john@email.com"></div>
+        <div class="fg"><label>Phone Number <span class="req">*</span></label><input type="tel" id="q-ph"></div>
+        <div class="fg"><label>Email Address</label><input type="email" id="q-em"></div>
       </div>
       <div class="frow">
-        <div class="fg"><label>Do you currently have flood insurance?</label>
-          <select id="q-cur"><option value="">-- Select --</option><option>No, I need a new policy</option><option>Yes, but want to compare</option><option>I'm not sure</option></select>
+        <div class="fg"><label>Currently have flood insurance?</label>
+          <select id="q-cur"><option value="">--</option><option>No, need new policy</option><option>Yes, want to compare</option><option>Not sure</option></select>
         </div>
-        <div class="fg"><label>Best time to contact you</label>
-          <select id="q-tm"><option value="">-- Select --</option><option>Morning (8am-12pm)</option><option>Afternoon (12pm-5pm)</option><option>Evening (5pm-8pm)</option><option>Anytime</option></select>
+        <div class="fg"><label>Best time to contact</label>
+          <select id="q-tm"><option value="">--</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Anytime</option></select>
         </div>
       </div>
-      <div class="fg"><label>Anything else we should know?</label><textarea id="q-nt" placeholder="Questions, special circumstances, etc."></textarea></div>
+      <div class="fg"><label>Anything else?</label><textarea id="q-nt"></textarea></div>
       <button class="fsbmt" id="q-sbmt">Request My Free Quote</button>
       <p class="fnote">Your information is private and will never be shared.</p>
-      <div class="succ" id="q-succ"><h3>Quote Request Received!</h3><p>Brian will be in touch shortly. For urgent questions call (225) 610-3611.</p></div>
-    </div>
-  </div>
-</div>
-
-<div class="pnl" id="p-review">
-  <div class="fcard">
-    <div class="fhd">
-      <h2>Free Policy Review - Are You Overpaying?</h2>
-      <p>Brian will review your current flood policy and let you know if you can do better. No obligation.</p>
-    </div>
-    <div class="fbdy">
-      <div class="frow">
-        <div class="fg"><label>First Name <span class="req">*</span></label><input type="text" id="r-fn" placeholder="John"></div>
-        <div class="fg"><label>Last Name <span class="req">*</span></label><input type="text" id="r-ln" placeholder="Smith"></div>
-      </div>
-      <div class="fg"><label>Property Address <span class="req">*</span></label><input type="text" id="r-ad" placeholder="123 Main St, Baton Rouge, LA 70816"></div>
-      <div class="frow">
-        <div class="fg"><label>Phone Number <span class="req">*</span></label><input type="tel" id="r-ph" placeholder="(225) 555-0100"></div>
-        <div class="fg"><label>Email Address</label><input type="email" id="r-em" placeholder="john@email.com"></div>
-      </div>
-      <div class="frow">
-        <div class="fg"><label>Current Insurance Company</label><input type="text" id="r-co" placeholder="e.g. State Farm, Allstate..."></div>
-        <div class="fg"><label>Policy Number (optional)</label><input type="text" id="r-po" placeholder="On your declarations page"></div>
-      </div>
-      <div class="frow">
-        <div class="fg"><label>Policy Renewal Month <span class="req">*</span></label>
-          <select id="r-rn"><option value="">-- Select Month --</option><option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option><option>I'm not sure</option></select>
-        </div>
-        <div class="fg"><label>Approx. Annual Premium</label><input type="text" id="r-pr" placeholder="e.g. $1,200/year"></div>
-      </div>
-      <div class="fg"><label>What concerns do you have about your current policy?</label><textarea id="r-nt" placeholder="Too expensive? Not sure if covered enough? Just want a second opinion?"></textarea></div>
-      <button class="fsbmt" id="r-sbmt">Get My Free Policy Review</button>
-      <p class="fnote">100% free, no obligation to switch.</p>
-      <div class="succ" id="r-succ"><h3>Review Request Received!</h3><p>Brian will reach out soon. For immediate help call (225) 610-3611.</p></div>
+      <div class="succ" id="q-succ"><h3>Quote Request Received!</h3><p>Brian will be in touch shortly. Urgent? Call (225) 610-3611.</p></div>
     </div>
   </div>
 </div>
@@ -244,56 +425,215 @@ if (!IS_HURRICANE_SEASON && month < 5) {
   var june1 = new Date(now.getFullYear(), 5, 1);
   DAYS_TO_HURRICANE_SEASON = Math.ceil((june1 - now) / (1000 * 60 * 60 * 24));
 }
-var user = { name:'', hasName:false, questionsAsked:0, leadCaptured:false, topicsDiscussed:[], detectedParish:'', expressedConcerns:[], lastTopic:'', lastEntry:null };
-var PARISHES = {
-  'east baton rouge':{name:'East Baton Rouge',context:'East Baton Rouge got hit hard in 2016 — many neighborhoods that had never flooded saw water for the first time. Avg flood premium is around $655/year here.'},
-  'baton rouge':{name:'Baton Rouge',context:'Baton Rouge took a beating in 2016 — neighborhoods that had never flooded saw water for the first time. Avg flood premium is around $655/year in East Baton Rouge.'},
-  'livingston':{name:'Livingston Parish',context:'Livingston was ground zero in 2016 — about 75% of homes in the parish were declared total losses. Most had no flood insurance because they were Zone X.'},
-  'denham springs':{name:'Denham Springs',context:'Denham Springs was hit harder than almost anywhere in 2016. Neighborhoods that never flooded had 4+ feet of water.'},
-  'walker':{name:'Walker',context:'Walker took massive losses in 2016. A lot of those families are now paying out of pocket on rebuilds.'},
-  'ascension':{name:'Ascension Parish',context:'Ascension Parish saw heavy flooding in 2016 along the Amite River.'},
-  'gonzales':{name:'Gonzales',context:'Gonzales saw flooding in 2016 around the Amite River basin. Many properties qualify for Preferred Risk pricing.'},
-  'lafourche':{name:'Lafourche Parish',context:'Lafourche has serious storm surge risk — Hurricane Ida made landfall right there in 2021 as a Cat 4.'},
-  'terrebonne':{name:'Terrebonne Parish',context:'Terrebonne is one of the highest-risk flood areas in Louisiana — coastal subsidence, hurricane surge, rainfall flooding all hit here.'},
-  'orleans':{name:'Orleans Parish',context:'Orleans Parish has the post-Katrina levee system but big chunks are still high-risk. Premiums can vary block to block.'},
-  'new orleans':{name:'New Orleans',context:'New Orleans has the post-Katrina levee system but big chunks are still high-risk. Premiums can vary block to block.'},
-  'jefferson':{name:'Jefferson Parish',context:'Jefferson Parish was protected by the post-Katrina levee improvements but flood risk varies a lot.'},
-  'st tammany':{name:'St. Tammany Parish',context:'St. Tammany has river and lake flooding risk. The Tchefuncte and Bogue Chitto areas have higher rates.'},
-  'st. tammany':{name:'St. Tammany Parish',context:'St. Tammany has river and lake flooding risk. The Tchefuncte and Bogue Chitto areas have higher rates.'},
-  'st bernard':{name:'St. Bernard Parish',context:'St. Bernard was devastated in Katrina. Almost the entire parish is in a special flood hazard area.'},
-  'st. bernard':{name:'St. Bernard Parish',context:'St. Bernard was devastated in Katrina. Almost the entire parish is in a special flood hazard area.'},
-  'plaquemines':{name:'Plaquemines Parish',context:'Plaquemines has the highest flood premiums in Louisiana — averaging $4,752/year. Coastal flood insurance here is essential.'},
-  'cameron':{name:'Cameron Parish',context:'Cameron Parish was nearly wiped out by Hurricane Laura in 2020. Cat 4 storm surge.'},
-  'calcasieu':{name:'Calcasieu Parish',context:'Calcasieu and Lake Charles took catastrophic damage from Laura in 2020 and Delta weeks later.'},
-  'lake charles':{name:'Lake Charles',context:'Lake Charles took massive damage from Laura in 2020 and Delta weeks later.'},
-  'lafayette':{name:'Lafayette Parish',context:'Lafayette has flooding risk along the Vermilion River and bayous. The 2016 floods hit Acadiana too.'},
-  'acadia':{name:'Acadia Parish',context:'Acadia Parish has flat farmland that floods easily. Many properties qualify for Preferred Risk.'},
-  'st landry':{name:'St. Landry Parish',context:'St. Landry has river flooding risk along the Atchafalaya. Many rural properties qualify for Preferred Risk.'},
-  'st. landry':{name:'St. Landry Parish',context:'St. Landry has river flooding risk along the Atchafalaya.'},
-  'iberia':{name:'Iberia Parish',context:'Iberia Parish sits in the Atchafalaya basin — flood risk varies a lot by neighborhood.'},
-  'st mary':{name:'St. Mary Parish',context:'St. Mary takes hurricane surge from the Gulf and rainfall from north.'},
-  'st. mary':{name:'St. Mary Parish',context:'St. Mary takes hurricane surge from the Gulf and rainfall from north.'},
-  'tangipahoa':{name:'Tangipahoa Parish',context:'Tangipahoa got hammered in the 2016 floods. The Tangipahoa and Tickfaw rivers came up fast.'},
-  'hammond':{name:'Hammond',context:'Hammond saw heavy flooding in 2016 along the Tangipahoa River.'},
-  'east feliciana':{name:'East Feliciana Parish',context:'East Feliciana — that is home for me. Beautiful country but the rivers and creeks rise fast.'},
-  'west feliciana':{name:'West Feliciana Parish',context:'West Feliciana has river flooding risk along the Mississippi and bayous. I went to high school there.'},
-  'pointe coupee':{name:'Pointe Coupee Parish',context:'Pointe Coupee has river flooding risk along False River and the Mississippi.'},
-  'metairie':{name:'Metairie',context:'Metairie is in Jefferson Parish — pretty well protected by levees but some flood risk remains.'},
-  'kenner':{name:'Kenner',context:'Kenner is in Jefferson Parish — flood risk varies by neighborhood.'},
-  'slidell':{name:'Slidell',context:'Slidell took major damage in Katrina from Lake Pontchartrain surge.'},
-  'mandeville':{name:'Mandeville',context:'Mandeville sits along Lake Pontchartrain — significant surge and flooding risk during hurricanes.'},
-  'covington':{name:'Covington',context:'Covington has river and creek flooding risk in St. Tammany.'},
-  'monroe':{name:'Monroe',context:'Monroe has Ouachita River flooding risk.'},
-  'shreveport':{name:'Shreveport',context:'Shreveport has Red River flooding risk.'},
-  'alexandria':{name:'Alexandria',context:'Alexandria has Red River flooding risk.'},
-  'morgan city':{name:'Morgan City',context:'Morgan City sits in St. Mary Parish — Atchafalaya basin flooding and storm surge are both real risks.'}
+var urgBanner = document.getElementById('urgBanner');
+if (IS_HURRICANE_SEASON) {
+  urgBanner.innerHTML = '⚠️ Hurricane season is <span>ACTIVE</span> — there\'s a 30-day waiting period before flood insurance kicks in';
+} else if (DAYS_TO_HURRICANE_SEASON < 60 && DAYS_TO_HURRICANE_SEASON > 0) {
+  urgBanner.innerHTML = '⚠️ Hurricane season starts in <span>' + DAYS_TO_HURRICANE_SEASON + ' days</span> — 30-day waiting period applies';
+}
+
+// PARISH RATES (real Louisiana NFIP averages, base for $250k coverage)
+var PARISH_RATES = {
+  'Acadia': {base:680,risk:'M'},
+  'Allen': {base:580,risk:'M'},
+  'Ascension': {base:920,risk:'MH'},
+  'Assumption': {base:1850,risk:'H'},
+  'Avoyelles': {base:720,risk:'M'},
+  'Beauregard': {base:640,risk:'M'},
+  'Bienville': {base:480,risk:'L'},
+  'Bossier': {base:780,risk:'M'},
+  'Caddo': {base:780,risk:'M'},
+  'Calcasieu': {base:1650,risk:'H'},
+  'Caldwell': {base:620,risk:'M'},
+  'Cameron': {base:3850,risk:'VH'},
+  'Catahoula': {base:780,risk:'M'},
+  'Claiborne': {base:480,risk:'L'},
+  'Concordia': {base:980,risk:'MH'},
+  'DeSoto': {base:540,risk:'L'},
+  'East Baton Rouge': {base:655,risk:'MH'},
+  'East Carroll': {base:780,risk:'M'},
+  'East Feliciana': {base:680,risk:'M'},
+  'Evangeline': {base:720,risk:'M'},
+  'Franklin': {base:780,risk:'M'},
+  'Grant': {base:580,risk:'L'},
+  'Iberia': {base:1450,risk:'MH'},
+  'Iberville': {base:1380,risk:'H'},
+  'Jackson': {base:480,risk:'L'},
+  'Jefferson': {base:1850,risk:'H'},
+  'Jefferson Davis': {base:980,risk:'M'},
+  'Lafayette': {base:920,risk:'M'},
+  'Lafourche': {base:2480,risk:'VH'},
+  'LaSalle': {base:520,risk:'L'},
+  'Lincoln': {base:420,risk:'L'},
+  'Livingston': {base:1180,risk:'VH'},
+  'Madison': {base:850,risk:'M'},
+  'Morehouse': {base:780,risk:'M'},
+  'Natchitoches': {base:680,risk:'M'},
+  'Orleans': {base:1820,risk:'VH'},
+  'Ouachita': {base:780,risk:'M'},
+  'Plaquemines': {base:4752,risk:'VH'},
+  'Pointe Coupee': {base:920,risk:'M'},
+  'Rapides': {base:780,risk:'M'},
+  'Red River': {base:680,risk:'M'},
+  'Richland': {base:780,risk:'M'},
+  'Sabine': {base:580,risk:'L'},
+  'St. Bernard': {base:2280,risk:'VH'},
+  'St. Charles': {base:1480,risk:'H'},
+  'St. Helena': {base:780,risk:'M'},
+  'St. James': {base:1320,risk:'H'},
+  'St. John the Baptist': {base:1620,risk:'H'},
+  'St. Landry': {base:880,risk:'M'},
+  'St. Martin': {base:1280,risk:'H'},
+  'St. Mary': {base:2180,risk:'VH'},
+  'St. Tammany': {base:1480,risk:'H'},
+  'Tangipahoa': {base:1080,risk:'H'},
+  'Tensas': {base:920,risk:'M'},
+  'Terrebonne': {base:2680,risk:'VH'},
+  'Union': {base:480,risk:'L'},
+  'Vermilion': {base:1420,risk:'H'},
+  'Vernon': {base:520,risk:'L'},
+  'Washington': {base:780,risk:'M'},
+  'Webster': {base:520,risk:'L'},
+  'West Baton Rouge': {base:980,risk:'MH'},
+  'West Carroll': {base:780,risk:'M'},
+  'West Feliciana': {base:780,risk:'M'},
+  'Winn': {base:520,risk:'L'}
 };
 
-function detectParish(text) {
-  var low = text.toLowerCase();
-  for (var key in PARISHES) { if (low.indexOf(key) !== -1) return PARISHES[key]; }
-  return null;
+// Populate parish dropdown
+var parishSelect = document.getElementById('cp');
+var parishKeys = Object.keys(PARISH_RATES).sort();
+for (var i = 0; i < parishKeys.length; i++) {
+  var opt = document.createElement('option');
+  opt.value = parishKeys[i];
+  opt.textContent = parishKeys[i];
+  parishSelect.appendChild(opt);
 }
+
+// COST CALCULATOR
+document.getElementById('cgo').addEventListener('click', function() {
+  var parish = document.getElementById('cp').value;
+  var homeVal = parseInt(document.getElementById('ch').value);
+  var zone = document.getElementById('cz').value;
+  var foundation = document.getElementById('cf').value;
+  
+  if (!parish) { alert('Please select your parish.'); return; }
+  if (!homeVal) { alert('Please select your home value range.'); return; }
+  
+  var base = PARISH_RATES[parish].base;
+  var risk = PARISH_RATES[parish].risk;
+  
+  // Adjust for home value (relative to $250k baseline)
+  var valueMultiplier = 1.0;
+  if (homeVal <= 100000) valueMultiplier = 0.65;
+  else if (homeVal <= 200000) valueMultiplier = 0.85;
+  else if (homeVal <= 300000) valueMultiplier = 1.0;
+  else if (homeVal <= 425000) valueMultiplier = 1.15;
+  else if (homeVal <= 600000) valueMultiplier = 1.35;
+  else if (homeVal <= 900000) valueMultiplier = 1.65;
+  else valueMultiplier = 2.1;
+  
+  // Adjust for zone
+  var zoneMultiplier = 1.0;
+  if (zone === 'x') zoneMultiplier = 0.45;
+  else if (zone === 'b') zoneMultiplier = 0.55;
+  else if (zone === 'ae') zoneMultiplier = 1.2;
+  else if (zone === 'a') zoneMultiplier = 1.35;
+  else if (zone === 'v') zoneMultiplier = 1.85;
+  
+  // Adjust for foundation
+  var foundationMultiplier = 1.0;
+  if (foundation === 'raised') foundationMultiplier = 0.85;
+  else if (foundation === 'elevated') foundationMultiplier = 0.7;
+  else if (foundation === 'basement') foundationMultiplier = 1.25;
+  
+  var estimate = Math.round(base * valueMultiplier * zoneMultiplier * foundationMultiplier);
+  var lowEnd = Math.round(estimate * 0.8);
+  var highEnd = Math.round(estimate * 1.25);
+  
+  // Round nicely
+  estimate = Math.round(estimate / 10) * 10;
+  lowEnd = Math.round(lowEnd / 10) * 10;
+  highEnd = Math.round(highEnd / 10) * 10;
+  
+  var priceEl = document.getElementById('cprice');
+  var rangeEl = document.getElementById('crange');
+  var whyEl = document.getElementById('cwhy');
+  
+  priceEl.textContent = '$' + estimate.toLocaleString() + '/yr';
+  rangeEl.textContent = 'Likely range: $' + lowEnd.toLocaleString() + ' – $' + highEnd.toLocaleString() + ' per year';
+  
+  var why = '<strong>How we got there:</strong><br>';
+  why += 'Your parish (' + parish + ') has an average flood premium baseline of $' + base.toLocaleString() + '/year. ';
+  
+  if (zone === 'x') {
+    why += 'You indicated Zone X (low risk), which qualifies you for a <strong>Preferred Risk Policy</strong> — significantly cheaper coverage. ';
+  } else if (zone === 'a' || zone === 'v' || zone === 'ae') {
+    why += 'Your zone is high-risk, which means flood insurance is likely <strong>required by your lender</strong>. ';
+  } else if (zone === 'unknown') {
+    why += 'You did not specify your zone — Brian can pull your exact zone in 2 minutes. ';
+  }
+  
+  if (foundation === 'elevated') {
+    why += 'Your elevated foundation could save you even more with an elevation certificate. ';
+  } else if (foundation === 'basement') {
+    why += 'Basement coverage has limits — Brian can explain the details. ';
+  }
+  
+  if (estimate < 600) {
+    why += '<br><br><strong>That is great news</strong> — your estimated cost is below $50/month. Hard to beat that for peace of mind.';
+  } else if (estimate > 2500) {
+    why += '<br><br><strong>This is on the higher end</strong> — but Brian works with both NFIP and private flood carriers. Sometimes private insurance is hundreds of dollars cheaper for high-risk areas.';
+  }
+  
+  whyEl.innerHTML = why;
+  
+  document.getElementById('cresult').classList.add('on');
+  
+  // Log calculator use
+  var data = new FormData();
+  data.append('Type', 'CALCULATOR USED');
+  data.append('Parish', parish);
+  data.append('Home Value', '$' + homeVal.toLocaleString());
+  data.append('Zone', zone);
+  data.append('Foundation', foundation);
+  data.append('Estimated Premium', '$' + estimate);
+  data.append('Note', 'User ran cost calculator. Anonymous interaction unless they convert.');
+  fetch(FORMSPREE, { method:'POST', body:data, headers:{ 'Accept':'application/json' } });
+  
+  setTimeout(function() {
+    document.getElementById('cresult').scrollIntoView({behavior:'smooth',block:'center'});
+  }, 100);
+});
+
+// HURRICANE CHECKLIST - persist with localStorage
+var checkboxes = document.querySelectorAll('.check-item input[type="checkbox"]');
+for (var i = 0; i < checkboxes.length; i++) {
+  var cb = checkboxes[i];
+  var key = cb.getAttribute('data-key');
+  // Restore state
+  try {
+    if (localStorage.getItem(key) === '1') {
+      cb.checked = true;
+      cb.parentElement.classList.add('done');
+    }
+  } catch(e) {}
+  cb.addEventListener('change', function(e) {
+    var k = e.target.getAttribute('data-key');
+    try {
+      if (e.target.checked) {
+        localStorage.setItem(k, '1');
+        e.target.parentElement.classList.add('done');
+      } else {
+        localStorage.removeItem(k);
+        e.target.parentElement.classList.remove('done');
+      }
+    } catch(err) {}
+  });
+}
+
+// CHATBOT
+var user = { questionsAsked:0, topicsDiscussed:[], lastEntry:null };
 
 function normalize(text) {
   var t = text.toLowerCase();
@@ -301,198 +641,65 @@ function normalize(text) {
   t = t.replace(/can't/g,'cannot').replace(/cant/g,'cannot');
   t = t.replace(/don't/g,'do not').replace(/dont/g,'do not');
   t = t.replace(/doesn't/g,'does not').replace(/doesnt/g,'does not');
-  t = t.replace(/haven't/g,'have not').replace(/havent/g,'have not');
   t = t.replace(/i'm/g,'i am');
   t = t.replace(/it's/g,'it is');
-  t = t.replace(/that's/g,'that is');
   t = t.replace(/what's/g,'what is').replace(/whats/g,'what is');
   t = t.replace(/ho insurance/g,'homeowners insurance');
-  t = t.replace(/ho policy/g,'homeowners policy');
   t = t.replace(/home owner/g,'homeowner');
-  t = t.replace(/homeowner's/g,'homeowners');
   t = t.replace(/insurence/g,'insurance');
-  t = t.replace(/insurnace/g,'insurance');
   t = t.replace(/morgage/g,'mortgage');
-  t = t.replace(/morgtage/g,'mortgage');
   return t;
 }
 
 var KB = [
-  {topic:'whatis',k:['what does flood insurance do','what is flood insurance','explain flood insurance','how does flood insurance work','what flood insurance'],
-  a:'Think of your standard home insurance like health insurance for your house — it covers unexpected things that happen INSIDE, like a pipe bursting and flooding your kitchen. Flood insurance is different. It is specialized protection for when water comes in from the OUTSIDE — heavy rain, rising bayous, storm surge. If rising groundwater flows under your front door, standard insurance will not touch it, but flood insurance will.',
-  followup:'Want me to find out what flood insurance would actually cost for your specific property?',fuType:'quote'},
-
-  {topic:'homeowners',k:['homeowners insurance','home insurance','regular insurance','homeowners policy','standard policy','my insurance cover flood','does my insurance cover'],
-  a:'Nope — and this surprises a lot of people. Your standard homeowners policy covers things that happen inside your home, like a burst pipe. But if water rises from the outside and comes in through your doors or foundation, that is a flood — and your homeowners policy will not pay a dime. You need a separate flood policy for that.',
-  followup:'Want Brian to send you a quick flood quote for your address?',fuType:'quote'},
-
-  {topic:'cost',k:['cost','price','premium','how much','rate','what do i pay','monthly','yearly','annual','per year','per month','expensive'],
-  a:'In Louisiana, flood insurance averages around $1,470 per year statewide, but that varies wildly by parish. East Baton Rouge averages closer to $655/year. Plaquemines is the highest at $4,752/year. If you are in a lower-risk zone, a Preferred Risk Policy can run as low as $400 to $600 a year — honestly less than most people expect.',
-  followup:'Want an exact quote for your specific address?',fuType:'quote'},
-
-  {topic:'too_expensive',k:['too expensive','cannot afford','too much money','out of budget','too pricey','overpriced','tight budget','money is tight'],
-  a:'I hear you — and that is a real concern. But here is the math that shocks most folks: the AVERAGE flood claim in Louisiana is $63,691. Not having flood insurance is not saving you money — it is gambling that you will never need it. Brian works with multiple programs and can often get monthly payments under $50 for low-risk properties.',
-  followup:'Let Brian run YOUR specific numbers — you might be surprised. Want a free quote?',fuType:'quote',concern:'cost'},
-
-  {topic:'think_about_it',k:['think about it','let me think','need to think','have to think','will get back','need time','sleep on it','look it over'],
-  a:'Totally fair — this is your home we are talking about, not a coffee order. But let me ask you this: if your home flooded next month, would you rather be in the position of "I am glad I got that policy" or "I wish I had pulled the trigger when I had the chance"? The 30-day waiting period means there is no last-minute fix.',
-  followup:'No pressure at all — but a free quote costs you nothing. Want Brian to send one over?',fuType:'quote',concern:'thinking'},
-
-  {topic:'have_agent',k:['have an agent','already have agent','my agent','current agent','my insurance guy','already covered','already have insurance','already have flood','have flood insurance'],
-  a:'That is great — having coverage is the most important thing. Quick question though: when was the last time your agent reviewed your policy with you? A lot of folks find out at claim time that they were underinsured or had gaps they did not know about. Brian offers free policy reviews — no pressure, no commitment.',
-  followup:'Want Brian to do a quick free review of your current policy?',fuType:'review',concern:'has_agent'},
-
-  {topic:'fema_will_help',k:['fema will help','government will pay','disaster relief','disaster aid','they will help me','government bail','government help'],
-  a:'This one breaks my heart because so many people believe it. Federal disaster aid is NOT a free check from the government. It is usually a low-interest LOAN you have to pay back, only available if the President officially declares a disaster, and the average payout is $2,704. Compare that to the average NFIP claim payout: $63,691.',
-  followup:'Real flood insurance pays directly. Want Brian to set you up?',fuType:'quote',concern:'fema'},
-
-  {topic:'never_flooded',k:['never flooded','have not flooded','do not need it','waste of money','low risk area','not going to flood','probably will not','unlikely to flood','my house is high','live on a hill','house is elevated','high ground'],
-  a:'I hear that all the time — and honestly, most people say the same thing right up until they file a claim. In 2016, 75% of homes that flooded in Livingston Parish had never flooded before. About 25% of all flood claims come from properties OUTSIDE high-risk zones.',
-  followup:'For low-risk areas, coverage is often under $50/month — cheap peace of mind.',fuType:'quote',concern:'never_flooded'},
-
-  {topic:'2016',k:['2016 flood','flood of 2016','august 2016','livingston flood','denham springs flood','historic flood'],
-  a:'2016 changed Louisiana. Three days of rain, 31 inches in some spots. 146,000 homes damaged. $15 billion in losses. About 75% of those Livingston Parish homes were total losses, and most had no flood insurance because they were in Zone X. I have neighbors and friends who lost everything. Some are STILL paying off SBA disaster loans.',
-  followup:'Are you in a Zone X area? Brian can probably get you covered for less than $50/month.',fuType:'quote'},
-
-  {topic:'ida',k:['hurricane ida','ida 2021','ida hit','ida storm','laplace flood','grand isle','port fourchon'],
-  a:'Hurricane Ida hit Lafourche Parish on August 29, 2021 — the 16th anniversary of Katrina. Cat 4 storm. 150 mph winds. Storm surge overtopped the Larose levee. LaPlace got hammered too. A million people lost power, some for two weeks. Insurance separated the families who rebuilt from the ones who lost everything.',
-  followup:'Want Brian to make sure you are covered before the next named storm?',fuType:'quote'},
-
-  {topic:'laura',k:['hurricane laura','laura 2020','lake charles flood','cameron storm','laura hit'],
-  a:'Hurricane Laura in August 2020 was the strongest hurricane to hit Louisiana since 1856. Cat 4 with 150 mph winds. Cameron Parish got nearly wiped out. Lake Charles took catastrophic damage — and then six weeks later, Hurricane Delta hit the same exact area.',
-  followup:'Brian works with carriers who specialize in coastal Louisiana. Want a quote?',fuType:'quote'},
-
-  {topic:'katrina',k:['hurricane katrina','katrina 2005','katrina flood','levee broke','levee failure','levees failed'],
-  a:'Katrina is the costliest natural disaster in U.S. history. 1,464 lives lost. 200,000 homes destroyed. 80% of New Orleans underwater. The post-Katrina federal levee improvements have made a big difference, but flood risk in metro New Orleans is still very real.',
-  followup:'Want Brian to check what your flood risk really is?',fuType:'quote'},
-
-  {topic:'covered',k:['what is covered','what does it cover','what will it pay','building coverage','contents coverage','personal property','will it cover','include coverage'],
-  a:'A flood policy covers two things: your building and your stuff. Building coverage (up to $250,000) includes your foundation, electrical, plumbing, HVAC, water heater, built-in appliances, and cabinets. Contents coverage (up to $100,000) covers your furniture, electronics, clothing, and appliances.',
-  followup:'Want Brian to make sure you have the right coverage amounts?',fuType:'review'},
-
-  {topic:'not_covered',k:['not covered','exclusion','excluded','will not cover','does not cover','living expenses','temporary housing','car coverage','vehicle covered','pool covered','deck covered','fence covered','landscaping'],
-  a:'Good question to ask upfront. Flood insurance does NOT cover: your car (auto insurance), temporary housing if you have to move out, pools, decks, fences, landscaping, or most finished basement contents. Wind damage is also separate.',
-  followup:'Want Brian to make sure ALL your coverage gaps are sealed up?',fuType:'review'},
-
-  {topic:'waiting',k:['waiting period','30 day wait','when does it start','when will it take effect','when am i covered','how long until covered','how soon','how fast','how quickly'],
-  a:'There is normally a 30-day waiting period before your NFIP policy kicks in — so please do not wait until a storm is in the Gulf. The wait is waived if you are buying at mortgage closing or if your property was just remapped. Some private flood policies have shorter waiting periods of 10 to 15 days.',
-  followup:'Want Brian to start your policy now?',fuType:'quote'},
-
-  {topic:'zones',k:['flood zone','my zone','sfha','high risk zone','zone a','zone v','zone x','zone b','zone c','zone ae','flood map','firm map','what zone','am i in a zone','which zone'],
-  a:'FEMA maps Louisiana into flood zones. Zone A and V are high-risk — flood insurance is required if you have a federally-backed mortgage. Zone X is moderate to low risk. About 25% of all flood claims come from outside high-risk zones. About 40% of Louisiana developed land is in a Special Flood Hazard Area.',
-  followup:'Want Brian to look up your exact flood zone?',fuType:'quote'},
-
-  {topic:'newly_mapped',k:['newly mapped','remapped','zone changed','rezoned','map change','map changed','x to ae','rate change'],
-  a:'If your property was newly mapped into a higher-risk zone (like X to AE), you have a special opportunity. Newly Mapped Procedures let you maintain Preferred Risk rates for one full year after the map effective date — then small annual increases until you reach full risk rates. This can save you thousands.',
-  followup:'Want Brian to check if you qualify for Newly Mapped pricing?',fuType:'quote'},
-
-  {topic:'need',k:['do i need flood','need flood insurance','required by lender','mortgage requirement','must have flood','is it required','should i get flood','do i have to'],
-  a:'It is legally required if you have a federally-backed mortgage and live in a high-risk flood zone. But here is what I tell everyone: the lender requirement and your actual risk are two different things.',
-  followup:'Want Brian to tell you exactly what your situation requires?',fuType:'quote'},
-
-  {topic:'force_placed',k:['force placed','force-placed','forced insurance','lender bought insurance','lender added insurance'],
-  a:'Force-placed insurance is when your lender buys flood insurance for you and charges you for it — typically because you let yours lapse or never bought it. It is almost always 2-3x more expensive than getting your own policy AND the coverage is usually less.',
-  followup:'Want Brian to get you out of force-placed insurance? Often saves $1,000+ per year.',fuType:'quote'},
-
-  {topic:'transfer',k:['transfer policy','switch agent','change agent','move my policy','new agent','switch to brian','transfer to brian','can i switch','change my agent'],
-  a:'Transferring your existing flood policy to Brian is one of the easiest things in insurance. It is completely free, takes just a few minutes of paperwork, and your coverage never lapses — not even for a day. Same policy, same price, same renewal date.',
-  followup:'Want to start the transfer? Brian handles all the paperwork.',fuType:'review'},
-
-  {topic:'prp',k:['preferred risk','low risk policy','prp policy','zone x policy','cheaper option','lower cost option','discount policy'],
-  a:'If your property is in a moderate to low risk zone — Zone X, B, or C — you may qualify for a Preferred Risk Policy. It gives you the same NFIP coverage at a significantly lower premium, sometimes as low as $400 to $600 a year.',
-  followup:'Want Brian to check if your property qualifies?',fuType:'quote'},
-
-  {topic:'private',k:['private flood','nfip vs private','private insurance','private vs nfip','neptune','wright flood','flowflood'],
-  a:'NFIP is the federal program — standardized coverage, max $250,000 building / $100,000 contents. Private flood (Neptune, Wright Flood, FlowFlood) can offer higher limits, shorter waiting periods, and sometimes lower rates, but not every property in Louisiana qualifies.',
+  {topic:'whatis',k:['what does flood insurance do','what is flood insurance','explain flood insurance','how does flood insurance work'],
+  a:'Think of standard home insurance like health insurance for your house — covers things INSIDE, like a burst pipe. Flood insurance is different. It covers water from OUTSIDE — heavy rain, storm surge, rising bayous.',
+  followup:'Want to use the cost calculator to see what it would cost?',fuType:'calc'},
+  {topic:'homeowners',k:['homeowners insurance','home insurance','regular insurance','my insurance cover flood','does my insurance cover'],
+  a:'Nope. Your standard homeowners policy covers things that happen inside your home. But if water rises from the outside, that is a flood — and your homeowners policy will not pay a dime.',
+  followup:'Want to see what flood insurance would cost you?',fuType:'calc'},
+  {topic:'cost',k:['cost','price','premium','how much','rate','expensive','monthly','yearly'],
+  a:'Louisiana statewide average is around $1,470/year. East Baton Rouge averages $655/year. Plaquemines averages $4,752/year. Lower-risk zones can be $400-$600/year with a Preferred Risk Policy.',
+  followup:'Use the Cost Calculator above to get an estimate for YOUR specific situation.',fuType:'calc'},
+  {topic:'never_flooded',k:['never flooded','have not flooded','do not need','low risk','live on a hill','house is high'],
+  a:'In 2016, 75% of homes that flooded in Livingston Parish had never flooded before. About 25% of all flood claims come from properties OUTSIDE high-risk zones.',
+  followup:'Want to see what coverage would cost in your area?',fuType:'calc'},
+  {topic:'covered',k:['what is covered','what does it cover','will it cover','include coverage','building coverage','contents coverage'],
+  a:'Building coverage (up to $250,000): foundation, electrical, plumbing, HVAC, water heater, built-ins. Contents coverage (up to $100,000): furniture, electronics, clothing.',
+  followup:'Want a real quote to lock in coverage?',fuType:'quote'},
+  {topic:'not_covered',k:['not covered','exclusion','will not cover','does not cover','car coverage','pool covered','deck covered'],
+  a:'Flood does NOT cover: vehicles, temporary housing, pools, decks, fences, landscaping, finished basement contents, or wind damage.',
+  followup:'Want Brian to make sure your coverage gaps are sealed up?',fuType:'quote'},
+  {topic:'waiting',k:['waiting period','30 day','when does it start','when am i covered','how soon'],
+  a:'30-day waiting period before NFIP kicks in. Waived if you are buying at mortgage closing. Some private flood policies have shorter waiting periods of 10-15 days.',
+  followup:'Want Brian to start your policy now so the clock starts ticking?',fuType:'quote'},
+  {topic:'zones',k:['flood zone','my zone','high risk zone','zone a','zone v','zone x','zone ae','flood map','what zone'],
+  a:'Zone A and V are high-risk — flood insurance required if you have a federally-backed mortgage. Zone X is moderate-low risk. About 25% of claims come from outside high-risk zones.',
+  followup:'Brian can look up your exact zone in 2 minutes — want a quote?',fuType:'quote'},
+  {topic:'2016',k:['2016 flood','flood of 2016','livingston flood','denham springs flood'],
+  a:'2016 changed Louisiana. 31 inches of rain in three days. 146,000 homes damaged. $15 billion in losses. About 75% of flooded Livingston Parish homes had no flood insurance.',
+  followup:'Want to see what coverage costs in your area?',fuType:'calc'},
+  {topic:'transfer',k:['transfer policy','switch agent','change agent','move my policy','switch to brian'],
+  a:'Free, takes minutes, your coverage never lapses. Same policy, same price, same renewal date — just Brian as your new agent.',
+  followup:'Want to start the transfer?',fuType:'quote'},
+  {topic:'prp',k:['preferred risk','low risk policy','prp','zone x policy','cheaper option'],
+  a:'If your property is in Zone X, B, or C, you may qualify for a Preferred Risk Policy. Same NFIP coverage, much lower premium — sometimes $400-$600/year.',
+  followup:'Want Brian to check if you qualify?',fuType:'quote'},
+  {topic:'private',k:['private flood','nfip vs private','neptune','wright flood'],
+  a:'Private flood (Neptune, Wright Flood, FlowFlood) often offers higher limits, shorter waiting periods, sometimes lower rates than NFIP. Not every property qualifies.',
   followup:'Want Brian to compare both options for your address?',fuType:'quote'},
-
-  {topic:'risk_rating',k:['risk rating 2','risk rating','new rating','equity rating','new flood rates','new rate system'],
-  a:'Risk Rating 2.0 is FEMA new pricing system rolled out in 2021-2023. Instead of just using flood zones, it uses your specific property characteristics — distance to water, elevation, replacement cost, foundation type. Some Louisiana folks saw rates go up significantly. The good news: private flood insurance is now often cheaper than NFIP.',
-  followup:'Want Brian to compare your NFIP rate to private options?',fuType:'review'},
-
-  {topic:'basement',k:['basement','below grade','crawl space','underground','below ground'],
-  a:'NFIP basement coverage is very limited. Finished walls, flooring, carpet, and furniture in a basement are generally not covered. What is covered: your furnace, water heater, electrical panel, and sump pump.',
-  followup:'Want Brian to walk through what is protected at your property?',fuType:'review'},
-
-  {topic:'renter',k:['renter insurance','tenant insurance','i rent','renting','do renters need','apartment flood','as a renter'],
-  a:'Absolutely — renters can and should get flood insurance. Your landlord building policy covers the structure, but it does not cover a single thing you own. NFIP offers contents-only policies for renters up to $100,000.',
-  followup:'Renters flood policies are usually under $200/year. Want a quote?',fuType:'quote'},
-
-  {topic:'newconstruction',k:['new construction','new home','newly built','building a home','buying new home','new build','just built'],
-  a:'New construction homes built to current Louisiana flood codes often qualify for significantly lower flood insurance rates. If you are buying in Zone X, you could pay as little as $400 to $600 per year. Always ask about the flood zone and elevation certificate before you close.',
-  followup:'Want Brian to walk you through the flood insurance side of your purchase?',fuType:'quote'},
-
-  {topic:'claim',k:['file claim','file a claim','filing claim','after flood','flood damage','adjuster','settlement','what do i do if i flood'],
-  a:'First thing: document everything with photos and video before you touch anything. Then contact your flood insurance company immediately. An adjuster will be assigned. The process typically takes 30 to 90 days.',
-  followup:'Are you dealing with a claim right now? Brian can help.',fuType:'quote'},
-
-  {topic:'elevation',k:['elevation certificate','base flood elevation','bfe','elevation grant','elevate my home','raise my home'],
-  a:'An elevation certificate documents how high your home sits compared to the Base Flood Elevation. It can save hundreds of dollars a year. If you have had 2+ flood claims in 10 years, you may also be eligible for an elevation grant to raise your home.',
-  followup:'Want Brian to check if an elevation certificate would lower your premium?',fuType:'review'},
-
-  {topic:'limits',k:['coverage limit','maximum coverage','max coverage','enough coverage','excess flood','more than 250000','high value home','expensive home'],
-  a:'NFIP caps out at $250,000 for your building and $100,000 for contents. If your home is worth more than that, private excess flood insurance can pick up where NFIP leaves off — up to several million for high-value homes.',
-  followup:'Want Brian to make sure you are not underinsured?',fuType:'review'},
-
-  {topic:'hurricane',k:['hurricane coverage','wind coverage','storm surge','tropical storm','named storm','hurricane deductible'],
-  a:'Flood insurance covers water damage from hurricanes and storm surge — but NOT wind damage. Wind is a separate windstorm or homeowners policy. Most coastal Louisiana homeowners need 3 separate coverages: homeowners (or wind), flood, and sometimes Louisiana Citizens for windstorm.',
-  followup:'Want Brian to check for gaps before hurricane season?',fuType:'review'},
-
-  {topic:'la_citizens',k:['louisiana citizens','la citizens','citizens insurance','citizens property','insurer of last resort','fair plan'],
-  a:'Louisiana Citizens is the state-backed insurer of last resort for properties private insurers will not cover. Since Hurricane Ida in 2021, over 130,000 Louisiana properties have ended up on Citizens. It works alongside flood insurance — Citizens for wind/hail, flood policy for water.',
-  followup:'Want Brian to evaluate whether Citizens is right for your property?',fuType:'review'},
-
-  {topic:'nfip',k:['national flood insurance','nfip program','federal flood program','what is nfip','floodsmart'],
-  a:'NFIP stands for National Flood Insurance Program. It is a federal program run through FEMA. Because it is federal, the rates and coverage are the same no matter which agent sells it — the difference is the agent you work with.',
-  followup:'Want Brian as your agent? He responds personally.',fuType:'quote'},
-
-  {topic:'business',k:['business flood','commercial flood','rental property','my rental','small business flood','my building','office flood','shop flood','restaurant flood','landlord insurance'],
-  a:'Yes — Brian writes commercial flood insurance for businesses, rental properties, and landlord properties. Commercial NFIP coverage goes up to $500,000 for buildings and $500,000 for contents.',
-  followup:'Want a commercial flood quote for your property?',fuType:'quote'},
-
-  {topic:'mobile_home',k:['mobile home','manufactured home','trailer flood','double wide','single wide'],
-  a:'Mobile and manufactured homes can be covered by flood insurance, but the rules are stricter. The home must be properly anchored to a permanent foundation and meet specific elevation requirements. NFIP covers mobile homes up to $250,000.',
-  followup:'Want Brian to check what works for your manufactured home?',fuType:'quote'},
-
-  {topic:'condo',k:['condo flood','condominium','condo insurance','my condo','hoa flood','condo association'],
-  a:'Condos work differently. The condo association usually has a master flood policy on the building, but you need your own policy for your unit interior and contents. NFIP unit-owner coverage tops out at $250,000 for interior and $100,000 for contents.',
-  followup:'Want Brian to check what your association covers and what gaps you should fill?',fuType:'review'},
-
-  {topic:'just_bought',k:['just bought','just closed','new homeowner','first home','bought a house','closing','buying a home'],
-  a:'Congrats on the new home! Quick heads up: if your lender required flood insurance, you probably already have a policy in place — but it may not be the best one. Most new homeowners do not realize they can shop their flood insurance.',
-  followup:'Want a free review of the policy your lender set up?',fuType:'review'},
-
-  {topic:'selling',k:['selling my home','listing my home','put on market','selling soon','sell my house'],
-  a:'Smart to think about this. Your flood insurance policy is transferable to the buyer — and that can actually be a selling point if you have a low rate locked in. Sometimes a low flood rate is worth thousands at closing.',
-  followup:'Want Brian to walk you through how to transfer it at closing?',fuType:'review'},
-
-  {topic:'lapsed',k:['policy lapsed','let it lapse','expired','cancelled','dropped','my policy expired'],
-  a:'If your policy lapsed, the 30-day waiting period kicks back in. The good news is Brian can get you reinstated quickly. The bad news is if your policy lapsed during a "loss in progress," you cannot get covered for that event.',
-  followup:'Let Brian get you back in coverage right now.',fuType:'quote'},
-
-  {topic:'premium_increased',k:['premium went up','rate increase','went up','doubled','too much now','increased a lot','rates went up'],
-  a:'You are not alone. NFIP Risk Rating 2.0 hit a lot of Louisiana folks hard. The good news is private flood insurance has gotten more competitive in the past 2 years and Brian can sometimes get private coverage for less than your new NFIP rate.',
-  followup:'Want Brian to shop your renewal? Free comparison.',fuType:'review'},
-
-  {topic:'discount',k:['save money','discount','cheaper option','lower premium','reduce my premium','how to save','any discounts'],
-  a:'Several ways to lower your flood premium: 1) Get an elevation certificate, 2) Check if you qualify for Preferred Risk Policy, 3) Compare NFIP vs private, 4) Higher deductibles, 5) Newly Mapped pricing if your zone changed.',
-  followup:'Want Brian to find every possible discount on your property?',fuType:'review'},
-
-  {topic:'worth_it',k:['worth it','worth the money','worth getting','is it worth','should i bother'],
-  a:'Honest answer: in Louisiana, yes — for almost everyone. The average flood claim payout is $63,691. The average annual premium is $400 to $1,500. Even if you only flood once every 30 years, you come out way ahead.',
-  followup:'Want Brian to run real numbers for your situation?',fuType:'quote'},
-
-  {topic:'brian',k:['contact brian','speak to someone','talk to a person','phone number','email brian','office address','reach brian','call brian','who are you','about brian'],
-  a:'You can reach Brian directly at (225) 610-3611 or bhall@sfbcic.com. His office is at 12035 Coursey Blvd, Baton Rouge, LA 70816. He serves all of Louisiana. Background: former law enforcement, K9 handler, raised in East Feliciana — Louisiana through and through.',
-  followup:'Want Brian to reach out to you instead?',fuType:'callback'},
-
-  {topic:'greeting',k:['hello','hi there','hey','good morning','good afternoon','howdy','hi brian','hello brian'],
-  a:'Glad you stopped by! I am here to give you straight, honest answers about flood insurance in Louisiana. No pressure, no sales pitch.',
-  followup:'What would you like to know about?',fuType:'none'},
-
-  {topic:'thanks',k:['thanks','thank you','appreciate it','helpful','great info'],
+  {topic:'guide',k:['guide','pdf','download','book','document','full guide'],
+  a:'Yes — Brian wrote a free 20-page guide covering everything: 2016 lessons, NFIP vs private, the 5 mistakes that cost homeowners thousands, how to read your dec page, what to do after a flood, and a parish-by-parish risk overview for all 64 Louisiana parishes.',
+  followup:'Want to download it now? It is free, no email required.',fuType:'guide'},
+  {topic:'brian',k:['contact brian','phone number','reach brian','call brian','who are you'],
+  a:'Reach Brian at (225) 610-3611 or bhall@sfbcic.com. Office at 12035 Coursey Blvd, Baton Rouge. Background: former law enforcement, K9 handler, raised in East Feliciana.',
+  followup:'Want Brian to reach out to you instead?',fuType:'quote'},
+  {topic:'greeting',k:['hello','hi there','hey','good morning','howdy'],
+  a:'Glad you stopped by! I am here to give you straight answers about flood insurance in Louisiana.',
+  followup:'What would you like to know?',fuType:'none'},
+  {topic:'thanks',k:['thanks','thank you','appreciate','helpful'],
   a:'You bet! Glad I could help.',
-  followup:'Want Brian to reach out about anything specific?',fuType:'callback'}
+  followup:'Want Brian to follow up about anything specific?',fuType:'quote'}
 ];
 
 function findEntry(txt) {
@@ -503,9 +710,7 @@ function findEntry(txt) {
     var score = 0;
     for (var j = 0; j < KB[i].k.length; j++) {
       var kw = KB[i].k[j].toLowerCase();
-      if (low.indexOf(kw) !== -1) {
-        score += kw.length;
-      }
+      if (low.indexOf(kw) !== -1) score += kw.length;
     }
     if (KB[i].topic === 'greeting' && low.length > 15) score = score * 0.3;
     if (score > bestScore) { bestScore = score; best = KB[i]; }
@@ -519,7 +724,7 @@ function addMsg(txt, role) {
   d.className = 'cmsg ' + role;
   var av = document.createElement('div');
   av.className = 'cav ' + role;
-  av.textContent = role === 'b' ? 'BH' : (user.hasName ? user.name.charAt(0).toUpperCase() : 'You');
+  av.textContent = role === 'b' ? 'BH' : 'You';
   var bb = document.createElement('div');
   bb.className = 'cbbl';
   bb.textContent = txt;
@@ -561,41 +766,28 @@ function showFollowup(text, type) {
   var btnsDiv = document.createElement('div');
   btnsDiv.className = 'qbtns-inline';
   if (type === 'quote') {
-    var yesBtn = document.createElement('button');
-    yesBtn.textContent = 'Yes, send me a quote';
-    yesBtn.addEventListener('click', function() { startLeadCapture('quote'); });
-    btnsDiv.appendChild(yesBtn);
-    var noBtn = document.createElement('button');
-    noBtn.textContent = 'Just looking for now';
-    noBtn.addEventListener('click', function() {
-      addMsg('Just looking for now', 'u');
-      setTimeout(function() { addMsg('No problem' + (user.hasName ? ', ' + user.name : '') + '! Take your time. Any other questions?', 'b'); }, 600);
-    });
-    btnsDiv.appendChild(noBtn);
-  } else if (type === 'review') {
-    var yesBtn = document.createElement('button');
-    yesBtn.textContent = 'Yes, free policy review';
-    yesBtn.addEventListener('click', function() { startLeadCapture('review'); });
-    btnsDiv.appendChild(yesBtn);
-    var noBtn = document.createElement('button');
-    noBtn.textContent = 'Maybe later';
-    noBtn.addEventListener('click', function() {
-      addMsg('Maybe later', 'u');
-      setTimeout(function() { addMsg('Sounds good' + (user.hasName ? ', ' + user.name : '') + '. Anything else I can help with?', 'b'); }, 600);
-    });
-    btnsDiv.appendChild(noBtn);
-  } else if (type === 'callback') {
-    var yesBtn = document.createElement('button');
-    yesBtn.textContent = 'Yes, have Brian call me';
-    yesBtn.addEventListener('click', function() { startLeadCapture('callback'); });
-    btnsDiv.appendChild(yesBtn);
-    var noBtn = document.createElement('button');
-    noBtn.textContent = 'I will call him';
-    noBtn.addEventListener('click', function() {
-      addMsg('I will call him', 'u');
-      setTimeout(function() { addMsg('Sounds good! (225) 610-3611 — Brian answers personally.', 'b'); }, 600);
-    });
-    btnsDiv.appendChild(noBtn);
+    var b1 = document.createElement('button');
+    b1.textContent = 'Yes, get me a quote';
+    b1.onclick = function() { document.getElementById('t-quote').click(); window.scrollTo({top:document.querySelector('.tabs-bar').offsetTop,behavior:'smooth'}); };
+    btnsDiv.appendChild(b1);
+    var b2 = document.createElement('button');
+    b2.textContent = 'Just looking for now';
+    b2.onclick = function() { addMsg('Just looking for now', 'u'); setTimeout(function(){ addMsg('No problem! Any other questions?', 'b'); }, 600); };
+    btnsDiv.appendChild(b2);
+  } else if (type === 'calc') {
+    var b1 = document.createElement('button');
+    b1.textContent = 'Show me the calculator';
+    b1.onclick = function() { document.getElementById('t-calc').click(); window.scrollTo({top:document.querySelector('.tabs-bar').offsetTop,behavior:'smooth'}); };
+    btnsDiv.appendChild(b1);
+    var b2 = document.createElement('button');
+    b2.textContent = 'I have another question';
+    b2.onclick = function() { addMsg('I have another question', 'u'); setTimeout(function(){ addMsg('Go ahead, ask away!', 'b'); }, 600); };
+    btnsDiv.appendChild(b2);
+  } else if (type === 'guide') {
+    var b1 = document.createElement('button');
+    b1.textContent = 'Yes, take me to the guide';
+    b1.onclick = function() { document.getElementById('t-guide').click(); window.scrollTo({top:document.querySelector('.tabs-bar').offsetTop,behavior:'smooth'}); };
+    btnsDiv.appendChild(b1);
   }
   wrap.appendChild(btnsDiv);
   d.appendChild(av); d.appendChild(wrap);
@@ -603,105 +795,11 @@ function showFollowup(text, type) {
   c.scrollTop = c.scrollHeight;
 }
 
-var leadFlow = { type:'', step:0, data:{} };
-
-function startLeadCapture(type) {
-  leadFlow = { type: type, step: 0, data: {} };
-  if (user.hasName) {
-    leadFlow.data.firstName = user.name;
-    addMsg(type === 'quote' ? 'Yes, send me a quote' : (type === 'review' ? 'Yes, free policy review' : 'Yes, have Brian call me'), 'u');
-    leadFlow.step = 1;
-    setTimeout(function() { askLeadQuestion(); }, 600);
-  } else {
-    addMsg(type === 'quote' ? 'Yes, send me a quote' : (type === 'review' ? 'Yes, free policy review' : 'Yes, have Brian call me'), 'u');
-    setTimeout(function() { askLeadQuestion(); }, 600);
-  }
-}
-
-function askLeadQuestion() {
-  var prompts = [
-    'Awesome! What is your first name?',
-    user.hasName ? 'Thanks ' + user.name + '! What is the property address?' : 'Thanks! What is the property address?',
-    'Perfect. What is the best phone number to reach you?',
-    'Last question — what time of day works best to call? (morning, afternoon, or evening)'
-  ];
-  showTyping();
-  setTimeout(function() {
-    hideTyping();
-    if (leadFlow.step === 0) { addMsg(prompts[0], 'b'); showLeadInput('first name', 'firstName'); }
-    else if (leadFlow.step === 1) { addMsg(prompts[1], 'b'); showLeadInput('property address', 'address'); }
-    else if (leadFlow.step === 2) { addMsg(prompts[2], 'b'); showLeadInput('phone number', 'phone'); }
-    else if (leadFlow.step === 3) { addMsg(prompts[3], 'b'); showLeadInput('best time', 'time'); }
-    else { submitLead(); }
-  }, 600);
-}
-
-function showLeadInput(placeholder, field) {
-  var c = document.getElementById('cmsgs');
-  var d = document.createElement('div');
-  d.className = 'cmsg b'; d.id = 'leadInputMsg';
-  var av = document.createElement('div');
-  av.className = 'cav b'; av.textContent = 'BH';
-  var wrap = document.createElement('div');
-  wrap.className = 'qrep';
-  var inp = document.createElement('input');
-  inp.id = 'leadInp'; inp.placeholder = 'Your ' + placeholder + '...';
-  if (field === 'phone') inp.type = 'tel';
-  inp.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') { e.preventDefault(); submitLeadField(field); }
-  });
-  var btn = document.createElement('button');
-  btn.className = 'submit'; btn.textContent = 'Continue';
-  btn.addEventListener('click', function() { submitLeadField(field); });
-  wrap.appendChild(inp); wrap.appendChild(btn);
-  d.appendChild(av); d.appendChild(wrap);
-  c.appendChild(d);
-  c.scrollTop = c.scrollHeight;
-  setTimeout(function(){ inp.focus(); }, 200);
-}
-
-function submitLeadField(field) {
-  var inp = document.getElementById('leadInp');
-  var val = inp ? inp.value.trim() : '';
-  if (!val) return;
-  leadFlow.data[field] = val;
-  if (field === 'firstName' && !user.hasName) { user.name = val; user.hasName = true; }
-  var f = document.getElementById('leadInputMsg');
-  if (f) f.parentNode.removeChild(f);
-  addMsg(val, 'u');
-  leadFlow.step++;
-  setTimeout(function() { askLeadQuestion(); }, 400);
-}
-
-function submitLead() {
-  var data = new FormData();
-  data.append('Type', 'CHATBOT LEAD - ' + leadFlow.type.toUpperCase());
-  data.append('Name', leadFlow.data.firstName || 'Not provided');
-  data.append('Address', leadFlow.data.address || 'Not provided');
-  data.append('Phone', leadFlow.data.phone || 'Not provided');
-  data.append('Best Time', leadFlow.data.time || 'Not provided');
-  data.append('Topics Discussed', user.topicsDiscussed.join(', ') || 'None');
-  data.append('Concerns Raised', user.expressedConcerns.join(', ') || 'None');
-  data.append('Detected Parish', user.detectedParish || 'None');
-  data.append('Source', 'In-chat lead capture');
-  fetch(FORMSPREE, { method:'POST', body:data, headers:{ 'Accept':'application/json' } });
-  showTyping();
-  setTimeout(function() {
-    hideTyping();
-    var name = leadFlow.data.firstName || 'there';
-    addMsg('You are all set, ' + name + '! Brian got your info and will reach out soon.', 'b');
-    user.leadCaptured = true;
-    setTimeout(function() { addMsg('In the meantime — anything else you want to know?', 'b'); }, 1500);
-  }, 800);
-}
-
 function logUnmatchedQuestion(question) {
   var data = new FormData();
   data.append('Type', 'AUTO-LEARN: Unmatched Question');
   data.append('Question', question);
-  data.append('User Name', user.name || 'Anonymous');
-  data.append('Topics So Far', user.topicsDiscussed.join(', ') || 'None');
-  data.append('Note', 'Bot did not have an answer. Tell your AI assistant what to add.');
+  data.append('Note', 'Bot did not have an answer.');
   fetch(FORMSPREE, { method:'POST', body:data, headers:{ 'Accept':'application/json' } });
 }
 
@@ -720,12 +818,11 @@ function showSendForm(prefill) {
   if (prefill) ta.value = prefill;
   var n = document.createElement('input');
   n.id = 'sf-n'; n.placeholder = 'Your first name';
-  if (user.hasName) n.value = user.name;
   var ph = document.createElement('input');
   ph.id = 'sf-p'; ph.placeholder = 'Phone or email';
   var btn = document.createElement('button');
   btn.className = 'submit'; btn.textContent = 'Send to Brian';
-  btn.addEventListener('click', function() {
+  btn.onclick = function() {
     var q = document.getElementById('sf-q').value.trim();
     var nm = document.getElementById('sf-n').value.trim();
     var pv = document.getElementById('sf-p').value.trim();
@@ -736,38 +833,14 @@ function showSendForm(prefill) {
     data.append('Contact', pv);
     data.append('Question', q);
     fetch(FORMSPREE, { method:'POST', body:data, headers:{ 'Accept':'application/json' } });
-    if (!user.hasName) { user.name = nm; user.hasName = true; }
     var f = document.getElementById('sfmsg');
     if (f) f.parentNode.removeChild(f);
-    addMsg('Got it ' + nm + '! Brian got your question and will get back to you at ' + pv + '.', 'b');
-  });
+    addMsg('Got it ' + nm + '! Brian will get back to you.', 'b');
+  };
   wrap.appendChild(p); wrap.appendChild(ta); wrap.appendChild(n); wrap.appendChild(ph); wrap.appendChild(btn);
   d.appendChild(av); d.appendChild(wrap);
   c.appendChild(d);
   c.scrollTop = c.scrollHeight;
-}
-
-function isShortFollowup(txt) {
-  var low = txt.toLowerCase().trim();
-  var followupTriggers = ['monthly', 'yearly', 'annually', 'how about', 'what about', 'and what', 'is it', 'really', 'sure', 'why', 'why not', 'how come'];
-  for (var i = 0; i < followupTriggers.length; i++) {
-    if (low === followupTriggers[i]) return true;
-    if (low.indexOf(followupTriggers[i]) === 0 && low.length < 25) return true;
-  }
-  return false;
-}
-
-function smartFallback(txt) {
-  var low = txt.toLowerCase();
-  if (low.indexOf('?') !== -1 || low.indexOf('how') === 0 || low.indexOf('what') === 0 || low.indexOf('when') === 0 || low.indexOf('why') === 0 || low.indexOf('can ') === 0 || low.indexOf('do ') === 0 || low.indexOf('does') === 0) {
-    if (low.indexOf('save') !== -1 || low.indexOf('cheaper') !== -1) {
-      return {answer:'Several ways to lower your flood premium: elevation certificate, Preferred Risk Policy if you qualify, compare NFIP to private, higher deductibles, Newly Mapped pricing if your zone changed.',followup:'Want Brian to find every discount on your property?',fuType:'review'};
-    }
-    if (low.indexOf('quick') !== -1 || low.indexOf('fast') !== -1) {
-      return {answer:'Most NFIP policies have a 30-day waiting period, BUT private flood insurance can have waiting periods as short as 10 to 15 days. Brian can have a quote to you within hours.',followup:'Want Brian to start your quote right now?',fuType:'quote'};
-    }
-  }
-  return null;
 }
 
 function doSend() {
@@ -776,52 +849,30 @@ function doSend() {
   if (!txt) return;
   addMsg(txt, 'u');
   inp.value = '';
-  inp.style.height = 'auto';
   document.getElementById('csnd').disabled = true;
   user.questionsAsked++;
-  var parish = detectParish(txt);
-  if (parish && !user.detectedParish) { user.detectedParish = parish.name; }
   showTyping();
   setTimeout(function() {
     hideTyping();
     var entry = findEntry(txt);
-    if (!entry && user.lastEntry && isShortFollowup(txt)) { entry = user.lastEntry; }
     if (entry) {
-      if (user.topicsDiscussed.indexOf(entry.topic) === -1) { user.topicsDiscussed.push(entry.topic); }
-      if (entry.concern && user.expressedConcerns.indexOf(entry.concern) === -1) { user.expressedConcerns.push(entry.concern); }
-      user.lastTopic = entry.topic;
+      if (user.topicsDiscussed.indexOf(entry.topic) === -1) user.topicsDiscussed.push(entry.topic);
       user.lastEntry = entry;
-      var answer = entry.a;
-      if (user.hasName && user.questionsAsked > 1) { answer = 'Good question, ' + user.name + '. ' + answer; }
-      if (parish && entry.topic !== 'greeting' && entry.topic !== 'thanks') {
-        answer = answer + '\n\nSince you mentioned ' + parish.name + ' — ' + parish.context;
-      }
-      if (IS_HURRICANE_SEASON && (entry.topic === 'waiting' || entry.topic === 'cost' || entry.topic === 'never_flooded' || entry.topic === 'think_about_it')) {
-        answer = answer + '\n\nAnd hurricane season is ACTIVE right now. The 30-day waiting period means waiting could leave you exposed.';
-      } else if (DAYS_TO_HURRICANE_SEASON > 0 && DAYS_TO_HURRICANE_SEASON < 60 && (entry.topic === 'waiting' || entry.topic === 'cost' || entry.topic === 'think_about_it')) {
-        answer = answer + '\n\nFYI — hurricane season starts in ' + DAYS_TO_HURRICANE_SEASON + ' days. With the 30-day waiting period, now is the time.';
-      }
-      addMsg(answer, 'b');
-      if (entry.followup && entry.fuType !== 'none' && !user.leadCaptured) {
-        setTimeout(function() { showFollowup(entry.followup, entry.fuType); }, 1200);
+      addMsg(entry.a, 'b');
+      if (entry.followup && entry.fuType !== 'none') {
+        setTimeout(function() { showFollowup(entry.followup, entry.fuType); }, 1000);
       }
     } else {
-      var smart = smartFallback(txt);
-      if (smart) {
-        addMsg(smart.answer, 'b');
-        if (!user.leadCaptured) { setTimeout(function() { showFollowup(smart.followup, smart.fuType); }, 1200); }
-      } else {
-        logUnmatchedQuestion(txt);
-        addMsg('That is a great question and Brian will have the answer for you. Send it to him directly below.', 'b');
-        showSendForm(txt);
-      }
+      logUnmatchedQuestion(txt);
+      addMsg('Great question — Brian will have the answer for you. Send it to him directly below.', 'b');
+      showSendForm(txt);
     }
     document.getElementById('csnd').disabled = false;
-  }, 700 + Math.floor(Math.random() * 500));
+  }, 700);
 }
 
 function showTab(name) {
-  var tabs = ['chat','quote','review'];
+  var tabs = ['calc','guide','check','chat','quote'];
   for (var i = 0; i < tabs.length; i++) {
     var t = document.getElementById('t-' + tabs[i]);
     var p = document.getElementById('p-' + tabs[i]);
@@ -830,131 +881,61 @@ function showTab(name) {
   }
 }
 
-function submitForm(type) {
-  var p = type === 'quote' ? 'q' : 'r';
-  var fn = document.getElementById(p+'-fn').value.trim();
-  var ln = document.getElementById(p+'-ln').value.trim();
-  var ph = document.getElementById(p+'-ph').value.trim();
-  var ad = document.getElementById(p+'-ad').value.trim();
+function submitForm() {
+  var fn = document.getElementById('q-fn').value.trim();
+  var ln = document.getElementById('q-ln').value.trim();
+  var ph = document.getElementById('q-ph').value.trim();
+  var ad = document.getElementById('q-ad').value.trim();
   if (!fn || !ln || !ph || !ad) { alert('Please fill in all required fields marked with *.'); return; }
-  var btn = document.getElementById(p+'-sbmt');
+  var btn = document.getElementById('q-sbmt');
   btn.disabled = true;
   btn.textContent = 'Sending...';
   var data = new FormData();
-  if (type === 'quote') {
-    data.append('Type', 'Quote Request');
-    data.append('First Name', fn); data.append('Last Name', ln);
-    data.append('Phone', ph); data.append('Email', document.getElementById('q-em').value);
-    data.append('Address', ad);
-    data.append('Current Insurance', document.getElementById('q-cur').value);
-    data.append('Best Time to Contact', document.getElementById('q-tm').value);
-    data.append('Notes', document.getElementById('q-nt').value);
-  } else {
-    data.append('Type', 'Policy Review Request');
-    data.append('First Name', fn); data.append('Last Name', ln);
-    data.append('Phone', ph); data.append('Email', document.getElementById('r-em').value);
-    data.append('Address', ad);
-    data.append('Current Company', document.getElementById('r-co').value);
-    data.append('Policy Number', document.getElementById('r-po').value);
-    data.append('Renewal Month', document.getElementById('r-rn').value);
-    data.append('Annual Premium', document.getElementById('r-pr').value);
-    data.append('Concerns', document.getElementById('r-nt').value);
-  }
-  fetch(FORMSPREE, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } }).then(function() {
-    var succId = type === 'quote' ? 'q-succ' : 'r-succ';
-    var s = document.getElementById(succId);
-    s.style.display = 'block';
-    s.scrollIntoView({behavior:'smooth',block:'center'});
+  data.append('Type', 'Quote Request');
+  data.append('First Name', fn);
+  data.append('Last Name', ln);
+  data.append('Phone', ph);
+  data.append('Email', document.getElementById('q-em').value);
+  data.append('Address', ad);
+  data.append('Current Insurance', document.getElementById('q-cur').value);
+  data.append('Best Time', document.getElementById('q-tm').value);
+  data.append('Notes', document.getElementById('q-nt').value);
+  fetch(FORMSPREE, { method:'POST', body:data, headers:{ 'Accept':'application/json' } }).then(function() {
+    document.getElementById('q-succ').style.display = 'block';
     btn.textContent = 'Submitted!';
   }).catch(function() {
     btn.disabled = false;
-    btn.textContent = type === 'quote' ? 'Request My Free Quote' : 'Get My Free Policy Review';
-    alert('Something went wrong. Please call Brian directly at (225) 610-3611.');
+    btn.textContent = 'Request My Free Quote';
+    alert('Something went wrong. Call (225) 610-3611.');
   });
 }
 
-function initGreeting() {
-  setTimeout(function() {
-    addMsg('Hey there! I am Brian Hall flood insurance assistant. I am here to give you straight answers — no pressure.', 'b');
-    setTimeout(function() {
-      addMsg('Quick question first — what is your first name? I want to make this personal.', 'b');
-      var c = document.getElementById('cmsgs');
-      var d = document.createElement('div');
-      d.className = 'cmsg b'; d.id = 'nameMsg';
-      var av = document.createElement('div');
-      av.className = 'cav b'; av.textContent = 'BH';
-      var wrap = document.createElement('div');
-      wrap.className = 'qrep';
-      var inp = document.createElement('input');
-      inp.id = 'nameInp'; inp.placeholder = 'Your first name';
-      inp.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') { e.preventDefault(); captureName(); }
-      });
-      var btn = document.createElement('button');
-      btn.className = 'submit'; btn.textContent = 'Let\'s go';
-      btn.addEventListener('click', captureName);
-      var skip = document.createElement('button');
-      skip.style.background = '#fff';
-      skip.style.color = '#7b1c2e';
-      skip.style.border = '1.5px solid #ddc8c8';
-      skip.style.marginTop = '4px';
-      skip.textContent = 'Skip — just answer my question';
-      skip.addEventListener('click', function() {
-        var f = document.getElementById('nameMsg');
-        if (f) f.parentNode.removeChild(f);
-        addMsg('No problem! What can I help you with?', 'b');
-      });
-      wrap.appendChild(inp); wrap.appendChild(btn); wrap.appendChild(skip);
-      d.appendChild(av); d.appendChild(wrap);
-      c.appendChild(d);
-      setTimeout(function() { inp.focus(); }, 200);
-    }, 800);
-  }, 400);
-}
-
-function captureName() {
-  var inp = document.getElementById('nameInp');
-  var val = inp ? inp.value.trim() : '';
-  if (!val) return;
-  user.name = val;
-  user.hasName = true;
-  var f = document.getElementById('nameMsg');
-  if (f) f.parentNode.removeChild(f);
-  addMsg(val, 'u');
-  setTimeout(function() {
-    var greeting = 'Great to meet you, ' + val + '! What can I help you with?';
-    if (IS_HURRICANE_SEASON) {
-      greeting = 'Great to meet you, ' + val + '! Hurricane season is active right now, so this is the perfect time to get questions answered. What can I help you with?';
-    }
-    addMsg(greeting, 'b');
-  }, 600);
-}
-
-document.getElementById('t-chat').addEventListener('click', function() { showTab('chat'); });
-document.getElementById('t-quote').addEventListener('click', function() { showTab('quote'); });
-document.getElementById('t-review').addEventListener('click', function() { showTab('review'); });
-document.getElementById('csnd').addEventListener('click', doSend);
+document.getElementById('t-calc').onclick = function() { showTab('calc'); };
+document.getElementById('t-guide').onclick = function() { showTab('guide'); };
+document.getElementById('t-check').onclick = function() { showTab('check'); };
+document.getElementById('t-chat').onclick = function() { showTab('chat'); };
+document.getElementById('t-quote').onclick = function() { showTab('quote'); };
+document.getElementById('csnd').onclick = doSend;
 document.getElementById('cin').addEventListener('keydown', function(e) {
   if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); doSend(); }
 });
-document.getElementById('cin').addEventListener('input', function() {
-  this.style.height = 'auto';
-  this.style.height = Math.min(this.scrollHeight, 90) + 'px';
-});
-document.getElementById('q-sbmt').addEventListener('click', function() { submitForm('quote'); });
-document.getElementById('r-sbmt').addEventListener('click', function() { submitForm('review'); });
+document.getElementById('q-sbmt').onclick = submitForm;
 
 var qbs = document.querySelectorAll('.qb');
 for (var i = 0; i < qbs.length; i++) {
   (function(btn) {
-    btn.addEventListener('click', function() {
+    btn.onclick = function() {
       document.getElementById('cin').value = btn.getAttribute('data-q');
       doSend();
-    });
+    };
   })(qbs[i]);
 }
 
-initGreeting();
+// Greet on chatbot open
+setTimeout(function() {
+  addMsg('Hey there! Got a flood insurance question? Tap one below or type yours in.', 'b');
+}, 400);
+
 })();
 </script>
 
