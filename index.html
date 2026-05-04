@@ -8,103 +8,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f3f3;color:#2a1a1a}
-
-/* HEADER WITH STADIUM-NIGHT VIBE - works without external images */
-.hdr{
-position:relative;
-background:
-radial-gradient(ellipse 80% 50% at 20% 0%, rgba(255,215,0,.12) 0%, transparent 50%),
-radial-gradient(ellipse 80% 50% at 80% 0%, rgba(255,215,0,.12) 0%, transparent 50%),
-radial-gradient(ellipse 60% 40% at 50% 100%, rgba(200,146,42,.18) 0%, transparent 60%),
-linear-gradient(180deg,#2a0810 0%,#540f1e 30%,#7b1c2e 70%,#7b1c2e 100%);
-padding:36px 20px;
-border-bottom:4px solid #c8922a;
-overflow:hidden;
-}
-.lights{
-position:absolute;top:10px;left:0;right:0;
-display:flex;justify-content:space-around;
-pointer-events:none;
-z-index:1;
-}
-.lights span{
-width:6px;height:6px;
-background:#ffd700;
-border-radius:50%;
-box-shadow:0 0 10px #ffd700, 0 0 18px rgba(255,215,0,.6);
-opacity:.85;
-}
-.stadium-bg{
-position:absolute;
-bottom:0;left:0;right:0;
-height:50px;
-opacity:.22;
-pointer-events:none;
-z-index:1;
-}
-.hdr-in{
-position:relative;
-max-width:800px;
-margin:0 auto;
-text-align:center;
-z-index:3;
-}
-.eyebrow{
-display:block;
-font-size:11px;
-font-weight:700;
-letter-spacing:3px;
-text-transform:uppercase;
-color:#c8922a;
-margin-bottom:8px;
-}
-.hdr h1{
-font-size:28px;
-font-weight:800;
-color:#fff;
-margin:0 0 8px;
-line-height:1.2;
-letter-spacing:.5px;
-text-shadow:0 2px 12px rgba(0,0,0,.5);
-}
-.hdr h1 span{
-color:#c8922a;
-display:block;
-font-size:18px;
-font-weight:700;
-margin-top:4px;
-text-shadow:0 2px 8px rgba(0,0,0,.4);
-}
-.hdr p{
-font-size:13px;
-color:rgba(255,255,255,.92);
-margin:0 auto 14px;
-line-height:1.5;
-max-width:480px;
-}
+.hdr{position:relative;background:radial-gradient(ellipse 80% 50% at 20% 0%, rgba(255,215,0,.12) 0%, transparent 50%),radial-gradient(ellipse 80% 50% at 80% 0%, rgba(255,215,0,.12) 0%, transparent 50%),radial-gradient(ellipse 60% 40% at 50% 100%, rgba(200,146,42,.18) 0%, transparent 60%),linear-gradient(180deg,#2a0810 0%,#540f1e 30%,#7b1c2e 70%,#7b1c2e 100%);padding:36px 20px;border-bottom:4px solid #c8922a;overflow:hidden}
+.lights{position:absolute;top:10px;left:0;right:0;display:flex;justify-content:space-around;pointer-events:none;z-index:1}
+.lights span{width:6px;height:6px;background:#ffd700;border-radius:50%;box-shadow:0 0 10px #ffd700, 0 0 18px rgba(255,215,0,.6);opacity:.85}
+.stadium-bg{position:absolute;bottom:0;left:0;right:0;height:50px;opacity:.22;pointer-events:none;z-index:1}
+.hdr-in{position:relative;max-width:800px;margin:0 auto;text-align:center;z-index:3}
+.eyebrow{display:block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#c8922a;margin-bottom:8px}
+.hdr h1{font-size:28px;font-weight:800;color:#fff;margin:0 0 8px;line-height:1.2;letter-spacing:.5px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
+.hdr h1 span{color:#c8922a;display:block;font-size:18px;font-weight:700;margin-top:4px;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.hdr p{font-size:13px;color:rgba(255,255,255,.92);margin:0 auto 14px;line-height:1.5;max-width:480px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
-.tag{
-background:rgba(200,146,42,.25);
-border:1px solid rgba(200,146,42,.6);
-color:#f0c060;
-font-size:11px;
-font-weight:600;
-padding:3px 10px;
-border-radius:12px;
-}
-.proof{
-background:#fdf6ec;
-border-bottom:2px solid #c8922a;
-padding:10px 16px;
-text-align:center;
-font-size:12px;
-color:#7b1c2e;
-font-weight:600;
-}
+.tag{background:rgba(200,146,42,.25);border:1px solid rgba(200,146,42,.6);color:#f0c060;font-size:11px;font-weight:600;padding:3px 10px;border-radius:12px}
+.proof{background:#fdf6ec;border-bottom:2px solid #c8922a;padding:10px 16px;text-align:center;font-size:12px;color:#7b1c2e;font-weight:600}
 .proof span{color:#c8922a}
 .tabs-bar{background:#fff;border-bottom:2px solid #ddc8c8;position:sticky;top:0;z-index:99;box-shadow:0 2px 8px rgba(0,0,0,.08)}
 .tabs-in{max-width:800px;margin:0 auto;display:flex}
-.tbtn{flex:1;padding:14px 8px;text-align:center;cursor:pointer;font-weight:600;font-size:13px;color:#7a5a5a;border:none;background:none;border-bottom:3px solid transparent;font-family:‘Open Sans’,Arial,sans-serif}
+.tbtn{flex:1;padding:14px 8px;text-align:center;cursor:pointer;font-weight:600;font-size:13px;color:#7a5a5a;border:none;background:none;border-bottom:3px solid transparent;font-family:'Open Sans',Arial,sans-serif}
 .tbtn.on{color:#7b1c2e;border-bottom:3px solid #c8922a}
 .pnl{display:none;max-width:800px;margin:0 auto;padding:20px 16px 48px}
 .pnl.on{display:block}
@@ -123,9 +42,9 @@ font-weight:600;
 .qrep{background:#fdf6ec;border:1.5px solid #c8922a;border-radius:10px;padding:10px;margin-top:6px;max-width:80%}
 .qrep p{font-size:12px;font-weight:700;color:#7b1c2e;margin:0 0 8px}
 .qrep .qbtns-inline{display:flex;flex-direction:column;gap:5px}
-.qrep button{background:#fff;border:1.5px solid #c8922a;color:#7b1c2e;padding:7px 10px;border-radius:7px;font-family:‘Open Sans’,Arial,sans-serif;font-size:12px;font-weight:600;cursor:pointer;text-align:left}
+.qrep button{background:#fff;border:1.5px solid #c8922a;color:#7b1c2e;padding:7px 10px;border-radius:7px;font-family:'Open Sans',Arial,sans-serif;font-size:12px;font-weight:600;cursor:pointer;text-align:left}
 .qrep button:active{background:#7b1c2e;color:#fff}
-.qrep input{width:100%;border:1.5px solid #ddc8c8;border-radius:7px;padding:8px 10px;font-family:‘Open Sans’,Arial,sans-serif;font-size:13px;outline:none;box-sizing:border-box;margin-bottom:6px}
+.qrep input{width:100%;border:1.5px solid #ddc8c8;border-radius:7px;padding:8px 10px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;outline:none;box-sizing:border-box;margin-bottom:6px}
 .qrep input:focus{border-color:#7b1c2e}
 .qrep .submit{background:#7b1c2e;color:#fff;border:none;width:100%;padding:8px;border-radius:7px;font-weight:700;font-size:13px}
 .typing{display:flex;gap:8px}
@@ -137,10 +56,10 @@ font-weight:600;
 .qwrap{padding:8px 14px 10px;border-top:1px solid #ddc8c8;background:#fdf9f9}
 .qlbl{font-size:10px;font-weight:700;color:#7a5a5a;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
 .qbtns{display:flex;flex-wrap:wrap;gap:5px}
-.qb{background:#fff;border:1.5px solid #ddc8c8;color:#7b1c2e;padding:4px 10px;border-radius:14px;font-size:12px;font-weight:600;cursor:pointer;font-family:‘Open Sans’,Arial,sans-serif}
+.qb{background:#fff;border:1.5px solid #ddc8c8;color:#7b1c2e;padding:4px 10px;border-radius:14px;font-size:12px;font-weight:600;cursor:pointer;font-family:'Open Sans',Arial,sans-serif}
 .qb:active{background:#7b1c2e;color:#fff}
 .cinrow{display:flex;gap:8px;padding:10px 12px;border-top:1px solid #ddc8c8;background:#fff;align-items:flex-end}
-.cin{flex:1;border:1.5px solid #ddc8c8;border-radius:18px;padding:8px 14px;font-family:‘Open Sans’,Arial,sans-serif;font-size:13px;outline:none;resize:none;max-height:90px;line-height:1.4}
+.cin{flex:1;border:1.5px solid #ddc8c8;border-radius:18px;padding:8px 14px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;outline:none;resize:none;max-height:90px;line-height:1.4}
 .cin:focus{border-color:#7b1c2e}
 .csnd{width:36px;height:36px;background:#7b1c2e;color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:16px;flex-shrink:0;font-weight:700}
 .csnd:disabled{opacity:.4}
@@ -154,11 +73,11 @@ font-weight:600;
 @media(max-width:500px){.frow{grid-template-columns:1fr}}
 .fg{margin-bottom:12px}
 .fg label{display:block;font-size:12px;font-weight:600;margin-bottom:4px}
-.fg input,.fg select,.fg textarea{width:100%;border:1.5px solid #ddc8c8;border-radius:7px;padding:8px 11px;font-family:‘Open Sans’,Arial,sans-serif;font-size:13px;outline:none;box-sizing:border-box;background:#fff}
+.fg input,.fg select,.fg textarea{width:100%;border:1.5px solid #ddc8c8;border-radius:7px;padding:8px 11px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;outline:none;box-sizing:border-box;background:#fff}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:#7b1c2e}
 .fg textarea{resize:vertical;min-height:65px}
 .req{color:#7b1c2e}
-.fsbmt{width:100%;padding:12px;background:#7b1c2e;color:#fff;border:none;border-radius:7px;font-family:‘Open Sans’,Arial,sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:4px}
+.fsbmt{width:100%;padding:12px;background:#7b1c2e;color:#fff;border:none;border-radius:7px;font-family:'Open Sans',Arial,sans-serif;font-size:14px;font-weight:700;cursor:pointer;margin-top:4px}
 .fsbmt:hover{background:#540f1e}
 .fsbmt:disabled{opacity:.6;cursor:default}
 .fnote{text-align:center;font-size:11px;color:#7a5a5a;margin-top:10px}
@@ -173,7 +92,6 @@ font-weight:600;
 .clinks a{color:#fff;text-decoration:none;font-size:13px;font-weight:600}
 .cfooter{color:rgba(255,255,255,.4);font-size:10px;margin-top:12px}
 </style>
-
 </head>
 <body>
 
@@ -317,252 +235,282 @@ font-weight:600;
 
 <script>
 (function() {
-
 var FORMSPREE = 'https://formspree.io/f/meenogzy';
-
-var user = {
-  name: '',
-  hasName: false,
-  questionsAsked: 0,
-  leadCaptured: false,
-  topicsDiscussed: [],
-  detectedParish: '',
-  expressedConcerns: []
-};
-
+var now = new Date();
+var month = now.getMonth();
+var IS_HURRICANE_SEASON = (month >= 5 && month <= 10);
+var DAYS_TO_HURRICANE_SEASON = 0;
+if (!IS_HURRICANE_SEASON && month < 5) {
+  var june1 = new Date(now.getFullYear(), 5, 1);
+  DAYS_TO_HURRICANE_SEASON = Math.ceil((june1 - now) / (1000 * 60 * 60 * 24));
+}
+var user = { name:'', hasName:false, questionsAsked:0, leadCaptured:false, topicsDiscussed:[], detectedParish:'', expressedConcerns:[], lastTopic:'', lastEntry:null };
 var PARISHES = {
-  'east baton rouge': {name:'East Baton Rouge', context:'East Baton Rouge got hit hard in 2016 — many neighborhoods that had never flooded saw water for the first time. Avg flood premium is around $655/year here.'},
-  'baton rouge': {name:'Baton Rouge', context:'Baton Rouge took a beating in 2016 — neighborhoods that had never flooded saw water for the first time. Avg flood premium is around $655/year in East Baton Rouge.'},
-  'livingston': {name:'Livingston Parish', context:'Livingston was ground zero in 2016 — about 75% of homes in the parish were declared total losses. Most had no flood insurance because they were Zone X.'},
-  'denham springs': {name:'Denham Springs', context:'Denham Springs was hit harder than almost anywhere in 2016. Neighborhoods that never flooded had 4+ feet of water. Most folks did not have flood insurance.'},
-  'walker': {name:'Walker', context:'Walker took massive losses in 2016. A lot of those families are now paying out of pocket on rebuilds because they had no flood insurance.'},
-  'ascension': {name:'Ascension Parish', context:'Ascension Parish saw heavy flooding in 2016 along the Amite River. Premiums vary a lot here depending on whether you are near the river.'},
-  'gonzales': {name:'Gonzales', context:'Gonzales saw flooding in 2016 around the Amite River basin. Many properties qualify for Preferred Risk pricing.'},
-  'lafourche': {name:'Lafourche Parish', context:'Lafourche has serious storm surge risk — Hurricane Ida made landfall right there in 2021 as a Cat 4. Coastal flood premiums are higher but worth every penny.'},
-  'terrebonne': {name:'Terrebonne Parish', context:'Terrebonne is one of the highest-risk flood areas in Louisiana — coastal subsidence, hurricane surge, and rainfall flooding all hit here.'},
-  'orleans': {name:'Orleans Parish', context:'Orleans Parish has the post-Katrina levee system but big chunks are still high-risk. Premiums can vary wildly block to block here.'},
-  'new orleans': {name:'New Orleans', context:'New Orleans has the post-Katrina levee system but big chunks are still high-risk. Premiums can vary wildly block to block here.'},
-  'jefferson': {name:'Jefferson Parish', context:'Jefferson Parish was protected by the post-Katrina levee improvements but flood risk varies a lot — Metairie vs. Lafitte are night and day.'},
-  'st tammany': {name:'St. Tammany Parish', context:'St. Tammany has river and lake flooding risk. The Tchefuncte and Bogue Chitto areas have particularly high rates.'},
-  'st. tammany': {name:'St. Tammany Parish', context:'St. Tammany has river and lake flooding risk. The Tchefuncte and Bogue Chitto areas have particularly high rates.'},
-  'st bernard': {name:'St. Bernard Parish', context:'St. Bernard was devastated in Katrina. Almost the entire parish is in a special flood hazard area — flood insurance is essentially required.'},
-  'st. bernard': {name:'St. Bernard Parish', context:'St. Bernard was devastated in Katrina. Almost the entire parish is in a special flood hazard area — flood insurance is essentially required.'},
-  'plaquemines': {name:'Plaquemines Parish', context:'Plaquemines is at the front line of every major hurricane. Coastal flood insurance here is essential and Brian works with carriers who specialize in coastal Louisiana.'},
-  'cameron': {name:'Cameron Parish', context:'Cameron Parish was nearly wiped out by Hurricane Laura in 2020. Cat 4 storm surge — flood insurance there is non-negotiable.'},
-  'calcasieu': {name:'Calcasieu Parish', context:'Calcasieu and Lake Charles took catastrophic damage from Laura in 2020 and Delta weeks later. Flood and wind insurance both critical here.'},
-  'lake charles': {name:'Lake Charles', context:'Lake Charles took massive damage from Laura in 2020 and Delta weeks later. Flood and wind insurance both critical here.'},
-  'lafayette': {name:'Lafayette Parish', context:'Lafayette has flooding risk along the Vermilion River and bayous. The 2016 floods hit Acadiana hard too — easy to forget that.'},
-  'acadia': {name:'Acadia Parish', context:'Acadia Parish has flat farmland that floods easily. Premiums are usually moderate but many properties qualify for Preferred Risk.'},
-  'st landry': {name:'St. Landry Parish', context:'St. Landry has river flooding risk along the Atchafalaya. Many rural properties qualify for cheaper Preferred Risk policies.'},
-  'st. landry': {name:'St. Landry Parish', context:'St. Landry has river flooding risk along the Atchafalaya. Many rural properties qualify for cheaper Preferred Risk policies.'},
-  'iberia': {name:'Iberia Parish', context:'Iberia Parish sits in the Atchafalaya basin — flood risk varies a lot by neighborhood and your distance from the bayou.'},
-  'st mary': {name:'St. Mary Parish', context:'St. Mary takes hurricane surge from the Gulf and rainfall from north. Coastal areas like Morgan City need flood coverage.'},
-  'st. mary': {name:'St. Mary Parish', context:'St. Mary takes hurricane surge from the Gulf and rainfall from north. Coastal areas like Morgan City need flood coverage.'},
-  'tangipahoa': {name:'Tangipahoa Parish', context:'Tangipahoa got hammered in the 2016 floods. The Tangipahoa and Tickfaw rivers came up fast and a lot of folks lost everything.'},
-  'hammond': {name:'Hammond', context:'Hammond saw heavy flooding in 2016 along the Tangipahoa River. Brian has helped a lot of families there get coverage.'},
-  'east feliciana': {name:'East Feliciana Parish', context:'East Feliciana — that is home for me. Beautiful country but the rivers and creeks rise fast. Always smart to be covered.'},
-  'west feliciana': {name:'West Feliciana Parish', context:'West Feliciana has river flooding risk along the Mississippi and bayous. I went to high school there — beautiful country.'},
-  'pointe coupee': {name:'Pointe Coupee Parish', context:'Pointe Coupee has river flooding risk along False River and the Mississippi. A lot of properties qualify for Preferred Risk.'}
+  'east baton rouge':{name:'East Baton Rouge',context:'East Baton Rouge got hit hard in 2016 — many neighborhoods that had never flooded saw water for the first time. Avg flood premium is around $655/year here.'},
+  'baton rouge':{name:'Baton Rouge',context:'Baton Rouge took a beating in 2016 — neighborhoods that had never flooded saw water for the first time. Avg flood premium is around $655/year in East Baton Rouge.'},
+  'livingston':{name:'Livingston Parish',context:'Livingston was ground zero in 2016 — about 75% of homes in the parish were declared total losses. Most had no flood insurance because they were Zone X.'},
+  'denham springs':{name:'Denham Springs',context:'Denham Springs was hit harder than almost anywhere in 2016. Neighborhoods that never flooded had 4+ feet of water.'},
+  'walker':{name:'Walker',context:'Walker took massive losses in 2016. A lot of those families are now paying out of pocket on rebuilds.'},
+  'ascension':{name:'Ascension Parish',context:'Ascension Parish saw heavy flooding in 2016 along the Amite River.'},
+  'gonzales':{name:'Gonzales',context:'Gonzales saw flooding in 2016 around the Amite River basin. Many properties qualify for Preferred Risk pricing.'},
+  'lafourche':{name:'Lafourche Parish',context:'Lafourche has serious storm surge risk — Hurricane Ida made landfall right there in 2021 as a Cat 4.'},
+  'terrebonne':{name:'Terrebonne Parish',context:'Terrebonne is one of the highest-risk flood areas in Louisiana — coastal subsidence, hurricane surge, rainfall flooding all hit here.'},
+  'orleans':{name:'Orleans Parish',context:'Orleans Parish has the post-Katrina levee system but big chunks are still high-risk. Premiums can vary block to block.'},
+  'new orleans':{name:'New Orleans',context:'New Orleans has the post-Katrina levee system but big chunks are still high-risk. Premiums can vary block to block.'},
+  'jefferson':{name:'Jefferson Parish',context:'Jefferson Parish was protected by the post-Katrina levee improvements but flood risk varies a lot.'},
+  'st tammany':{name:'St. Tammany Parish',context:'St. Tammany has river and lake flooding risk. The Tchefuncte and Bogue Chitto areas have higher rates.'},
+  'st. tammany':{name:'St. Tammany Parish',context:'St. Tammany has river and lake flooding risk. The Tchefuncte and Bogue Chitto areas have higher rates.'},
+  'st bernard':{name:'St. Bernard Parish',context:'St. Bernard was devastated in Katrina. Almost the entire parish is in a special flood hazard area.'},
+  'st. bernard':{name:'St. Bernard Parish',context:'St. Bernard was devastated in Katrina. Almost the entire parish is in a special flood hazard area.'},
+  'plaquemines':{name:'Plaquemines Parish',context:'Plaquemines has the highest flood premiums in Louisiana — averaging $4,752/year. Coastal flood insurance here is essential.'},
+  'cameron':{name:'Cameron Parish',context:'Cameron Parish was nearly wiped out by Hurricane Laura in 2020. Cat 4 storm surge.'},
+  'calcasieu':{name:'Calcasieu Parish',context:'Calcasieu and Lake Charles took catastrophic damage from Laura in 2020 and Delta weeks later.'},
+  'lake charles':{name:'Lake Charles',context:'Lake Charles took massive damage from Laura in 2020 and Delta weeks later.'},
+  'lafayette':{name:'Lafayette Parish',context:'Lafayette has flooding risk along the Vermilion River and bayous. The 2016 floods hit Acadiana too.'},
+  'acadia':{name:'Acadia Parish',context:'Acadia Parish has flat farmland that floods easily. Many properties qualify for Preferred Risk.'},
+  'st landry':{name:'St. Landry Parish',context:'St. Landry has river flooding risk along the Atchafalaya. Many rural properties qualify for Preferred Risk.'},
+  'st. landry':{name:'St. Landry Parish',context:'St. Landry has river flooding risk along the Atchafalaya.'},
+  'iberia':{name:'Iberia Parish',context:'Iberia Parish sits in the Atchafalaya basin — flood risk varies a lot by neighborhood.'},
+  'st mary':{name:'St. Mary Parish',context:'St. Mary takes hurricane surge from the Gulf and rainfall from north.'},
+  'st. mary':{name:'St. Mary Parish',context:'St. Mary takes hurricane surge from the Gulf and rainfall from north.'},
+  'tangipahoa':{name:'Tangipahoa Parish',context:'Tangipahoa got hammered in the 2016 floods. The Tangipahoa and Tickfaw rivers came up fast.'},
+  'hammond':{name:'Hammond',context:'Hammond saw heavy flooding in 2016 along the Tangipahoa River.'},
+  'east feliciana':{name:'East Feliciana Parish',context:'East Feliciana — that is home for me. Beautiful country but the rivers and creeks rise fast.'},
+  'west feliciana':{name:'West Feliciana Parish',context:'West Feliciana has river flooding risk along the Mississippi and bayous. I went to high school there.'},
+  'pointe coupee':{name:'Pointe Coupee Parish',context:'Pointe Coupee has river flooding risk along False River and the Mississippi.'},
+  'metairie':{name:'Metairie',context:'Metairie is in Jefferson Parish — pretty well protected by levees but some flood risk remains.'},
+  'kenner':{name:'Kenner',context:'Kenner is in Jefferson Parish — flood risk varies by neighborhood.'},
+  'slidell':{name:'Slidell',context:'Slidell took major damage in Katrina from Lake Pontchartrain surge.'},
+  'mandeville':{name:'Mandeville',context:'Mandeville sits along Lake Pontchartrain — significant surge and flooding risk during hurricanes.'},
+  'covington':{name:'Covington',context:'Covington has river and creek flooding risk in St. Tammany.'},
+  'monroe':{name:'Monroe',context:'Monroe has Ouachita River flooding risk.'},
+  'shreveport':{name:'Shreveport',context:'Shreveport has Red River flooding risk.'},
+  'alexandria':{name:'Alexandria',context:'Alexandria has Red River flooding risk.'},
+  'morgan city':{name:'Morgan City',context:'Morgan City sits in St. Mary Parish — Atchafalaya basin flooding and storm surge are both real risks.'}
 };
 
 function detectParish(text) {
   var low = text.toLowerCase();
-  for (var key in PARISHES) {
-    if (low.indexOf(key) !== -1) return PARISHES[key];
-  }
+  for (var key in PARISHES) { if (low.indexOf(key) !== -1) return PARISHES[key]; }
   return null;
 }
 
+function normalize(text) {
+  var t = text.toLowerCase();
+  t = t.replace(/won't/g,'will not').replace(/wont/g,'will not');
+  t = t.replace(/can't/g,'cannot').replace(/cant/g,'cannot');
+  t = t.replace(/don't/g,'do not').replace(/dont/g,'do not');
+  t = t.replace(/doesn't/g,'does not').replace(/doesnt/g,'does not');
+  t = t.replace(/haven't/g,'have not').replace(/havent/g,'have not');
+  t = t.replace(/i'm/g,'i am');
+  t = t.replace(/it's/g,'it is');
+  t = t.replace(/that's/g,'that is');
+  t = t.replace(/what's/g,'what is').replace(/whats/g,'what is');
+  t = t.replace(/ho insurance/g,'homeowners insurance');
+  t = t.replace(/ho policy/g,'homeowners policy');
+  t = t.replace(/home owner/g,'homeowner');
+  t = t.replace(/homeowner's/g,'homeowners');
+  t = t.replace(/insurence/g,'insurance');
+  t = t.replace(/insurnace/g,'insurance');
+  t = t.replace(/morgage/g,'mortgage');
+  t = t.replace(/morgtage/g,'mortgage');
+  return t;
+}
+
 var KB = [
-  {topic:'whatis',k:['what does flood insurance do','what does it do','what is flood insurance','explain flood insurance','how does flood insurance work','flood insurance do'],
+  {topic:'whatis',k:['what does flood insurance do','what is flood insurance','explain flood insurance','how does flood insurance work','what flood insurance'],
   a:'Think of your standard home insurance like health insurance for your house — it covers unexpected things that happen INSIDE, like a pipe bursting and flooding your kitchen. Flood insurance is different. It is specialized protection for when water comes in from the OUTSIDE — heavy rain, rising bayous, storm surge. If rising groundwater flows under your front door, standard insurance will not touch it, but flood insurance will.',
-  followup:'Want me to find out what flood insurance would actually cost for your specific property? It is usually less than people expect.',
-  fuType:'quote'},
+  followup:'Want me to find out what flood insurance would actually cost for your specific property?',fuType:'quote'},
 
-  {topic:'homeowners',k:['homeowner','home insurance','regular insurance','cover flood','standard policy','does my insurance'],
+  {topic:'homeowners',k:['homeowners insurance','home insurance','regular insurance','homeowners policy','standard policy','my insurance cover flood','does my insurance cover'],
   a:'Nope — and this surprises a lot of people. Your standard homeowners policy covers things that happen inside your home, like a burst pipe. But if water rises from the outside and comes in through your doors or foundation, that is a flood — and your homeowners policy will not pay a dime. You need a separate flood policy for that.',
-  followup:'Want Brian to send you a quick flood quote for your address? Most properties run between $400 and $700 a year.',
-  fuType:'quote'},
+  followup:'Want Brian to send you a quick flood quote for your address?',fuType:'quote'},
 
-  {topic:'cost',k:['cost','price','premium','how much','rate','what do i pay','monthly','yearly'],
-  a:'In Louisiana, flood insurance averages around $1,470 per year statewide, but that varies wildly by parish. East Baton Rouge averages closer to $655/year. If you are in a lower-risk zone, a Preferred Risk Policy can run as low as $400 to $600 a year — honestly less than most people expect.',
-  followup:'Want an exact quote for your specific address? Just share where you are and Brian will run the real numbers.',
-  fuType:'quote'},
+  {topic:'cost',k:['cost','price','premium','how much','rate','what do i pay','monthly','yearly','annual','per year','per month','expensive'],
+  a:'In Louisiana, flood insurance averages around $1,470 per year statewide, but that varies wildly by parish. East Baton Rouge averages closer to $655/year. Plaquemines is the highest at $4,752/year. If you are in a lower-risk zone, a Preferred Risk Policy can run as low as $400 to $600 a year — honestly less than most people expect.',
+  followup:'Want an exact quote for your specific address?',fuType:'quote'},
 
-  {topic:'too_expensive',k:['too expensive','can\'t afford','cant afford','too much money','out of budget','too pricey','overpriced','can not afford'],
-  a:'I hear you — and that is a real concern. But here is the math that shocks most folks: the AVERAGE flood claim in Louisiana is $63,691. Not having flood insurance is not saving you money — it is gambling that you will never need it. And when you DO need it, the bill lands on YOU. Brian works with multiple programs and can often get monthly payments under $50 for low-risk properties. Affordable is not the same as cheap.',
-  followup:'Let Brian run YOUR specific numbers — you might be surprised how affordable it actually is. Want a free quote?',
-  fuType:'quote',
-  concern:'cost'},
+  {topic:'too_expensive',k:['too expensive','cannot afford','too much money','out of budget','too pricey','overpriced','tight budget','money is tight'],
+  a:'I hear you — and that is a real concern. But here is the math that shocks most folks: the AVERAGE flood claim in Louisiana is $63,691. Not having flood insurance is not saving you money — it is gambling that you will never need it. Brian works with multiple programs and can often get monthly payments under $50 for low-risk properties.',
+  followup:'Let Brian run YOUR specific numbers — you might be surprised. Want a free quote?',fuType:'quote',concern:'cost'},
 
-  {topic:'think_about_it',k:['think about it','let me think','need to think','have to think','will get back','need time'],
-  a:'Totally fair — this is your home we are talking about, not a coffee order. But let me ask you this: if your home flooded next month, would you rather be in the position of "I am glad I got that policy" or "I wish I had pulled the trigger when I had the chance"? The 30-day waiting period means there is no last-minute fix. The folks who flooded in 2016 had been thinking about it for years.',
-  followup:'No pressure at all — but a free quote costs you nothing and locks in your peace of mind. Want Brian to send one over?',
-  fuType:'quote',
-  concern:'thinking'},
+  {topic:'think_about_it',k:['think about it','let me think','need to think','have to think','will get back','need time','sleep on it','look it over'],
+  a:'Totally fair — this is your home we are talking about, not a coffee order. But let me ask you this: if your home flooded next month, would you rather be in the position of "I am glad I got that policy" or "I wish I had pulled the trigger when I had the chance"? The 30-day waiting period means there is no last-minute fix.',
+  followup:'No pressure at all — but a free quote costs you nothing. Want Brian to send one over?',fuType:'quote',concern:'thinking'},
 
-  {topic:'have_agent',k:['have an agent','already have agent','my agent','current agent','my insurance guy','already covered','already have insurance'],
-  a:'That is great — having coverage is the most important thing. Quick question though: when was the last time your agent reviewed your policy with you? A lot of folks find out at claim time that they were underinsured or had gaps they did not know about. Brian offers free policy reviews — no pressure, no commitment. He just tells you straight up if you are in good shape or if there are gaps to plug.',
-  followup:'Want Brian to do a quick free review of your current policy? Worst case you confirm you are in great shape.',
-  fuType:'review',
-  concern:'has_agent'},
+  {topic:'have_agent',k:['have an agent','already have agent','my agent','current agent','my insurance guy','already covered','already have insurance','already have flood','have flood insurance'],
+  a:'That is great — having coverage is the most important thing. Quick question though: when was the last time your agent reviewed your policy with you? A lot of folks find out at claim time that they were underinsured or had gaps they did not know about. Brian offers free policy reviews — no pressure, no commitment.',
+  followup:'Want Brian to do a quick free review of your current policy?',fuType:'review',concern:'has_agent'},
 
-  {topic:'fema_will_help',k:['fema will help','government will pay','disaster relief','disaster aid','they will help me','the government'],
-  a:'This one breaks my heart because so many people believe it. Federal disaster aid is NOT a free check from the government. It is usually a low-interest LOAN you have to pay back, only available if the President officially declares a disaster, and the average payout is $2,704. Compare that to the average NFIP claim payout: $63,691. Folks in Livingston Parish in 2016 found this out the hard way. Many got nothing — or got loans they are still paying back today.',
-  followup:'Real flood insurance pays directly and you do not pay it back. Want Brian to set you up with actual coverage?',
-  fuType:'quote',
-  concern:'fema'},
+  {topic:'fema_will_help',k:['fema will help','government will pay','disaster relief','disaster aid','they will help me','government bail','government help'],
+  a:'This one breaks my heart because so many people believe it. Federal disaster aid is NOT a free check from the government. It is usually a low-interest LOAN you have to pay back, only available if the President officially declares a disaster, and the average payout is $2,704. Compare that to the average NFIP claim payout: $63,691.',
+  followup:'Real flood insurance pays directly. Want Brian to set you up?',fuType:'quote',concern:'fema'},
 
-  {topic:'never_flooded',k:['never flooded','haven\'t flooded','don\'t need it','waste of money','low risk','not going to flood','probably won\'t','unlikely to flood','my house is high','live on a hill','elevated already'],
-  a:'I hear that all the time — and honestly, most people say the same thing right up until they file a claim. In 2016, 75% of homes that flooded in Livingston Parish had never flooded before. Their lenders told them they did not need it. Many of them lost everything. About 25% of all flood claims come from properties OUTSIDE high-risk zones. The question is simple: if your home floods tomorrow, do you want 100% of that bill to fall on you?',
-  followup:'Brian can show you what a policy actually costs for your property. For low-risk areas it is often under $50/month — cheap peace of mind.',
-  fuType:'quote',
-  concern:'never_flooded'},
+  {topic:'never_flooded',k:['never flooded','have not flooded','do not need it','waste of money','low risk area','not going to flood','probably will not','unlikely to flood','my house is high','live on a hill','house is elevated','high ground'],
+  a:'I hear that all the time — and honestly, most people say the same thing right up until they file a claim. In 2016, 75% of homes that flooded in Livingston Parish had never flooded before. About 25% of all flood claims come from properties OUTSIDE high-risk zones.',
+  followup:'For low-risk areas, coverage is often under $50/month — cheap peace of mind.',fuType:'quote',concern:'never_flooded'},
 
-  {topic:'2016',k:['2016','flood of 2016','august 2016','livingston','denham springs','historic','remember the flood','baton rouge flood'],
-  a:'2016 changed Louisiana. Three days of rain, 31 inches in some spots. 146,000 homes damaged. $15 billion in losses. The painful part? About 75% of those Livingston Parish homes were total losses, and most had no flood insurance because they were in Zone X — the so-called "low risk" zone. I have neighbors and friends who lost everything. Some are STILL paying off SBA disaster loans almost 10 years later.',
-  followup:'Are you in a Zone X area? If so, Brian can probably get you covered for less than $50/month — it is some of the cheapest peace of mind in Louisiana.',
-  fuType:'quote'},
+  {topic:'2016',k:['2016 flood','flood of 2016','august 2016','livingston flood','denham springs flood','historic flood'],
+  a:'2016 changed Louisiana. Three days of rain, 31 inches in some spots. 146,000 homes damaged. $15 billion in losses. About 75% of those Livingston Parish homes were total losses, and most had no flood insurance because they were in Zone X. I have neighbors and friends who lost everything. Some are STILL paying off SBA disaster loans.',
+  followup:'Are you in a Zone X area? Brian can probably get you covered for less than $50/month.',fuType:'quote'},
 
-  {topic:'ida',k:['ida','hurricane ida','2021','laplace','grand isle','port fourchon'],
-  a:'Hurricane Ida hit Lafourche Parish on August 29, 2021 — the 16th anniversary of Katrina, which felt cruel. Cat 4 storm. 150 mph winds. Storm surge overtopped the Larose levee and flooded homes that had stood through every other storm. LaPlace got hammered too — the levee project was not finished. A million people lost power, some for two weeks. Insurance separated the families who rebuilt from the ones who lost everything.',
-  followup:'Hurricane season is coming. Want Brian to make sure you are covered before the next named storm forms?',
-  fuType:'quote'},
+  {topic:'ida',k:['hurricane ida','ida 2021','ida hit','ida storm','laplace flood','grand isle','port fourchon'],
+  a:'Hurricane Ida hit Lafourche Parish on August 29, 2021 — the 16th anniversary of Katrina. Cat 4 storm. 150 mph winds. Storm surge overtopped the Larose levee. LaPlace got hammered too. A million people lost power, some for two weeks. Insurance separated the families who rebuilt from the ones who lost everything.',
+  followup:'Want Brian to make sure you are covered before the next named storm?',fuType:'quote'},
 
-  {topic:'laura',k:['laura','hurricane laura','2020','lake charles','cameron','calcasieu'],
-  a:'Hurricane Laura in August 2020 was the strongest hurricane to hit Louisiana since 1856. Cat 4 with 150 mph winds. Cameron Parish got nearly wiped out. Lake Charles took catastrophic damage — and then six weeks later, Hurricane Delta hit the same exact area. Folks who had flood insurance rebuilt. Folks who did not are still recovering five years later.',
-  followup:'Brian works with carriers who specialize in coastal Louisiana. Want a quote for your area?',
-  fuType:'quote'},
+  {topic:'laura',k:['hurricane laura','laura 2020','lake charles flood','cameron storm','laura hit'],
+  a:'Hurricane Laura in August 2020 was the strongest hurricane to hit Louisiana since 1856. Cat 4 with 150 mph winds. Cameron Parish got nearly wiped out. Lake Charles took catastrophic damage — and then six weeks later, Hurricane Delta hit the same exact area.',
+  followup:'Brian works with carriers who specialize in coastal Louisiana. Want a quote?',fuType:'quote'},
 
-  {topic:'katrina',k:['katrina','hurricane katrina','2005','levee broke','levee failure'],
-  a:'Katrina is the costliest natural disaster in U.S. history. 1,464 lives lost. 200,000 homes destroyed. 80% of New Orleans underwater. The post-Katrina federal levee improvements have made a big difference, but flood risk in metro New Orleans is still very real — and varies block by block. After Katrina, lenders got serious about requiring flood insurance for a reason.',
-  followup:'Want Brian to check what your flood risk really is post-Katrina? He can pull your zone in 2 minutes.',
-  fuType:'quote'},
+  {topic:'katrina',k:['hurricane katrina','katrina 2005','katrina flood','levee broke','levee failure','levees failed'],
+  a:'Katrina is the costliest natural disaster in U.S. history. 1,464 lives lost. 200,000 homes destroyed. 80% of New Orleans underwater. The post-Katrina federal levee improvements have made a big difference, but flood risk in metro New Orleans is still very real.',
+  followup:'Want Brian to check what your flood risk really is?',fuType:'quote'},
 
-  {topic:'covered',k:['what is covered','what does it cover','covered','building coverage','structure','contents','personal property','what will it pay'],
-  a:'A flood policy covers two things: your building and your stuff. Building coverage (up to $250,000) includes your foundation, electrical, plumbing, HVAC, water heater, built-in appliances, and cabinets. Contents coverage (up to $100,000) covers your furniture, electronics, clothing, and appliances like your washer and dryer.',
-  followup:'Want Brian to make sure you have the right coverage amounts for your home?',
-  fuType:'review'},
+  {topic:'covered',k:['what is covered','what does it cover','what will it pay','building coverage','contents coverage','personal property','will it cover','include coverage'],
+  a:'A flood policy covers two things: your building and your stuff. Building coverage (up to $250,000) includes your foundation, electrical, plumbing, HVAC, water heater, built-in appliances, and cabinets. Contents coverage (up to $100,000) covers your furniture, electronics, clothing, and appliances.',
+  followup:'Want Brian to make sure you have the right coverage amounts?',fuType:'review'},
 
-  {topic:'not_covered',k:['not covered','exclusion','excluded','what won\'t','won\'t cover','doesn\'t cover','living expenses','temporary','car','vehicle','pool','deck','fence','landscaping'],
-  a:'Good question to ask upfront. Flood insurance does NOT cover: your car (that is auto insurance), temporary housing if you have to move out, pools, decks, fences, landscaping, or most finished basement contents. Wind damage is also separate — that is a windstorm policy.',
-  followup:'Want Brian to make sure ALL your coverage gaps are sealed up? He can do a free policy review.',
-  fuType:'review'},
+  {topic:'not_covered',k:['not covered','exclusion','excluded','will not cover','does not cover','living expenses','temporary housing','car coverage','vehicle covered','pool covered','deck covered','fence covered','landscaping'],
+  a:'Good question to ask upfront. Flood insurance does NOT cover: your car (auto insurance), temporary housing if you have to move out, pools, decks, fences, landscaping, or most finished basement contents. Wind damage is also separate.',
+  followup:'Want Brian to make sure ALL your coverage gaps are sealed up?',fuType:'review'},
 
-  {topic:'waiting',k:['waiting period','wait','when does it start','effective','take effect','30 day','when will i be covered','how long'],
-  a:'There is normally a 30-day waiting period before your NFIP policy kicks in — so please do not wait until a storm is in the Gulf to call. The wait is waived if you are buying at mortgage closing or if your property was just remapped into a higher risk zone. Some private flood policies have shorter waiting periods of 10 to 15 days.',
-  followup:'With hurricane season approaching, this is the right time to get something in place. Want Brian to start your policy now?',
-  fuType:'quote'},
+  {topic:'waiting',k:['waiting period','30 day wait','when does it start','when will it take effect','when am i covered','how long until covered','how soon','how fast','how quickly'],
+  a:'There is normally a 30-day waiting period before your NFIP policy kicks in — so please do not wait until a storm is in the Gulf. The wait is waived if you are buying at mortgage closing or if your property was just remapped. Some private flood policies have shorter waiting periods of 10 to 15 days.',
+  followup:'Want Brian to start your policy now?',fuType:'quote'},
 
-  {topic:'zones',k:['flood zone','zone','sfha','high risk','zone a','zone v','zone x','zone b','zone c','map','firm','what zone','am i in a','which zone'],
-  a:'FEMA maps Louisiana into flood zones. Zone A and V are high-risk — flood insurance is required if you have a federally-backed mortgage. Zone X is moderate to low risk — not required, but 2016 showed us that does not mean safe. About 25 percent of all flood claims come from outside high-risk zones.',
-  followup:'Want Brian to look up your exact flood zone? Free service. Just share your address.',
-  fuType:'quote'},
+  {topic:'zones',k:['flood zone','my zone','sfha','high risk zone','zone a','zone v','zone x','zone b','zone c','zone ae','flood map','firm map','what zone','am i in a zone','which zone'],
+  a:'FEMA maps Louisiana into flood zones. Zone A and V are high-risk — flood insurance is required if you have a federally-backed mortgage. Zone X is moderate to low risk. About 25% of all flood claims come from outside high-risk zones. About 40% of Louisiana developed land is in a Special Flood Hazard Area.',
+  followup:'Want Brian to look up your exact flood zone?',fuType:'quote'},
 
-  {topic:'need',k:['do i need','need flood','required','mandatory','lender','mortgage','must i have','is it required','should i get'],
-  a:'It is legally required if you have a federally-backed mortgage and live in a high-risk flood zone. But here is what I tell everyone: the lender requirement and your actual risk are two different things. Just because your lender does not require it does not mean you are safe.',
-  followup:'Want Brian to tell you exactly what your situation requires? He will check your zone and give you a straight answer.',
-  fuType:'quote'},
+  {topic:'newly_mapped',k:['newly mapped','remapped','zone changed','rezoned','map change','map changed','x to ae','rate change'],
+  a:'If your property was newly mapped into a higher-risk zone (like X to AE), you have a special opportunity. Newly Mapped Procedures let you maintain Preferred Risk rates for one full year after the map effective date — then small annual increases until you reach full risk rates. This can save you thousands.',
+  followup:'Want Brian to check if you qualify for Newly Mapped pricing?',fuType:'quote'},
 
-  {topic:'transfer',k:['transfer','switch agent','change agent','move my policy','new agent','switch to brian','transfer to brian','can i switch','change my agent'],
-  a:'Transferring your existing flood policy to Brian is one of the easiest things in insurance. It is completely free, takes just a few minutes of paperwork, and your coverage never lapses — not even for a day. Same policy, same price, same renewal date. You just get Brian as your agent going forward.',
-  followup:'Want to start the transfer? It takes about 5 minutes and Brian handles all the paperwork.',
-  fuType:'review'},
+  {topic:'need',k:['do i need flood','need flood insurance','required by lender','mortgage requirement','must have flood','is it required','should i get flood','do i have to'],
+  a:'It is legally required if you have a federally-backed mortgage and live in a high-risk flood zone. But here is what I tell everyone: the lender requirement and your actual risk are two different things.',
+  followup:'Want Brian to tell you exactly what your situation requires?',fuType:'quote'},
 
-  {topic:'prp',k:['preferred risk','low risk policy','prp','affordable','zone x policy','cheaper policy','discount','lower cost'],
-  a:'If your property is in a moderate to low risk zone — Zone X, B, or C — you may qualify for a Preferred Risk Policy. It gives you the same solid NFIP coverage at a significantly lower premium, sometimes as low as $400 to $600 a year. It is honestly one of the best deals in insurance.',
-  followup:'Want Brian to check if your property qualifies?',
-  fuType:'quote'},
+  {topic:'force_placed',k:['force placed','force-placed','forced insurance','lender bought insurance','lender added insurance'],
+  a:'Force-placed insurance is when your lender buys flood insurance for you and charges you for it — typically because you let yours lapse or never bought it. It is almost always 2-3x more expensive than getting your own policy AND the coverage is usually less.',
+  followup:'Want Brian to get you out of force-placed insurance? Often saves $1,000+ per year.',fuType:'quote'},
 
-  {topic:'private',k:['private flood','nfip vs private','private insurance','difference between','which is better','private vs nfip'],
-  a:'NFIP is the federal program — standardized coverage, rates are the same no matter who sells it, with max limits of $250,000 for your building and $100,000 for contents. Private flood insurance can offer higher limits, shorter waiting periods, and sometimes lower rates, but not every property in Louisiana qualifies.',
-  followup:'Want Brian to compare both options for your specific address?',
-  fuType:'quote'},
+  {topic:'transfer',k:['transfer policy','switch agent','change agent','move my policy','new agent','switch to brian','transfer to brian','can i switch','change my agent'],
+  a:'Transferring your existing flood policy to Brian is one of the easiest things in insurance. It is completely free, takes just a few minutes of paperwork, and your coverage never lapses — not even for a day. Same policy, same price, same renewal date.',
+  followup:'Want to start the transfer? Brian handles all the paperwork.',fuType:'review'},
 
-  {topic:'basement',k:['basement','below grade','crawl space'],
+  {topic:'prp',k:['preferred risk','low risk policy','prp policy','zone x policy','cheaper option','lower cost option','discount policy'],
+  a:'If your property is in a moderate to low risk zone — Zone X, B, or C — you may qualify for a Preferred Risk Policy. It gives you the same NFIP coverage at a significantly lower premium, sometimes as low as $400 to $600 a year.',
+  followup:'Want Brian to check if your property qualifies?',fuType:'quote'},
+
+  {topic:'private',k:['private flood','nfip vs private','private insurance','private vs nfip','neptune','wright flood','flowflood'],
+  a:'NFIP is the federal program — standardized coverage, max $250,000 building / $100,000 contents. Private flood (Neptune, Wright Flood, FlowFlood) can offer higher limits, shorter waiting periods, and sometimes lower rates, but not every property in Louisiana qualifies.',
+  followup:'Want Brian to compare both options for your address?',fuType:'quote'},
+
+  {topic:'risk_rating',k:['risk rating 2','risk rating','new rating','equity rating','new flood rates','new rate system'],
+  a:'Risk Rating 2.0 is FEMA new pricing system rolled out in 2021-2023. Instead of just using flood zones, it uses your specific property characteristics — distance to water, elevation, replacement cost, foundation type. Some Louisiana folks saw rates go up significantly. The good news: private flood insurance is now often cheaper than NFIP.',
+  followup:'Want Brian to compare your NFIP rate to private options?',fuType:'review'},
+
+  {topic:'basement',k:['basement','below grade','crawl space','underground','below ground'],
   a:'NFIP basement coverage is very limited. Finished walls, flooring, carpet, and furniture in a basement are generally not covered. What is covered: your furnace, water heater, electrical panel, and sump pump.',
-  followup:'Want Brian to walk through exactly what is and is not protected at your property?',
-  fuType:'review'},
+  followup:'Want Brian to walk through what is protected at your property?',fuType:'review'},
 
-  {topic:'renter',k:['renter','tenant','rent','apartment','landlord','i rent','do renters'],
+  {topic:'renter',k:['renter insurance','tenant insurance','i rent','renting','do renters need','apartment flood','as a renter'],
   a:'Absolutely — renters can and should get flood insurance. Your landlord building policy covers the structure, but it does not cover a single thing you own. NFIP offers contents-only policies for renters up to $100,000.',
-  followup:'In Louisiana, renters flood policies are usually under $200/year. Want Brian to send you a quote?',
-  fuType:'quote'},
+  followup:'Renters flood policies are usually under $200/year. Want a quote?',fuType:'quote'},
 
-  {topic:'newconstruction',k:['new construction','new home','newly built','building a home','buying new','new build','just built'],
-  a:'New construction homes built to current Louisiana flood codes often qualify for significantly lower flood insurance rates. If you are buying in Zone X, you could pay as little as $400 to $600 per year. Always ask about the flood zone and elevation certificate before you close on any lot.',
-  followup:'Want Brian to walk you through the flood insurance side of your purchase before you sign anything?',
-  fuType:'quote'},
+  {topic:'newconstruction',k:['new construction','new home','newly built','building a home','buying new home','new build','just built'],
+  a:'New construction homes built to current Louisiana flood codes often qualify for significantly lower flood insurance rates. If you are buying in Zone X, you could pay as little as $400 to $600 per year. Always ask about the flood zone and elevation certificate before you close.',
+  followup:'Want Brian to walk you through the flood insurance side of your purchase?',fuType:'quote'},
 
-  {topic:'claim',k:['claim','file a claim','after flood','flood damage','adjuster','settlement','what do i do if','if i flood'],
-  a:'First thing: document everything with photos and video before you touch anything or start cleaning up. Then contact your flood insurance company immediately. An adjuster will be assigned. The process typically takes 30 to 90 days.',
-  followup:'Are you dealing with a claim right now? Brian can help you navigate it.',
-  fuType:'quote'},
+  {topic:'claim',k:['file claim','file a claim','filing claim','after flood','flood damage','adjuster','settlement','what do i do if i flood'],
+  a:'First thing: document everything with photos and video before you touch anything. Then contact your flood insurance company immediately. An adjuster will be assigned. The process typically takes 30 to 90 days.',
+  followup:'Are you dealing with a claim right now? Brian can help.',fuType:'quote'},
 
-  {topic:'elevation',k:['elevation','bfe','base flood elevation','elevation certificate'],
-  a:'An elevation certificate documents how high your home sits compared to the Base Flood Elevation. It can make a significant difference in your premium — sometimes saving hundreds of dollars a year.',
-  followup:'Want Brian to check if getting one would lower your premium?',
-  fuType:'review'},
+  {topic:'elevation',k:['elevation certificate','base flood elevation','bfe','elevation grant','elevate my home','raise my home'],
+  a:'An elevation certificate documents how high your home sits compared to the Base Flood Elevation. It can save hundreds of dollars a year. If you have had 2+ flood claims in 10 years, you may also be eligible for an elevation grant to raise your home.',
+  followup:'Want Brian to check if an elevation certificate would lower your premium?',fuType:'review'},
 
-  {topic:'limits',k:['limit','maximum','max coverage','enough coverage','excess flood','more than 250','high value home'],
-  a:'NFIP caps out at $250,000 for your building and $100,000 for contents. If your home is worth more than that, private excess flood insurance can pick up where NFIP leaves off and provide much higher limits.',
-  followup:'Want Brian to assess your property and make sure you are not underinsured?',
-  fuType:'review'},
+  {topic:'limits',k:['coverage limit','maximum coverage','max coverage','enough coverage','excess flood','more than 250000','high value home','expensive home'],
+  a:'NFIP caps out at $250,000 for your building and $100,000 for contents. If your home is worth more than that, private excess flood insurance can pick up where NFIP leaves off — up to several million for high-value homes.',
+  followup:'Want Brian to make sure you are not underinsured?',fuType:'review'},
 
-  {topic:'hurricane',k:['hurricane','wind','storm surge','tropical','named storm','category'],
-  a:'Flood insurance covers water damage from hurricanes and storm surge — but NOT wind damage. Wind is a separate windstorm or homeowners policy. Louisiana hurricane season runs June through November.',
-  followup:'Want Brian to make sure you have no gaps before the next hurricane season?',
-  fuType:'review'},
+  {topic:'hurricane',k:['hurricane coverage','wind coverage','storm surge','tropical storm','named storm','hurricane deductible'],
+  a:'Flood insurance covers water damage from hurricanes and storm surge — but NOT wind damage. Wind is a separate windstorm or homeowners policy. Most coastal Louisiana homeowners need 3 separate coverages: homeowners (or wind), flood, and sometimes Louisiana Citizens for windstorm.',
+  followup:'Want Brian to check for gaps before hurricane season?',fuType:'review'},
 
-  {topic:'nfip',k:['what is nfip','national flood insurance','nfip','federal flood','who is nfip'],
-  a:'NFIP stands for National Flood Insurance Program. It is a federal program run through FEMA that provides standardized flood insurance policies. Because it is federal, the rates and coverage are the same no matter which agent sells it — the difference is the agent you work with.',
-  followup:'Want Brian as your agent? He responds personally and actually answers the phone.',
-  fuType:'quote'},
+  {topic:'la_citizens',k:['louisiana citizens','la citizens','citizens insurance','citizens property','insurer of last resort','fair plan'],
+  a:'Louisiana Citizens is the state-backed insurer of last resort for properties private insurers will not cover. Since Hurricane Ida in 2021, over 130,000 Louisiana properties have ended up on Citizens. It works alongside flood insurance — Citizens for wind/hail, flood policy for water.',
+  followup:'Want Brian to evaluate whether Citizens is right for your property?',fuType:'review'},
 
-  {topic:'business',k:['business','commercial','rental property','rental','landlord','small business','my building','office','shop','restaurant'],
-  a:'Yes — Brian writes commercial flood insurance for businesses, rental properties, and landlord properties. Commercial NFIP coverage goes up to $500,000 for buildings and $500,000 for contents. Rental property owners especially need this — your homeowners equivalent does NOT extend to flood.',
-  followup:'Want Brian to put together a commercial flood quote for your property?',
-  fuType:'quote'},
+  {topic:'nfip',k:['national flood insurance','nfip program','federal flood program','what is nfip','floodsmart'],
+  a:'NFIP stands for National Flood Insurance Program. It is a federal program run through FEMA. Because it is federal, the rates and coverage are the same no matter which agent sells it — the difference is the agent you work with.',
+  followup:'Want Brian as your agent? He responds personally.',fuType:'quote'},
 
-  {topic:'brian',k:['contact','brian','speak to someone','talk to a person','human','phone','email','office','reach brian','call brian','who are you'],
-  a:'You can reach Brian directly at (225) 610-3611 or bhall@sfbcic.com. His office is at 12035 Coursey Blvd, Baton Rouge, LA 70816. He serves all of Louisiana and is one of those agents who actually answers the phone. Background: former law enforcement, K9 handler, raised in East Feliciana — Louisiana through and through.',
-  followup:'Want Brian to reach out to you instead? Just leave your name and number below.',
-  fuType:'callback'},
+  {topic:'business',k:['business flood','commercial flood','rental property','my rental','small business flood','my building','office flood','shop flood','restaurant flood','landlord insurance'],
+  a:'Yes — Brian writes commercial flood insurance for businesses, rental properties, and landlord properties. Commercial NFIP coverage goes up to $500,000 for buildings and $500,000 for contents.',
+  followup:'Want a commercial flood quote for your property?',fuType:'quote'},
 
-  {topic:'greeting',k:['hello','hi','hey','good morning','good afternoon','howdy','what can you do','help me','get started'],
+  {topic:'mobile_home',k:['mobile home','manufactured home','trailer flood','double wide','single wide'],
+  a:'Mobile and manufactured homes can be covered by flood insurance, but the rules are stricter. The home must be properly anchored to a permanent foundation and meet specific elevation requirements. NFIP covers mobile homes up to $250,000.',
+  followup:'Want Brian to check what works for your manufactured home?',fuType:'quote'},
+
+  {topic:'condo',k:['condo flood','condominium','condo insurance','my condo','hoa flood','condo association'],
+  a:'Condos work differently. The condo association usually has a master flood policy on the building, but you need your own policy for your unit interior and contents. NFIP unit-owner coverage tops out at $250,000 for interior and $100,000 for contents.',
+  followup:'Want Brian to check what your association covers and what gaps you should fill?',fuType:'review'},
+
+  {topic:'just_bought',k:['just bought','just closed','new homeowner','first home','bought a house','closing','buying a home'],
+  a:'Congrats on the new home! Quick heads up: if your lender required flood insurance, you probably already have a policy in place — but it may not be the best one. Most new homeowners do not realize they can shop their flood insurance.',
+  followup:'Want a free review of the policy your lender set up?',fuType:'review'},
+
+  {topic:'selling',k:['selling my home','listing my home','put on market','selling soon','sell my house'],
+  a:'Smart to think about this. Your flood insurance policy is transferable to the buyer — and that can actually be a selling point if you have a low rate locked in. Sometimes a low flood rate is worth thousands at closing.',
+  followup:'Want Brian to walk you through how to transfer it at closing?',fuType:'review'},
+
+  {topic:'lapsed',k:['policy lapsed','let it lapse','expired','cancelled','dropped','my policy expired'],
+  a:'If your policy lapsed, the 30-day waiting period kicks back in. The good news is Brian can get you reinstated quickly. The bad news is if your policy lapsed during a "loss in progress," you cannot get covered for that event.',
+  followup:'Let Brian get you back in coverage right now.',fuType:'quote'},
+
+  {topic:'premium_increased',k:['premium went up','rate increase','went up','doubled','too much now','increased a lot','rates went up'],
+  a:'You are not alone. NFIP Risk Rating 2.0 hit a lot of Louisiana folks hard. The good news is private flood insurance has gotten more competitive in the past 2 years and Brian can sometimes get private coverage for less than your new NFIP rate.',
+  followup:'Want Brian to shop your renewal? Free comparison.',fuType:'review'},
+
+  {topic:'discount',k:['save money','discount','cheaper option','lower premium','reduce my premium','how to save','any discounts'],
+  a:'Several ways to lower your flood premium: 1) Get an elevation certificate, 2) Check if you qualify for Preferred Risk Policy, 3) Compare NFIP vs private, 4) Higher deductibles, 5) Newly Mapped pricing if your zone changed.',
+  followup:'Want Brian to find every possible discount on your property?',fuType:'review'},
+
+  {topic:'worth_it',k:['worth it','worth the money','worth getting','is it worth','should i bother'],
+  a:'Honest answer: in Louisiana, yes — for almost everyone. The average flood claim payout is $63,691. The average annual premium is $400 to $1,500. Even if you only flood once every 30 years, you come out way ahead.',
+  followup:'Want Brian to run real numbers for your situation?',fuType:'quote'},
+
+  {topic:'brian',k:['contact brian','speak to someone','talk to a person','phone number','email brian','office address','reach brian','call brian','who are you','about brian'],
+  a:'You can reach Brian directly at (225) 610-3611 or bhall@sfbcic.com. His office is at 12035 Coursey Blvd, Baton Rouge, LA 70816. He serves all of Louisiana. Background: former law enforcement, K9 handler, raised in East Feliciana — Louisiana through and through.',
+  followup:'Want Brian to reach out to you instead?',fuType:'callback'},
+
+  {topic:'greeting',k:['hello','hi there','hey','good morning','good afternoon','howdy','hi brian','hello brian'],
   a:'Glad you stopped by! I am here to give you straight, honest answers about flood insurance in Louisiana. No pressure, no sales pitch.',
-  followup:'What would you like to know about? You can tap any question below or just type yours in.',
-  fuType:'none'},
+  followup:'What would you like to know about?',fuType:'none'},
 
-  {topic:'just_bought',k:['just bought','just closed','new homeowner','first home','bought a house','closing'],
-  a:'Congrats on the new home! Quick heads up: if your lender required flood insurance, you probably already have a policy in place — but it may not be the best one. Brian can do a free review and either confirm you are in good shape or save you money. Most new homeowners do not realize they can shop their flood insurance.',
-  followup:'Want a free review of the policy your lender set up? Could save you a few hundred a year.',
-  fuType:'review'},
-
-  {topic:'selling',k:['selling','listing my home','put on market','closing soon'],
-  a:'Smart to think about this. Your flood insurance policy is transferable to the buyer — and that can actually be a selling point if you have a low rate locked in. The buyer keeps your renewal date and your premium. Sometimes a low flood rate is worth thousands at closing.',
-  followup:'Want Brian to walk you through how to transfer it at closing?',
-  fuType:'review'},
-
-  {topic:'lapsed',k:['lapsed','expired','let it lapse','cancelled','dropped'],
-  a:'If your policy lapsed, the 30-day waiting period kicks back in. The good news is Brian can get you reinstated quickly. The bad news is if your policy lapsed during a "loss in progress" — meaning a flood already happened or is happening — you cannot get covered for that event.',
-  followup:'Let Brian get you back in coverage right now. Every day matters.',
-  fuType:'quote'},
-
-  {topic:'premium_increased',k:['premium went up','rate increase','went up','doubled','too much now','increased a lot'],
-  a:'You are not alone. NFIP Risk Rating 2.0 hit a lot of Louisiana folks hard. The good news is private flood insurance has gotten more competitive in the past 2 years and Brian can sometimes get private coverage for less than your new NFIP rate. Always worth checking.',
-  followup:'Want Brian to shop your renewal? Free comparison, no obligation.',
-  fuType:'review'}
+  {topic:'thanks',k:['thanks','thank you','appreciate it','helpful','great info'],
+  a:'You bet! Glad I could help.',
+  followup:'Want Brian to reach out about anything specific?',fuType:'callback'}
 ];
 
 function findEntry(txt) {
-  var low = txt.toLowerCase();
+  var low = normalize(txt);
+  var best = null;
+  var bestScore = 0;
   for (var i = 0; i < KB.length; i++) {
+    var score = 0;
     for (var j = 0; j < KB[i].k.length; j++) {
-      if (low.indexOf(KB[i].k[j]) !== -1) return KB[i];
+      var kw = KB[i].k[j].toLowerCase();
+      if (low.indexOf(kw) !== -1) {
+        score += kw.length;
+      }
     }
+    if (KB[i].topic === 'greeting' && low.length > 15) score = score * 0.3;
+    if (score > bestScore) { bestScore = score; best = KB[i]; }
   }
-  return null;
+  return bestScore > 0 ? best : null;
 }
 
 function addMsg(txt, role) {
@@ -575,8 +523,7 @@ function addMsg(txt, role) {
   var bb = document.createElement('div');
   bb.className = 'cbbl';
   bb.textContent = txt;
-  d.appendChild(av);
-  d.appendChild(bb);
+  d.appendChild(av); d.appendChild(bb);
   c.appendChild(d);
   c.scrollTop = c.scrollHeight;
 }
@@ -622,9 +569,7 @@ function showFollowup(text, type) {
     noBtn.textContent = 'Just looking for now';
     noBtn.addEventListener('click', function() {
       addMsg('Just looking for now', 'u');
-      setTimeout(function() {
-        addMsg('No problem' + (user.hasName ? ', ' + user.name : '') + '! Take your time. Any other questions?', 'b');
-      }, 600);
+      setTimeout(function() { addMsg('No problem' + (user.hasName ? ', ' + user.name : '') + '! Take your time. Any other questions?', 'b'); }, 600);
     });
     btnsDiv.appendChild(noBtn);
   } else if (type === 'review') {
@@ -636,9 +581,7 @@ function showFollowup(text, type) {
     noBtn.textContent = 'Maybe later';
     noBtn.addEventListener('click', function() {
       addMsg('Maybe later', 'u');
-      setTimeout(function() {
-        addMsg('Sounds good' + (user.hasName ? ', ' + user.name : '') + '. Anything else I can help with?', 'b');
-      }, 600);
+      setTimeout(function() { addMsg('Sounds good' + (user.hasName ? ', ' + user.name : '') + '. Anything else I can help with?', 'b'); }, 600);
     });
     btnsDiv.appendChild(noBtn);
   } else if (type === 'callback') {
@@ -650,9 +593,7 @@ function showFollowup(text, type) {
     noBtn.textContent = 'I will call him';
     noBtn.addEventListener('click', function() {
       addMsg('I will call him', 'u');
-      setTimeout(function() {
-        addMsg('Sounds good! (225) 610-3611 — Brian answers personally.', 'b');
-      }, 600);
+      setTimeout(function() { addMsg('Sounds good! (225) 610-3611 — Brian answers personally.', 'b'); }, 600);
     });
     btnsDiv.appendChild(noBtn);
   }
@@ -748,12 +689,20 @@ function submitLead() {
   setTimeout(function() {
     hideTyping();
     var name = leadFlow.data.firstName || 'there';
-    addMsg('You are all set, ' + name + '! Brian got your info and will reach out soon. He responds personally and usually within a few hours.', 'b');
+    addMsg('You are all set, ' + name + '! Brian got your info and will reach out soon.', 'b');
     user.leadCaptured = true;
-    setTimeout(function() {
-      addMsg('In the meantime — anything else you want to know?', 'b');
-    }, 1500);
+    setTimeout(function() { addMsg('In the meantime — anything else you want to know?', 'b'); }, 1500);
   }, 800);
+}
+
+function logUnmatchedQuestion(question) {
+  var data = new FormData();
+  data.append('Type', 'AUTO-LEARN: Unmatched Question');
+  data.append('Question', question);
+  data.append('User Name', user.name || 'Anonymous');
+  data.append('Topics So Far', user.topicsDiscussed.join(', ') || 'None');
+  data.append('Note', 'Bot did not have an answer. Tell your AI assistant what to add.');
+  fetch(FORMSPREE, { method:'POST', body:data, headers:{ 'Accept':'application/json' } });
 }
 
 function showSendForm(prefill) {
@@ -790,7 +739,7 @@ function showSendForm(prefill) {
     if (!user.hasName) { user.name = nm; user.hasName = true; }
     var f = document.getElementById('sfmsg');
     if (f) f.parentNode.removeChild(f);
-    addMsg('Got it ' + nm + '! Brian got your question and will get back to you at ' + pv + ' soon.', 'b');
+    addMsg('Got it ' + nm + '! Brian got your question and will get back to you at ' + pv + '.', 'b');
   });
   wrap.appendChild(p); wrap.appendChild(ta); wrap.appendChild(n); wrap.appendChild(ph); wrap.appendChild(btn);
   d.appendChild(av); d.appendChild(wrap);
@@ -798,17 +747,24 @@ function showSendForm(prefill) {
   c.scrollTop = c.scrollHeight;
 }
 
+function isShortFollowup(txt) {
+  var low = txt.toLowerCase().trim();
+  var followupTriggers = ['monthly', 'yearly', 'annually', 'how about', 'what about', 'and what', 'is it', 'really', 'sure', 'why', 'why not', 'how come'];
+  for (var i = 0; i < followupTriggers.length; i++) {
+    if (low === followupTriggers[i]) return true;
+    if (low.indexOf(followupTriggers[i]) === 0 && low.length < 25) return true;
+  }
+  return false;
+}
+
 function smartFallback(txt) {
   var low = txt.toLowerCase();
   if (low.indexOf('?') !== -1 || low.indexOf('how') === 0 || low.indexOf('what') === 0 || low.indexOf('when') === 0 || low.indexOf('why') === 0 || low.indexOf('can ') === 0 || low.indexOf('do ') === 0 || low.indexOf('does') === 0) {
-    if (low.indexOf('save') !== -1 || low.indexOf('discount') !== -1 || low.indexOf('cheaper') !== -1) {
-      return {answer:'Great question. There are a few ways to lower your flood premium: 1) get an elevation certificate, 2) check if you qualify for a Preferred Risk Policy, 3) sometimes private flood insurance is cheaper than NFIP, 4) higher deductibles lower premiums. Brian can check all of these for you.',followup:'Want Brian to find every possible discount on your specific property?',fuType:'review'};
+    if (low.indexOf('save') !== -1 || low.indexOf('cheaper') !== -1) {
+      return {answer:'Several ways to lower your flood premium: elevation certificate, Preferred Risk Policy if you qualify, compare NFIP to private, higher deductibles, Newly Mapped pricing if your zone changed.',followup:'Want Brian to find every discount on your property?',fuType:'review'};
     }
-    if (low.indexOf('worth it') !== -1 || low.indexOf('worth') !== -1) {
-      return {answer:'Honest answer: in Louisiana, yes — for almost everyone. The average flood claim payout is $63,691. The average annual premium is $400 to $1,500. Even if you only flood once every 30 years, you come out way ahead. And the peace of mind is priceless.',followup:'Want Brian to run real numbers for your specific situation?',fuType:'quote'};
-    }
-    if (low.indexOf('quick') !== -1 || low.indexOf('fast') !== -1 || low.indexOf('immediate') !== -1) {
-      return {answer:'Most NFIP policies have a 30-day waiting period, BUT private flood insurance can have waiting periods as short as 10 to 15 days. The fastest way to get covered is to start the application now — Brian can have a quote to you within hours.',followup:'Want Brian to start your quote right now?',fuType:'quote'};
+    if (low.indexOf('quick') !== -1 || low.indexOf('fast') !== -1) {
+      return {answer:'Most NFIP policies have a 30-day waiting period, BUT private flood insurance can have waiting periods as short as 10 to 15 days. Brian can have a quote to you within hours.',followup:'Want Brian to start your quote right now?',fuType:'quote'};
     }
   }
   return null;
@@ -824,44 +780,39 @@ function doSend() {
   document.getElementById('csnd').disabled = true;
   user.questionsAsked++;
   var parish = detectParish(txt);
-  if (parish && !user.detectedParish) {
-    user.detectedParish = parish.name;
-  }
+  if (parish && !user.detectedParish) { user.detectedParish = parish.name; }
   showTyping();
   setTimeout(function() {
     hideTyping();
     var entry = findEntry(txt);
+    if (!entry && user.lastEntry && isShortFollowup(txt)) { entry = user.lastEntry; }
     if (entry) {
-      if (user.topicsDiscussed.indexOf(entry.topic) === -1) {
-        user.topicsDiscussed.push(entry.topic);
-      }
-      if (entry.concern && user.expressedConcerns.indexOf(entry.concern) === -1) {
-        user.expressedConcerns.push(entry.concern);
-      }
+      if (user.topicsDiscussed.indexOf(entry.topic) === -1) { user.topicsDiscussed.push(entry.topic); }
+      if (entry.concern && user.expressedConcerns.indexOf(entry.concern) === -1) { user.expressedConcerns.push(entry.concern); }
+      user.lastTopic = entry.topic;
+      user.lastEntry = entry;
       var answer = entry.a;
-      if (user.hasName && user.questionsAsked > 1) {
-        answer = 'Good question, ' + user.name + '. ' + answer;
-      }
-      if (parish && entry.topic !== 'greeting') {
+      if (user.hasName && user.questionsAsked > 1) { answer = 'Good question, ' + user.name + '. ' + answer; }
+      if (parish && entry.topic !== 'greeting' && entry.topic !== 'thanks') {
         answer = answer + '\n\nSince you mentioned ' + parish.name + ' — ' + parish.context;
+      }
+      if (IS_HURRICANE_SEASON && (entry.topic === 'waiting' || entry.topic === 'cost' || entry.topic === 'never_flooded' || entry.topic === 'think_about_it')) {
+        answer = answer + '\n\nAnd hurricane season is ACTIVE right now. The 30-day waiting period means waiting could leave you exposed.';
+      } else if (DAYS_TO_HURRICANE_SEASON > 0 && DAYS_TO_HURRICANE_SEASON < 60 && (entry.topic === 'waiting' || entry.topic === 'cost' || entry.topic === 'think_about_it')) {
+        answer = answer + '\n\nFYI — hurricane season starts in ' + DAYS_TO_HURRICANE_SEASON + ' days. With the 30-day waiting period, now is the time.';
       }
       addMsg(answer, 'b');
       if (entry.followup && entry.fuType !== 'none' && !user.leadCaptured) {
-        setTimeout(function() {
-          showFollowup(entry.followup, entry.fuType);
-        }, 1200);
+        setTimeout(function() { showFollowup(entry.followup, entry.fuType); }, 1200);
       }
     } else {
       var smart = smartFallback(txt);
       if (smart) {
         addMsg(smart.answer, 'b');
-        if (!user.leadCaptured) {
-          setTimeout(function() {
-            showFollowup(smart.followup, smart.fuType);
-          }, 1200);
-        }
+        if (!user.leadCaptured) { setTimeout(function() { showFollowup(smart.followup, smart.fuType); }, 1200); }
       } else {
-        addMsg('That is a great question and Brian will have the answer for you. Send it to him directly below and he will get back to you personally — usually the same day.', 'b');
+        logUnmatchedQuestion(txt);
+        addMsg('That is a great question and Brian will have the answer for you. Send it to him directly below.', 'b');
         showSendForm(txt);
       }
     }
@@ -971,7 +922,11 @@ function captureName() {
   if (f) f.parentNode.removeChild(f);
   addMsg(val, 'u');
   setTimeout(function() {
-    addMsg('Great to meet you, ' + val + '! What can I help you with? You can tap any question below or type yours in.', 'b');
+    var greeting = 'Great to meet you, ' + val + '! What can I help you with?';
+    if (IS_HURRICANE_SEASON) {
+      greeting = 'Great to meet you, ' + val + '! Hurricane season is active right now, so this is the perfect time to get questions answered. What can I help you with?';
+    }
+    addMsg(greeting, 'b');
   }, 600);
 }
 
@@ -1000,7 +955,6 @@ for (var i = 0; i < qbs.length; i++) {
 }
 
 initGreeting();
-
 })();
 </script>
 
