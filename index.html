@@ -56,12 +56,24 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
 .calc-result .range{font-size:12px;color:#7a5a5a;margin-bottom:10px}
 .calc-result .why{font-size:13px;line-height:1.6;color:#2a1a1a;margin-bottom:12px}
 .calc-result .why strong{color:#7b1c2e}
-.calc-cta{display:flex;flex-direction:column;gap:8px;margin-top:12px}
-.calc-cta button{padding:11px;border-radius:7px;font-family:'Open Sans',Arial,sans-serif;font-size:13px;font-weight:700;cursor:pointer;border:none}
-.calc-cta .primary{background:#7b1c2e;color:#fff}
-.calc-cta .primary:active{background:#540f1e}
-.calc-cta .secondary{background:#fff;color:#7b1c2e;border:1.5px solid #7b1c2e}
-.calc-disclaim{font-size:11px;color:#7a5a5a;margin-top:10px;font-style:italic;line-height:1.4}
+/* THE LEAD CAPTURE - the new conversion play */
+.lead-capture{margin-top:14px;padding:16px;background:linear-gradient(135deg,#7b1c2e 0%,#540f1e 100%);border-radius:10px;border:2px solid #c8922a;color:#fff}
+.lead-capture h3{margin:0 0 6px;color:#f0c060;font-size:16px;font-weight:800}
+.lead-capture p{margin:0 0 12px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.95)}
+.lead-capture p strong{color:#f0c060}
+.lead-form{display:flex;flex-direction:column;gap:8px}
+.lead-form input{width:100%;border:2px solid #c8922a;border-radius:8px;padding:13px 14px;font-family:'Open Sans',Arial,sans-serif;font-size:16px;outline:none;background:#fff;color:#2a1a1a;box-sizing:border-box;font-weight:600}
+.lead-form input:focus{border-color:#f0c060}
+.lead-form button{width:100%;background:#c8922a;color:#fff;border:none;padding:14px;border-radius:8px;font-family:'Open Sans',Arial,sans-serif;font-size:15px;font-weight:800;cursor:pointer;letter-spacing:.3px}
+.lead-form button:active{background:#a87520}
+.lead-form button:disabled{opacity:.6;cursor:default}
+.lead-trust{font-size:11px;color:rgba(255,255,255,.75);text-align:center;margin-top:8px;font-style:italic}
+.lead-success{display:none;background:#eef7ee;border:2px solid #81c784;border-radius:8px;padding:16px;text-align:center;color:#2e7d32;margin-top:12px}
+.lead-success h3{margin:0 0 6px;font-size:16px;color:#2e7d32}
+.lead-success p{margin:0;font-size:13px;line-height:1.5}
+.lead-success.on{display:block}
+.calc-disclaim{font-size:11px;color:#7a5a5a;margin-top:12px;font-style:italic;line-height:1.4}
+.skip-lead{display:block;text-align:center;margin-top:10px;color:#7a5a5a;font-size:12px;text-decoration:underline;background:none;border:none;cursor:pointer;font-family:'Open Sans',Arial,sans-serif;width:100%;padding:6px}
 /* PDF DOWNLOAD CARD */
 .pdf-card{background:linear-gradient(135deg,#7b1c2e 0%,#540f1e 100%);color:#fff;border-radius:12px;padding:22px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.15);border:3px solid #c8922a}
 .pdf-card h2{margin:0 0 4px;font-size:20px;color:#f0c060}
@@ -242,18 +254,37 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
         </select>
       </div>
       <button class="calc-go" id="cgo">Calculate My Estimate →</button>
-      <div class="calc-result" id="cresult">
-        <div class="est">YOUR ESTIMATED ANNUAL PREMIUM</div>
-        <div class="price" id="cprice">—</div>
-        <div class="range" id="crange">Estimated range</div>
-        <div class="why" id="cwhy"></div>
-        <div class="calc-cta">
-          <button class="primary" onclick="document.getElementById('t-quote').click();window.scrollTo({top:document.querySelector('.tabs-bar').offsetTop,behavior:'smooth'})">Get My Exact Quote →</button>
-          <button class="secondary" onclick="document.getElementById('t-chat').click();window.scrollTo({top:document.querySelector('.tabs-bar').offsetTop,behavior:'smooth'})">Ask Brian a Question</button>
-        </div>
-        <div class="calc-disclaim">This estimate is based on Louisiana NFIP averages and is not a binding quote. Actual premiums depend on FEMA Flood Map review, elevation certificate, replacement cost, and other factors. For an exact rate, request a free quote from Brian.</div>
+
+```
+  <div class="calc-result" id="cresult">
+    <div class="est">YOUR ESTIMATED ANNUAL PREMIUM</div>
+    <div class="price" id="cprice">—</div>
+    <div class="range" id="crange">Estimated range</div>
+    <div class="why" id="cwhy"></div>
+    
+    <!-- THE LEAD CAPTURE -->
+    <div class="lead-capture" id="leadCapture">
+      <h3 id="leadTitle">🎯 Want Brian to run your real numbers?</h3>
+      <p id="leadCopy">This estimate uses Louisiana averages — your actual rate could be higher or lower. <strong>Brian can pull your exact flood zone and run real quotes from multiple carriers.</strong> Drop your number and he'll text you to get started.</p>
+      <div class="lead-form" id="leadFormDiv">
+        <input type="tel" id="leadPhone" placeholder="Your phone number" maxlength="14">
+        <button id="leadSubmit">Have Brian Text Me →</button>
       </div>
+      <div class="lead-trust">No spam. No bots. Brian texts you personally.</div>
     </div>
+    
+    <div class="lead-success" id="leadSuccessMsg">
+      <h3>✅ You're All Set!</h3>
+      <p id="leadSuccessText">Brian got your number and your estimate details. He'll text you within an hour with your exact quote. Need to talk now? Call (225) 610-3611.</p>
+    </div>
+    
+    <button class="skip-lead" id="skipLead">Or just keep browsing →</button>
+    
+    <div class="calc-disclaim">This estimate is based on Louisiana NFIP averages. Actual premiums depend on FEMA Flood Map review, elevation certificate, replacement cost, and other factors.</div>
+  </div>
+</div>
+```
+
   </div>
 </div>
 
@@ -298,21 +329,21 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
         <label class="check-item"><input type="checkbox" data-key="ck30-1"><span>Confirm flood insurance is active and not expired</span></label>
         <label class="check-item"><input type="checkbox" data-key="ck30-2"><span>Take video walkthrough of every room (open closets, drawers)</span></label>
         <label class="check-item"><input type="checkbox" data-key="ck30-3"><span>Photograph valuables, electronics, jewelry, art</span></label>
-        <label class="check-item"><input type="checkbox" data-key="ck30-4"><span>Save digital copies of insurance docs to cloud (Google Drive, iCloud)</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck30-4"><span>Save digital copies of insurance docs to cloud</span></label>
         <label class="check-item"><input type="checkbox" data-key="ck30-5"><span>Trim trees and remove dead branches near house</span></label>
         <label class="check-item"><input type="checkbox" data-key="ck30-6"><span>Clean gutters and check downspouts</span></label>
-        <label class="check-item"><input type="checkbox" data-key="ck30-7"><span>Check generator (if you have one) and stock fuel safely</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck30-7"><span>Check generator and stock fuel safely</span></label>
         <label class="check-item"><input type="checkbox" data-key="ck30-8"><span>Stock 14-day supply of non-perishable food and water</span></label>
       </div>
       <div class="check-section">
         <h3>📋 7 DAYS BEFORE A NAMED STORM</h3>
-        <label class="check-item"><input type="checkbox" data-key="ck7-1"><span>Fill all vehicles with gas (do not wait for evacuation)</span></label>
-        <label class="check-item"><input type="checkbox" data-key="ck7-2"><span>Get cash from ATM (cards may not work after storm)</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck7-1"><span>Fill all vehicles with gas</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck7-2"><span>Get cash from ATM</span></label>
         <label class="check-item"><input type="checkbox" data-key="ck7-3"><span>Refill prescriptions for 30+ days</span></label>
         <label class="check-item"><input type="checkbox" data-key="ck7-4"><span>Charge all devices, power banks, flashlights</span></label>
         <label class="check-item"><input type="checkbox" data-key="ck7-5"><span>Pack go-bag: meds, docs, clothes, water, snacks</span></label>
         <label class="check-item"><input type="checkbox" data-key="ck7-6"><span>Confirm evacuation route and destination</span></label>
-        <label class="check-item"><input type="checkbox" data-key="ck7-7"><span>Stock plywood, screws, tarps, sandbags if available</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck7-7"><span>Stock plywood, screws, tarps, sandbags</span></label>
         <label class="check-item"><input type="checkbox" data-key="ck7-8"><span>Notify out-of-state family of your plan</span></label>
       </div>
       <div class="check-section">
@@ -324,15 +355,15 @@ body{margin:0;padding:0;font-family:'Open Sans',Arial,sans-serif;background:#f5f
         <label class="check-item"><input type="checkbox" data-key="ck24-5"><span>Set freezer/fridge to coldest setting</span></label>
         <label class="check-item"><input type="checkbox" data-key="ck24-6"><span>Turn off propane tanks at the source</span></label>
         <label class="check-item"><input type="checkbox" data-key="ck24-7"><span>Charge all phones to 100%</span></label>
-        <label class="check-item"><input type="checkbox" data-key="ck24-8"><span>Decide: shelter in place or evacuate (do not wait too long)</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ck24-8"><span>Decide: shelter in place or evacuate</span></label>
       </div>
       <div class="check-section">
         <h3>🚨 AFTER THE STORM</h3>
         <label class="check-item"><input type="checkbox" data-key="ckafter-1"><span>Document EVERYTHING with photos/video before cleaning</span></label>
         <label class="check-item"><input type="checkbox" data-key="ckafter-2"><span>Call insurance company immediately, get claim number</span></label>
-        <label class="check-item"><input type="checkbox" data-key="ckafter-3"><span>Make reasonable temporary repairs (tarp, board) — save receipts</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ckafter-3"><span>Make reasonable temporary repairs — save receipts</span></label>
         <label class="check-item"><input type="checkbox" data-key="ckafter-4"><span>Do NOT throw anything away until adjuster sees it</span></label>
-        <label class="check-item"><input type="checkbox" data-key="ckafter-5"><span>Watch for downed power lines — assume all are live</span></label>
+        <label class="check-item"><input type="checkbox" data-key="ckafter-5"><span>Watch for downed power lines</span></label>
         <label class="check-item"><input type="checkbox" data-key="ckafter-6"><span>Boil water until told it is safe</span></label>
         <label class="check-item"><input type="checkbox" data-key="ckafter-7"><span>Beware contractor scams — get 3 quotes, check licenses</span></label>
         <label class="check-item"><input type="checkbox" data-key="ckafter-8"><span>Do NOT sign assignment of benefits without legal review</span></label>
@@ -432,83 +463,47 @@ if (IS_HURRICANE_SEASON) {
   urgBanner.innerHTML = '⚠️ Hurricane season starts in <span>' + DAYS_TO_HURRICANE_SEASON + ' days</span> — 30-day waiting period applies';
 }
 
-// PARISH RATES (real Louisiana NFIP averages, base for $250k coverage)
+// Track calculator state for lead capture context
+var calcState = { parish:'', homeVal:0, zone:'', foundation:'', estimate:0 };
+
 var PARISH_RATES = {
-  'Acadia': {base:680,risk:'M'},
-  'Allen': {base:580,risk:'M'},
-  'Ascension': {base:920,risk:'MH'},
-  'Assumption': {base:1850,risk:'H'},
-  'Avoyelles': {base:720,risk:'M'},
-  'Beauregard': {base:640,risk:'M'},
-  'Bienville': {base:480,risk:'L'},
-  'Bossier': {base:780,risk:'M'},
-  'Caddo': {base:780,risk:'M'},
-  'Calcasieu': {base:1650,risk:'H'},
-  'Caldwell': {base:620,risk:'M'},
-  'Cameron': {base:3850,risk:'VH'},
-  'Catahoula': {base:780,risk:'M'},
-  'Claiborne': {base:480,risk:'L'},
-  'Concordia': {base:980,risk:'MH'},
-  'DeSoto': {base:540,risk:'L'},
-  'East Baton Rouge': {base:655,risk:'MH'},
-  'East Carroll': {base:780,risk:'M'},
-  'East Feliciana': {base:680,risk:'M'},
-  'Evangeline': {base:720,risk:'M'},
-  'Franklin': {base:780,risk:'M'},
-  'Grant': {base:580,risk:'L'},
-  'Iberia': {base:1450,risk:'MH'},
-  'Iberville': {base:1380,risk:'H'},
-  'Jackson': {base:480,risk:'L'},
-  'Jefferson': {base:1850,risk:'H'},
-  'Jefferson Davis': {base:980,risk:'M'},
-  'Lafayette': {base:920,risk:'M'},
-  'Lafourche': {base:2480,risk:'VH'},
-  'LaSalle': {base:520,risk:'L'},
-  'Lincoln': {base:420,risk:'L'},
-  'Livingston': {base:1180,risk:'VH'},
-  'Madison': {base:850,risk:'M'},
-  'Morehouse': {base:780,risk:'M'},
-  'Natchitoches': {base:680,risk:'M'},
-  'Orleans': {base:1820,risk:'VH'},
-  'Ouachita': {base:780,risk:'M'},
-  'Plaquemines': {base:4752,risk:'VH'},
-  'Pointe Coupee': {base:920,risk:'M'},
-  'Rapides': {base:780,risk:'M'},
-  'Red River': {base:680,risk:'M'},
-  'Richland': {base:780,risk:'M'},
-  'Sabine': {base:580,risk:'L'},
-  'St. Bernard': {base:2280,risk:'VH'},
-  'St. Charles': {base:1480,risk:'H'},
-  'St. Helena': {base:780,risk:'M'},
-  'St. James': {base:1320,risk:'H'},
-  'St. John the Baptist': {base:1620,risk:'H'},
-  'St. Landry': {base:880,risk:'M'},
-  'St. Martin': {base:1280,risk:'H'},
-  'St. Mary': {base:2180,risk:'VH'},
-  'St. Tammany': {base:1480,risk:'H'},
-  'Tangipahoa': {base:1080,risk:'H'},
-  'Tensas': {base:920,risk:'M'},
-  'Terrebonne': {base:2680,risk:'VH'},
-  'Union': {base:480,risk:'L'},
-  'Vermilion': {base:1420,risk:'H'},
-  'Vernon': {base:520,risk:'L'},
-  'Washington': {base:780,risk:'M'},
-  'Webster': {base:520,risk:'L'},
-  'West Baton Rouge': {base:980,risk:'MH'},
-  'West Carroll': {base:780,risk:'M'},
-  'West Feliciana': {base:780,risk:'M'},
-  'Winn': {base:520,risk:'L'}
+  'Acadia':{base:680,risk:'M'},'Allen':{base:580,risk:'M'},'Ascension':{base:920,risk:'MH'},
+  'Assumption':{base:1850,risk:'H'},'Avoyelles':{base:720,risk:'M'},'Beauregard':{base:640,risk:'M'},
+  'Bienville':{base:480,risk:'L'},'Bossier':{base:780,risk:'M'},'Caddo':{base:780,risk:'M'},
+  'Calcasieu':{base:1650,risk:'H'},'Caldwell':{base:620,risk:'M'},'Cameron':{base:3850,risk:'VH'},
+  'Catahoula':{base:780,risk:'M'},'Claiborne':{base:480,risk:'L'},'Concordia':{base:980,risk:'MH'},
+  'DeSoto':{base:540,risk:'L'},'East Baton Rouge':{base:655,risk:'MH'},'East Carroll':{base:780,risk:'M'},
+  'East Feliciana':{base:680,risk:'M'},'Evangeline':{base:720,risk:'M'},'Franklin':{base:780,risk:'M'},
+  'Grant':{base:580,risk:'L'},'Iberia':{base:1450,risk:'MH'},'Iberville':{base:1380,risk:'H'},
+  'Jackson':{base:480,risk:'L'},'Jefferson':{base:1850,risk:'H'},'Jefferson Davis':{base:980,risk:'M'},
+  'Lafayette':{base:920,risk:'M'},'Lafourche':{base:2480,risk:'VH'},'LaSalle':{base:520,risk:'L'},
+  'Lincoln':{base:420,risk:'L'},'Livingston':{base:1180,risk:'VH'},'Madison':{base:850,risk:'M'},
+  'Morehouse':{base:780,risk:'M'},'Natchitoches':{base:680,risk:'M'},'Orleans':{base:1820,risk:'VH'},
+  'Ouachita':{base:780,risk:'M'},'Plaquemines':{base:4752,risk:'VH'},'Pointe Coupee':{base:920,risk:'M'},
+  'Rapides':{base:780,risk:'M'},'Red River':{base:680,risk:'M'},'Richland':{base:780,risk:'M'},
+  'Sabine':{base:580,risk:'L'},'St. Bernard':{base:2280,risk:'VH'},'St. Charles':{base:1480,risk:'H'},
+  'St. Helena':{base:780,risk:'M'},'St. James':{base:1320,risk:'H'},'St. John the Baptist':{base:1620,risk:'H'},
+  'St. Landry':{base:880,risk:'M'},'St. Martin':{base:1280,risk:'H'},'St. Mary':{base:2180,risk:'VH'},
+  'St. Tammany':{base:1480,risk:'H'},'Tangipahoa':{base:1080,risk:'H'},'Tensas':{base:920,risk:'M'},
+  'Terrebonne':{base:2680,risk:'VH'},'Union':{base:480,risk:'L'},'Vermilion':{base:1420,risk:'H'},
+  'Vernon':{base:520,risk:'L'},'Washington':{base:780,risk:'M'},'Webster':{base:520,risk:'L'},
+  'West Baton Rouge':{base:980,risk:'MH'},'West Carroll':{base:780,risk:'M'},
+  'West Feliciana':{base:780,risk:'M'},'Winn':{base:520,risk:'L'}
 };
 
-// Populate parish dropdown
 var parishSelect = document.getElementById('cp');
 var parishKeys = Object.keys(PARISH_RATES).sort();
 for (var i = 0; i < parishKeys.length; i++) {
   var opt = document.createElement('option');
-  opt.value = parishKeys[i];
-  opt.textContent = parishKeys[i];
+  opt.value = parishKeys[i]; opt.textContent = parishKeys[i];
   parishSelect.appendChild(opt);
 }
+
+// Auto-format phone number as user types
+document.getElementById('leadPhone').addEventListener('input', function(e) {
+  var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+  e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+});
 
 // COST CALCULATOR
 document.getElementById('cgo').addEventListener('click', function() {
@@ -521,9 +516,7 @@ document.getElementById('cgo').addEventListener('click', function() {
   if (!homeVal) { alert('Please select your home value range.'); return; }
   
   var base = PARISH_RATES[parish].base;
-  var risk = PARISH_RATES[parish].risk;
   
-  // Adjust for home value (relative to $250k baseline)
   var valueMultiplier = 1.0;
   if (homeVal <= 100000) valueMultiplier = 0.65;
   else if (homeVal <= 200000) valueMultiplier = 0.85;
@@ -533,7 +526,6 @@ document.getElementById('cgo').addEventListener('click', function() {
   else if (homeVal <= 900000) valueMultiplier = 1.65;
   else valueMultiplier = 2.1;
   
-  // Adjust for zone
   var zoneMultiplier = 1.0;
   if (zone === 'x') zoneMultiplier = 0.45;
   else if (zone === 'b') zoneMultiplier = 0.55;
@@ -541,7 +533,6 @@ document.getElementById('cgo').addEventListener('click', function() {
   else if (zone === 'a') zoneMultiplier = 1.35;
   else if (zone === 'v') zoneMultiplier = 1.85;
   
-  // Adjust for foundation
   var foundationMultiplier = 1.0;
   if (foundation === 'raised') foundationMultiplier = 0.85;
   else if (foundation === 'elevated') foundationMultiplier = 0.7;
@@ -550,68 +541,110 @@ document.getElementById('cgo').addEventListener('click', function() {
   var estimate = Math.round(base * valueMultiplier * zoneMultiplier * foundationMultiplier);
   var lowEnd = Math.round(estimate * 0.8);
   var highEnd = Math.round(estimate * 1.25);
-  
-  // Round nicely
   estimate = Math.round(estimate / 10) * 10;
   lowEnd = Math.round(lowEnd / 10) * 10;
   highEnd = Math.round(highEnd / 10) * 10;
   
-  var priceEl = document.getElementById('cprice');
-  var rangeEl = document.getElementById('crange');
-  var whyEl = document.getElementById('cwhy');
+  // Save state for lead capture
+  calcState = { parish:parish, homeVal:homeVal, zone:zone, foundation:foundation, estimate:estimate };
   
-  priceEl.textContent = '$' + estimate.toLocaleString() + '/yr';
-  rangeEl.textContent = 'Likely range: $' + lowEnd.toLocaleString() + ' – $' + highEnd.toLocaleString() + ' per year';
+  document.getElementById('cprice').textContent = '$' + estimate.toLocaleString() + '/yr';
+  document.getElementById('crange').textContent = 'Likely range: $' + lowEnd.toLocaleString() + ' – $' + highEnd.toLocaleString() + ' per year';
   
   var why = '<strong>How we got there:</strong><br>';
   why += 'Your parish (' + parish + ') has an average flood premium baseline of $' + base.toLocaleString() + '/year. ';
+  if (zone === 'x') why += 'You indicated Zone X (low risk), which qualifies you for a <strong>Preferred Risk Policy</strong>. ';
+  else if (zone === 'a' || zone === 'v' || zone === 'ae') why += 'Your zone is high-risk, which means flood insurance is likely <strong>required by your lender</strong>. ';
+  else if (zone === 'unknown') why += 'You did not specify your zone — Brian can pull your exact zone in 2 minutes. ';
+  if (foundation === 'elevated') why += 'Your elevated foundation could save you even more with an elevation certificate. ';
   
-  if (zone === 'x') {
-    why += 'You indicated Zone X (low risk), which qualifies you for a <strong>Preferred Risk Policy</strong> — significantly cheaper coverage. ';
-  } else if (zone === 'a' || zone === 'v' || zone === 'ae') {
-    why += 'Your zone is high-risk, which means flood insurance is likely <strong>required by your lender</strong>. ';
-  } else if (zone === 'unknown') {
-    why += 'You did not specify your zone — Brian can pull your exact zone in 2 minutes. ';
-  }
-  
-  if (foundation === 'elevated') {
-    why += 'Your elevated foundation could save you even more with an elevation certificate. ';
-  } else if (foundation === 'basement') {
-    why += 'Basement coverage has limits — Brian can explain the details. ';
-  }
+  // Customize the lead capture based on the result
+  var leadTitle = '🎯 Want Brian to run your real numbers?';
+  var leadCopy = 'This estimate uses Louisiana averages — your actual rate could be higher or lower. <strong>Brian can pull your exact flood zone and run real quotes from multiple carriers.</strong> Drop your number and he\'ll text you to get started.';
   
   if (estimate < 600) {
-    why += '<br><br><strong>That is great news</strong> — your estimated cost is below $50/month. Hard to beat that for peace of mind.';
+    why += '<br><br><strong>That is great news</strong> — your estimated cost is below $50/month.';
+    leadTitle = '🔥 Want to see your real options?';
+    leadCopy = 'At an estimated $' + estimate + '/year, properties like yours often qualify for great rates. <strong>Brian can pull your exact zone and quote real numbers from multiple carriers.</strong> Drop your number.';
   } else if (estimate > 2500) {
     why += '<br><br><strong>This is on the higher end</strong> — but Brian works with both NFIP and private flood carriers. Sometimes private insurance is hundreds of dollars cheaper for high-risk areas.';
+    leadTitle = '💰 You may have cheaper options';
+    leadCopy = 'At an estimated $' + estimate + '/year, NFIP rates are tough — but <strong>private flood carriers are often hundreds cheaper</strong> for properties like yours. Brian compares both. Drop your number.';
   }
   
-  whyEl.innerHTML = why;
+  document.getElementById('cwhy').innerHTML = why;
+  document.getElementById('leadTitle').innerHTML = leadTitle;
+  document.getElementById('leadCopy').innerHTML = leadCopy;
   
   document.getElementById('cresult').classList.add('on');
   
-  // Log calculator use
+  // Log calculator use (anonymous)
   var data = new FormData();
-  data.append('Type', 'CALCULATOR USED');
+  data.append('Type', 'CALCULATOR USED (Anonymous)');
   data.append('Parish', parish);
   data.append('Home Value', '$' + homeVal.toLocaleString());
   data.append('Zone', zone);
   data.append('Foundation', foundation);
   data.append('Estimated Premium', '$' + estimate);
-  data.append('Note', 'User ran cost calculator. Anonymous interaction unless they convert.');
   fetch(FORMSPREE, { method:'POST', body:data, headers:{ 'Accept':'application/json' } });
   
   setTimeout(function() {
-    document.getElementById('cresult').scrollIntoView({behavior:'smooth',block:'center'});
+    document.getElementById('cresult').scrollIntoView({behavior:'smooth',block:'start'});
   }, 100);
 });
 
-// HURRICANE CHECKLIST - persist with localStorage
+// LEAD CAPTURE FROM CALCULATOR - the conversion play
+document.getElementById('leadSubmit').addEventListener('click', function() {
+  var phone = document.getElementById('leadPhone').value.trim();
+  if (!phone || phone.replace(/\D/g, '').length < 10) {
+    alert('Please enter a valid 10-digit phone number.');
+    return;
+  }
+  
+  var btn = document.getElementById('leadSubmit');
+  btn.disabled = true;
+  btn.textContent = 'Sending to Brian...';
+  
+  var data = new FormData();
+  data.append('Type', '🔥 HOT LEAD - Calculator Quote Request');
+  data.append('Phone', phone);
+  data.append('Parish', calcState.parish);
+  data.append('Home Value', '$' + calcState.homeVal.toLocaleString());
+  data.append('Flood Zone', calcState.zone);
+  data.append('Foundation', calcState.foundation);
+  data.append('Estimated Premium', '$' + calcState.estimate);
+  data.append('Source', 'Cost Calculator - Phone-Only Lead Capture');
+  data.append('PRIORITY', '⚡ TEXT WITHIN 5 MINUTES - calculator users convert at highest rate when contacted fast');
+  
+  fetch(FORMSPREE, { method:'POST', body:data, headers:{ 'Accept':'application/json' } }).then(function() {
+    document.getElementById('leadCapture').style.display = 'none';
+    document.getElementById('skipLead').style.display = 'none';
+    document.getElementById('leadSuccessMsg').classList.add('on');
+    document.getElementById('leadSuccessMsg').scrollIntoView({behavior:'smooth',block:'center'});
+  }).catch(function() {
+    btn.disabled = false;
+    btn.textContent = 'Get My Exact Quote →';
+    alert('Something went wrong. Please call Brian directly at (225) 610-3611.');
+  });
+});
+
+document.getElementById('leadPhone').addEventListener('keydown', function(e) {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    document.getElementById('leadSubmit').click();
+  }
+});
+
+document.getElementById('skipLead').addEventListener('click', function() {
+  document.getElementById('leadCapture').style.display = 'none';
+  document.getElementById('skipLead').style.display = 'none';
+});
+
+// HURRICANE CHECKLIST
 var checkboxes = document.querySelectorAll('.check-item input[type="checkbox"]');
 for (var i = 0; i < checkboxes.length; i++) {
   var cb = checkboxes[i];
   var key = cb.getAttribute('data-key');
-  // Restore state
   try {
     if (localStorage.getItem(key) === '1') {
       cb.checked = true;
@@ -621,13 +654,8 @@ for (var i = 0; i < checkboxes.length; i++) {
   cb.addEventListener('change', function(e) {
     var k = e.target.getAttribute('data-key');
     try {
-      if (e.target.checked) {
-        localStorage.setItem(k, '1');
-        e.target.parentElement.classList.add('done');
-      } else {
-        localStorage.removeItem(k);
-        e.target.parentElement.classList.remove('done');
-      }
+      if (e.target.checked) { localStorage.setItem(k, '1'); e.target.parentElement.classList.add('done'); }
+      else { localStorage.removeItem(k); e.target.parentElement.classList.remove('done'); }
     } catch(err) {}
   });
 }
@@ -660,7 +688,7 @@ var KB = [
   followup:'Want to see what flood insurance would cost you?',fuType:'calc'},
   {topic:'cost',k:['cost','price','premium','how much','rate','expensive','monthly','yearly'],
   a:'Louisiana statewide average is around $1,470/year. East Baton Rouge averages $655/year. Plaquemines averages $4,752/year. Lower-risk zones can be $400-$600/year with a Preferred Risk Policy.',
-  followup:'Use the Cost Calculator above to get an estimate for YOUR specific situation.',fuType:'calc'},
+  followup:'Use the Cost Calculator to get an estimate for YOUR specific situation.',fuType:'calc'},
   {topic:'never_flooded',k:['never flooded','have not flooded','do not need','low risk','live on a hill','house is high'],
   a:'In 2016, 75% of homes that flooded in Livingston Parish had never flooded before. About 25% of all flood claims come from properties OUTSIDE high-risk zones.',
   followup:'Want to see what coverage would cost in your area?',fuType:'calc'},
@@ -689,7 +717,7 @@ var KB = [
   a:'Private flood (Neptune, Wright Flood, FlowFlood) often offers higher limits, shorter waiting periods, sometimes lower rates than NFIP. Not every property qualifies.',
   followup:'Want Brian to compare both options for your address?',fuType:'quote'},
   {topic:'guide',k:['guide','pdf','download','book','document','full guide'],
-  a:'Yes — Brian wrote a free 20-page guide covering everything: 2016 lessons, NFIP vs private, the 5 mistakes that cost homeowners thousands, how to read your dec page, what to do after a flood, and a parish-by-parish risk overview for all 64 Louisiana parishes.',
+  a:'Yes — Brian wrote a free 20-page guide covering everything: 2016 lessons, NFIP vs private, the 5 mistakes, how to read your dec page, what to do after a flood, and a parish-by-parish risk overview for all 64 Louisiana parishes.',
   followup:'Want to download it now? It is free, no email required.',fuType:'guide'},
   {topic:'brian',k:['contact brian','phone number','reach brian','call brian','who are you'],
   a:'Reach Brian at (225) 610-3611 or bhall@sfbcic.com. Office at 12035 Coursey Blvd, Baton Rouge. Background: former law enforcement, K9 handler, raised in East Feliciana.',
@@ -931,7 +959,6 @@ for (var i = 0; i < qbs.length; i++) {
   })(qbs[i]);
 }
 
-// Greet on chatbot open
 setTimeout(function() {
   addMsg('Hey there! Got a flood insurance question? Tap one below or type yours in.', 'b');
 }, 400);
