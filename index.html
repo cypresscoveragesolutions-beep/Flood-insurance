@@ -655,17 +655,17 @@ var KB = [
   a:'Think of standard home insurance like health insurance for your house — covers things INSIDE, like a burst pipe. Flood insurance is different. It covers water from OUTSIDE — heavy rain, storm surge, rising bayous.'},
   {topic:'homeowners',k:['homeowners insurance','home insurance','regular insurance','my insurance cover flood','does my insurance cover'],
   a:'Nope. Your standard homeowners policy covers things inside your home. But if water rises from the outside, that is a flood — and your homeowners policy will not pay a dime.'},
-  {topic:'cost',k:['cost','price','premium','how much','rate','expensive','monthly','yearly'],
+  {topic:'cost',k:['cost','price','premium','how much','rate','expensive','monthly','yearly','what does it cost','cost of flood insurance','flood insurance cost','what is the cost','how much is','how much does','pricing'],
   a:'Louisiana statewide average is around $1,470/year. East Baton Rouge averages $655/year. Plaquemines averages $4,752/year. Lower-risk zones can be $400-$600/year with a Preferred Risk Policy. Try the Cost Calculator above for a personalized estimate.'},
   {topic:'too_expensive',k:['too expensive','cannot afford','too much money','out of budget','too pricey','overpriced'],
   a:'I hear you. But here is the math: the AVERAGE flood claim in Louisiana is $63,691. A local agent can often get monthly payments under $50 for low-risk properties.',concern:'cost'},
   {topic:'never_flooded',k:['never flooded','have not flooded','do not need','low risk','live on a hill','house is high','high ground'],
   a:'In 2016, 75% of homes that flooded in Livingston Parish had never flooded before. About 25% of all flood claims come from properties OUTSIDE high-risk zones.',concern:'never_flooded'},
-  {topic:'covered',k:['what is covered','what does it cover','will it cover','include coverage','building coverage','contents coverage'],
+  {topic:'covered',k:['what is covered','what does it cover','will it cover','include coverage','building coverage','contents coverage','flood insurance cover','what does flood insurance','does flood insurance cover','what flood covers','what is included','what do i get','what flood insurance does','coverage include'],
   a:'Building coverage (up to $250,000): foundation, electrical, plumbing, HVAC, water heater, built-ins. Contents coverage (up to $100,000): furniture, electronics, clothing.'},
-  {topic:'not_covered',k:['not covered','exclusion','will not cover','does not cover','car coverage','pool covered','deck covered','fence covered'],
+  {topic:'not_covered',k:['not covered','exclusion','will not cover','does not cover','car coverage','pool covered','deck covered','fence covered','what is not covered','what does not cover','what is excluded','exclusions','not included','what is not included'],
   a:'Flood does NOT cover: vehicles, temporary housing, pools, decks, fences, landscaping, finished basement contents, or wind damage.'},
-  {topic:'waiting',k:['waiting period','30 day','when does it start','when am i covered','how soon'],
+  {topic:'waiting',k:['waiting period','30 day','when does it start','when am i covered','how soon','how long until','when does coverage','wait time','how fast'],
   a:'30-day waiting period before NFIP kicks in. Waived if you are buying at mortgage closing. Some private flood policies have shorter waiting periods of 10-15 days.'},
   {topic:'zones',k:['flood zone','my zone','high risk zone','zone a','zone v','zone x','zone ae','flood map','what zone','am i in a zone'],
   a:'Zone A and V are high-risk — flood insurance required if you have a federally-backed mortgage. Zone X is moderate-low risk. About 25% of claims come from outside high-risk zones.'},
@@ -735,10 +735,19 @@ function findEntry(txt) {
   var bestScore = 0;
   for (var i = 0; i < KB.length; i++) {
     var score = 0;
+    var matchCount = 0;
     for (var j = 0; j < KB[i].k.length; j++) {
       var kw = KB[i].k[j].toLowerCase();
-      if (low.indexOf(kw) !== -1) score += kw.length;
+      if (low.indexOf(kw) !== -1) {
+        // Score based on keyword length AND specificity (longer phrases = more specific intent)
+        score += kw.length;
+        matchCount++;
+        // Bonus for multi-word phrase matches (more specific)
+        if (kw.indexOf(' ') !== -1) score += 5;
+      }
     }
+    // Multiple keyword matches = stronger signal
+    if (matchCount > 1) score += matchCount * 3;
     if (KB[i].topic === 'greeting' && low.length > 15) score = score * 0.3;
     if (score > bestScore) { bestScore = score; best = KB[i]; }
   }
